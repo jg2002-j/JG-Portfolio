@@ -1,21 +1,20 @@
 import React from "react";
-import header from "./components/header";
-import homepage from "./components/homepage";
-import projectspage from "./components/projectspage";
-import featuredproj from "./components/featuredproj";
-import project from "./components/project";
-import contactpage from "./components/contactpage";
+import Header from "./components/Header";
+import HomePage from "./components/HomePage";
+import ProjectsPage from "./components/ProjectsPage";
+import FeaturedProject from "./components/FeaturedProject";
+import Project from "./components/Project";
+import ContactPage from "./components/ContactPage";
 
 function App() {
 	return (
 		<>
-			<header />
-			<homepage />
-			<projectspage>
-				<featuredproj />
-				<project />
-			</projectspage>
-			<contactpage />
+			<Header />
+			<HomePage />
+			<ProjectsPage />
+			<FeaturedProject />
+			<Project />
+			<ContactPage />
 		</>
 	);
 }

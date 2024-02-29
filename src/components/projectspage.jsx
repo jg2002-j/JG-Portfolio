@@ -1,9 +1,11 @@
 import React from 'react'
 
-function projectspage() {
-  return (
-	 <div>projectspage</div>
-  )
-}
+function ProjectsPage() {
+   return (
+	   <div>
+         ProjectsPage   
+      </div>
+   )
+};
 
-export default projectspage
+export default ProjectsPage

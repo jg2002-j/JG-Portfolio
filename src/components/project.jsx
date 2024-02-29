@@ -1,9 +1,11 @@
 import React from 'react'
 
-function project() {
-  return (
-	 <div>project</div>
-  )
-}
+function Project() {
+   return (
+	   <div>
+         Project
+      </div>
+   )
+};
 
-export default project
+export default Project;
