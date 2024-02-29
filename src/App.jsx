@@ -1,10 +1,10 @@
 import React from "react";
 import Header from "./components/Header";
-import HomePage from "./components/HomePage";
-import ProjectsPage from "./components/ProjectsPage";
+import HomePage from "./pages/HomePage";
+import ProjectsPage from "./pages/ProjectsPage";
 import FeaturedProject from "./components/FeaturedProject";
 import Project from "./components/Project";
-import ContactPage from "./components/ContactPage";
+import ContactPage from "./pages/ContactPage";
 
 function App() {
 	return (

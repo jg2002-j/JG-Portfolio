@@ -2,13 +2,14 @@
 export default {
   content: [
     "./index.html",
-    "./App.jsx",
-    "./main.jsx",
-    "./components/*.{js,ts,jsx,tsx}"
+    "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
     extend: {},
+    fontFamily: {
+      sans: ['Cabinet Grotesk', 'sans-serif'],
+      serif: ['Merriweather', 'serif'],
+    },
   },
   plugins: [],
 }
-
