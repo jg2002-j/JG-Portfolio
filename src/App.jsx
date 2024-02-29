@@ -15,9 +15,9 @@ function App() {
 				<featuredproj />
 				<project />
 			</projectspage>
-         <contactpage />
+			<contactpage />
 		</>
 	);
 }
 
-export default App
+export default App;
