@@ -1,9 +1,13 @@
-import React from 'react'
+import React from "react";
+import FeaturedProject from "../components/FeaturedProject";
+import Project from "../components/Project";
 
 function ProjectsPage() {
    return (
 	   <div>
-         ProjectsPage   
+         ProjectsPage
+         <FeaturedProject />
+         <Project />  
       </div>
    )
 };

@@ -20,7 +20,7 @@ const NavIcon = (props) => {
 
 const NavbarButton = (props) => {
    return (
-      <a href={props.link} className="rounded-full px-4 py-2 mx-5 my-10 group transition ease-in-out duration-700 hover:scale-150 hover:bg-stone-800 flex justify-center align-middle">
+      <a href={props.link} className="rounded-lg px-4 py-2 mx-5 my-10 group transition ease-in-out duration-700 hover:scale-150 hover:bg-neutral-700 flex justify-center align-middle">
          {NavIcon(props)}
       </a>
    )
