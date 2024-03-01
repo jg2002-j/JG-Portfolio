@@ -9,7 +9,7 @@ import ContactPage from "./pages/ContactPage";
 function App() {
 	return (
 		<>
-			<Header />
+			{/* <Header /> */}
 			<HomePage />
 			<ProjectsPage />
 			<FeaturedProject />
