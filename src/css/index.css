@@ -9,6 +9,7 @@
 
 :root{
 	scroll-behavior: smooth;
+	background-color: rgb(25, 26, 27);
 }
 
 .font-title{
@@ -30,5 +31,5 @@
 	object-fit: cover;
 	object-position: center;
 	mask-image: linear-gradient(to bottom, black 75%, rgba(0,0,0,0.5) 90%,transparent 100%);
-	z-index: -5;
+	z-index: -1;
 }
