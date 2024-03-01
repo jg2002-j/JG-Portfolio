@@ -38,7 +38,7 @@ const NavbarItems = [
 function Header() {
    return (
 	   <>
-         <div className="flex justify-evenly align-middle px-3">
+         <nav className="flex justify-evenly align-middle px-3">
             <div className="hidden lg:block border-r-2 border-gray-400 w-full"></div>
             <div className="hidden lg:block border-r-2 border-gray-400 w-full"></div>
             <div className='flex justify-centre align-middle px-3'>
@@ -47,7 +47,7 @@ function Header() {
                ))}
             </div>
             <div className="hidden lg:block border-l-2 border-gray-400 w-full"></div>
-         </div>
+         </nav>
       </>
    )
 };	

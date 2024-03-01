@@ -2,17 +2,33 @@
 @tailwind components;
 @tailwind utilities;
 
-.font-header {
-	font-family: "General Sans", sans-serif;
+@font-face {
+	font-family: Akira;
+	src: url(../assets/Akira.otf);
 }
 
 :root{
 	scroll-behavior: smooth;
 }
 
-.homepage{
-	background-image: url(../assets/xebelion-15.jpg);
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+.font-title{
+	font-family: "Akira", sans-serif;
+	font-weight: 600;
+	font-size: calc(30px + 7.5vw);
+	letter-spacing: 15px;
+}
+
+.font-header {
+	font-family: "General Sans", sans-serif;
+}
+
+.homepage-img{
+	width: 100%;
+	height: 125%;
+	position: absolute;
+	top: -10%;
+	object-fit: cover;
+	object-position: center;
+	mask-image: linear-gradient(to bottom, black 75%, rgba(0,0,0,0.5) 90%,transparent 100%);
+	z-index: -5;
 }

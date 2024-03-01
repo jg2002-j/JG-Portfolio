@@ -2,7 +2,11 @@ import React from "react";
 
 function Sidebar() {
   	return (
-	 	<div>Sidebar</div>
+	 	<div className="w-vw">
+			<nav className="bg-slate-300 z-50 h-dvh w-1/4 rounded-xl m-5">
+
+			</nav>
+		</div>
   	)
 };
 
