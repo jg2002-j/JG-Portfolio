@@ -2,7 +2,9 @@ import React from "react";
 
 function AboutMePage() {
 	return (
-		<div>AboutMePage</div>
+		<div id="aboutme">
+			AboutMePage
+		</div>
   	)
 };
 

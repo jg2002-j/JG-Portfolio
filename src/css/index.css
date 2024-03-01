@@ -6,6 +6,10 @@
 	font-family: "General Sans", sans-serif;
 }
 
+:root{
+	scroll-behavior: smooth;
+}
+
 .homepage{
 	background-image: url(../assets/xebelion-15.jpg);
 	background-position: center;

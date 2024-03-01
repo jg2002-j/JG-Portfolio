@@ -4,7 +4,7 @@ import Project from "../components/Project";
 
 function ProjectsPage() {
    return (
-	   <div>
+	   <div id="projects">
          ProjectsPage
          <FeaturedProject />
          <Project />  

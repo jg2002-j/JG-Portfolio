@@ -27,7 +27,7 @@ const NavbarButton = (props) => {
 }
 
 const NavbarItems = [
-   {id: 1, name: "Home", link: "#", icon: "Home"},
+   {id: 1, name: "Home", link: "#home", icon: "Home"},
    {id: 2, name: "About Me", link: "#aboutme", icon: "CircleUserRound"},
    {id: 3, name: "Projects", link: "#projects", icon: "CodeSquare"},
    {id: 4, name: "Experience", link: "#experience", icon: "FileText"},
