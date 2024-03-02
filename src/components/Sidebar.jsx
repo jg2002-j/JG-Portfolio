@@ -1,6 +1,18 @@
 import React from "react";
+import { NavIcons, NavItems } from "./NavData";
 
-
+const SidebarNavButton = (props) => {
+   return (
+		<li>
+			<a href={props.link} className="rounded-lg px-4 py-2 mx-5 my-10 group ease-in-out duration-700 flex justify-start items-center">
+				{NavIcons(props)}
+				<h2 className="ms-5 font-title text-xl tracking-widest border-red-400 border-2">
+					{props.name}
+				</h2>
+			</a>
+		</li>
+   )
+}
 
 function Sidebar(props) {
   	return (
@@ -10,9 +22,14 @@ function Sidebar(props) {
 					Toggle sidebar
 				</span>
 			</button>
-			<nav className={`${props.state} bg-slate-300 fixed top-0 z-40 h-2/3 w-vw 2xl:w-1/4 rounded-xl m-5 ease-in-out duration-[2000]`}>
+			<nav className={`${props.state} bg-neutral-700 fixed top-0 z-40 h-2/3 w-vw 2xl:w-1/4 rounded-xl m-5 ease-in-out duration-[2000]`}>
 				<div className="flex flex-col justify-start items-start border-2 my-[5rem] mx-11 border-black">
-					<h1 className="font-title text-md">hello</h1>
+					<h1 className="font-title text-3xl tracking-[5px] uppercase inline-block bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text">Where to?</h1>
+					<ul>
+						{NavItems.map(navItem => (
+							<SidebarNavButton key={navItem.id} name={navItem.name} link={navItem.link} icon={navItem.icon} />
+						))}
+					</ul>
 				</div>
 			</nav>
 		</div>

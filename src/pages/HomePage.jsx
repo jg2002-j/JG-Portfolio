@@ -24,7 +24,7 @@ function HomePage() {
          <img className="homepage-img -z-10" src={bgImage} alt="bg art" />
          <Header />
          <div className="flex justify-center items-center h-3/4">
-            <h1 className="font-title pgtitle uppercase mix-blend-difference text-slate-200 mx-8 hover:tracking-[2rem] hover:scale-110 ease-in-out duration-1000 select-none">Jai Gandhi</h1>
+            <h1 className="font-title pgtitle tracking-[12px] uppercase mix-blend-difference text-slate-200 mx-8 hover:tracking-[2rem] hover:scale-110 ease-in-out duration-1000 select-none">Jai Gandhi</h1>
          </div>
          <Sidebar state={sidebarState} toggleSidebar={toggleSidebar} />
       </div>
