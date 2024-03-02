@@ -14,9 +14,6 @@
 
 .font-title{
 	font-family: "Akira", sans-serif;
-	font-weight: 600;
-	font-size: calc(30px + 7.5vw);
-	letter-spacing: 15px;
 }
 
 .font-header {
@@ -32,4 +29,10 @@
 	object-position: center;
 	mask-image: linear-gradient(to bottom, black 75%, rgba(0,0,0,0.5) 90%,transparent 100%);
 	z-index: -1;
+}
+
+.pgtitle{
+	font-size: calc(30px + 7.5vw);
+	font-weight: 600;
+	letter-spacing: 15px;
 }

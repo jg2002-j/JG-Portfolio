@@ -39,14 +39,14 @@ function Header() {
    return (
 	   <>
          <nav className="flex justify-evenly align-middle px-3">
-            <div className="hidden lg:block border-r-2 border-gray-400 w-full"></div>
-            <div className="hidden lg:block border-r-2 border-gray-400 w-full"></div>
+            <div className="hidden 2xl:block border-r-2 border-gray-400 w-full"></div>
+            <div className="hidden 2xl:block border-r-2 border-gray-400 w-full"></div>
             <div className='flex justify-centre align-middle px-3'>
                {NavbarItems.map(navItem => (
                   <NavbarButton key={navItem.id} name={navItem.name} link={navItem.link} icon={navItem.icon} />
                ))}
             </div>
-            <div className="hidden lg:block border-l-2 border-gray-400 w-full"></div>
+            <div className="hidden 2xl:block border-l-2 border-gray-400 w-full"></div>
          </nav>
       </>
    )
