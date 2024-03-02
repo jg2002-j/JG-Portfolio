@@ -9,12 +9,12 @@ import bgImage from "../assets/xebelion-15.jpg";
 
 function HomePage() {
 
-   const [sidebarState, setsidebarState] = React.useState();
+   const [sidebarState, setsidebarState] = React.useState("hidden");
 
    const toggleSidebar = (state) => {
       if (state == "hidden") {
-         setsidebarState("");
-      } else if (state == undefined || state == "") {
+         setsidebarState("visible");
+      } else if (state == "visible") {
          setsidebarState("hidden");
       }
    };

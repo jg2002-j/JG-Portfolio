@@ -25,8 +25,8 @@ function Sidebar(props) {
 					<MenuSquare />
 				</span>
 			</button>
-			<div class={`${props.state} z-30 h-screen w-screen fixed top-0 left-0 bg-neutral-700 cursor-not-allowed opacity-40`}></div>
-			<nav className={`${props.state} bg-[#1e2025] fixed top-0 z-40 h-screen w-vw 2xl:w-1/5 rounded-xl m-5 ease-in-out duration-[2000]`}>
+			<div className={`${props.state} z-30 h-screen w-screen fixed top-0 left-0 bg-neutral-700 cursor-not-allowed opacity-40`}></div>
+			<nav className={`${props.state} bg-[#1e2025] fixed top-0 z-40 min-h-[1/2] w-vw 2xl:w-1/5 rounded-xl m-5 ease-in-out duration-[2000]`}>
 				<div className="flex flex-col justify-start items-start my-[6rem] mx-11">
 					<h1 className="font-title text-3xl tracking-[5px] uppercase inline-block bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text">Where to?</h1>
 					<ul>

@@ -1,28 +1,17 @@
 import React from "react";
 
+
+// fav tech stacks
+// fav designed things
+// top 3 spotify songs
+// fav shows
+
+
 function AboutMeBento() {
   	return (
-	 	<>
-			<div className="flex flex-row justify-center items-center group">
-				<div className="w-1/5 h-50 rounded border-2 border-slate-50 text-slate-50">hello</div>
-				<div className="w-1/5 h-50 rounded border-2 border-slate-50 text-slate-50">hello</div>
-				<div className="w-1/5 h-50 rounded border-2 border-slate-50 text-slate-50">hello</div>
-			</div>
-			<div className="flex flex-row justify-center items-center group">
-				<div className="w-1/5 h-50 rounded border-2 border-slate-50 text-slate-50">hello</div>
-				<div className="w-1/5 h-50 rounded border-2 border-slate-50 text-slate-50">hello</div>
-				<div className="w-1/5 h-50 rounded border-2 border-slate-50 text-slate-50">hello</div>
-			</div>
-			<div className="flex flex-row justify-center items-center group">
-				<div className="w-1/5 h-50 rounded border-2 border-slate-50 text-slate-50">hello</div>
-				<div className="w-1/5 h-50 rounded border-2 border-slate-50 text-slate-50">hello</div>
-				<div className="w-1/5 h-50 rounded border-2 border-slate-50 text-slate-50">hello</div>
-			</div>
-			{/* fav tech stacks */}
-			{/* fav designed things */}
-			{/* spotify songs  */}
-			{/* fav shows */}
-		</>
+	 	<div className="border-2 border-green-500 h-full 2xl:w-2/5 flex flex-col justify-center items-center">
+
+		</div>
   	)
 };
 
