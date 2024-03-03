@@ -1,8 +1,13 @@
 import React from "react";
 import Header from "../components/Header";
 import Sidebar from "../components/Sidebar";
-
 import bgImage from "../assets/xebelion-15.jpg";
+
+//// This should be a welcome landing page that contains:
+   //// Your Name
+   //// A headshot of you (or an avatar)
+   //// Your brand statement
+   //// Some indication that this is your portfolio site
 
 const currentTime = "{TIME}";
 

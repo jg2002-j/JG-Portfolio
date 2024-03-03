@@ -17,12 +17,4 @@ const NavIcons = (props) => {
    }
 }
 
-const NavItems = [
-   {id: 1, name: "Home", link: "#home", icon: "Home"},
-   {id: 2, name: "About Me", link: "#aboutme", icon: "CircleUserRound"},
-   {id: 3, name: "Projects", link: "#projects", icon: "CodeSquare"},
-   {id: 4, name: "Experience", link: "#experience", icon: "FileText"},
-   {id: 5, name: "Contact Me", link: "#contactme", icon: "MessageSquareMore"}
-]
-
-export { NavIcons, NavItems };
+export { NavIcons };

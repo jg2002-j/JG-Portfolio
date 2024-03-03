@@ -1,6 +1,9 @@
 import React from 'react';
-import { NavIcons, NavItems } from "./NavData";
+import { NavIcons } from "./NavIcons";
+import NavData from "../data/NavItems.json";
 
+// TODO: Must be rendered across every page component of the site
+//// Must contain a Navbar
 
 const HeaderNavButton = (props) => {
    return (
@@ -21,7 +24,7 @@ function Header() {
             <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div>
             <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div>
             <div className="h-32 flex 2xl:border-r-[1px] border-gray-400 w-full justify-evenly items-center px-3">
-               {NavItems.map(navItem => (
+               {NavData.map(navItem => (
                   <HeaderNavButton key={navItem.id} name={navItem.name} link={navItem.link} icon={navItem.icon} />
                ))}
             </div>

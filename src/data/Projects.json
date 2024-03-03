@@ -1,0 +1,50 @@
+[
+	{
+		"id": 1,
+		"title": "project one",
+		"desc": "Lorem ipsum dipsum idfk",
+		"img": "imglink",
+		"deployed": "deployed app link",
+		"repo": "repolink"
+	},
+	{
+		"id": 2,
+		"title": "",
+		"desc": "",
+		"img": "",
+		"deployed": "",
+		"repo": ""
+	},
+	{
+		"id": 3,
+		"title": "",
+		"desc": "",
+		"img": "",
+		"deployed": "",
+		"repo": ""
+	},
+	{
+		"id": 4,
+		"title": "",
+		"desc": "",
+		"img": "",
+		"deployed": "",
+		"repo": ""
+	},
+	{
+		"id": 5,
+		"title": "",
+		"desc": "",
+		"img": "",
+		"deployed": "",
+		"repo": ""
+	},
+	{
+		"id": 6,
+		"title": "",
+		"desc": "",
+		"img": "",
+		"deployed": "",
+		"repo": ""
+	}
+]
