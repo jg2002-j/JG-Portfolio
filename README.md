@@ -32,11 +32,15 @@ Provide instructions and examples for use.
 ![Deployed Application](undefined)
 	
 ## Credits and Sources
+- 
 - Animation library from [GSAP](https://gsap.com/).
 - Icons from [Lucide icons](https://lucide.dev/).
 - Favicon from [_kkeopi on Instagram](https://www.instagram.com/p/B56jBmCj6ns/?epik=dj0yJnU9UVpwY2ZwaW0tNjFwUHNPcGUydzJfT25qWlZ2dXBzLTMmcD0wJm49V0pwU0RXM3Z4ZmgxeFlqel8wZ19uQSZ0PUFBQUFBR1hpYVBF).
 - HomePage background art from [Xebelion on Artstation](https://www.artstation.com/artwork/WB1JeE).
-- Button component from [Flowbite](https://flowbite.com/docs/components/buttons/.)
+- Button component from [Flowbite](https://flowbite.com/docs/components/buttons/).
+- Pokemon sprites from [PokemonDB](https://pokemondb.net/sprites).
+- Spotify embeds from [Spotify](https://developer.spotify.com/documentation/embeds) and [React Spotify Embed NPM](https://www.npmjs.com/package/react-spotify-embed).
+- Screenshot from [Studio Ghibli](https://www.ghibli.jp/works/howl/).
 
 
 ## Tests
