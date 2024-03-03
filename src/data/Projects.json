@@ -1,50 +1,56 @@
 [
 	{
 		"id": 1,
-		"title": "project one",
-		"desc": "Lorem ipsum dipsum idfk",
+		"title": "Project 2",
+		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
 		"img": "imglink",
 		"deployed": "deployed app link",
-		"repo": "repolink"
+		"repo": "repolink",
+		"techs": ["HTML", "CSS", "JS"]
 	},
 	{
 		"id": 2,
-		"title": "",
-		"desc": "",
+		"title": "Project 3",
+		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
 		"img": "",
 		"deployed": "",
-		"repo": ""
+		"repo": "",
+		"techs": ["HTML", "CSS", "JS"]
 	},
 	{
 		"id": 3,
-		"title": "",
-		"desc": "",
+		"title": "Project 4",
+		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
 		"img": "",
 		"deployed": "",
-		"repo": ""
+		"repo": "",
+		"techs": ["HTML", "CSS", "JS"]
 	},
 	{
 		"id": 4,
-		"title": "",
-		"desc": "",
+		"title": "Project 5",
+		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
 		"img": "",
 		"deployed": "",
-		"repo": ""
+		"repo": "",
+		"techs": ["HTML", "CSS", "JS"]
 	},
 	{
 		"id": 5,
-		"title": "",
-		"desc": "",
+		"title": "Project 6",
+		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
 		"img": "",
 		"deployed": "",
-		"repo": ""
+		"repo": "",
+		"techs": ["HTML", "CSS", "JS"]
 	},
 	{
 		"id": 6,
-		"title": "",
-		"desc": "",
+		"title": "Project 7",
+		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
 		"img": "",
 		"deployed": "",
-		"repo": ""
+		"repo": "",
+		"techs": ["HTML", "CSS", "JS"]
 	}
 ]

@@ -14,9 +14,11 @@ function ProjectsPage() {
             <h1 className="font-title tracking-[0.7rem] text-5xl bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text inline-block">My Work</h1>
          </div>
          <FeaturedProject />
-         {projects.map(projItem => (
-            <Project key={projItem.id} title={projItem.title} desc={projItem.desc} img={projItem.img} deployed={projItem.deployed} repo={projItem.repo} />
-         ))} 
+         <div className="flex flex-col 2xl:flex-row justify-center items-center rounded-lg mx-5 2xl:m-40">
+            {projects.map(projItem => (
+               <Project key={projItem.id} title={projItem.title} desc={projItem.desc} img={projItem.img} deployed={projItem.deployed} repo={projItem.repo} techs={projItem.techs} peer={projItem.id}/>
+            ))} 
+         </div>
       </>      
    )
 };
