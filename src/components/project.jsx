@@ -1,4 +1,10 @@
-import React from 'react'
+import React from "react";
+
+// props:
+// title
+// desc
+// imgurl
+// link
 
 function Project() {
    return (
