@@ -4,7 +4,7 @@ import { NavIcons, NavItems } from "./NavData";
 
 const HeaderNavButton = (props) => {
    return (
-      <a href={props.link} className="rounded-lg px-4 py-2 mx-5 my-10 group ease-in-out duration-700 hover:scale-150 hover:bg-neutral-700 flex justify-center items-center">
+      <a href={props.link} className="rounded-lg px-4 py-2 mx-5 my-10 group ease-in-out duration-700 hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] flex justify-center items-center">
          {NavIcons(props)}
       </a>
    )
