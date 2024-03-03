@@ -32,7 +32,6 @@ Provide instructions and examples for use.
 ![Deployed Application](undefined)
 	
 ## Credits and Sources
-- 
 - Animation library from [GSAP](https://gsap.com/).
 - Icons from [Lucide icons](https://lucide.dev/).
 - Favicon from [_kkeopi on Instagram](https://www.instagram.com/p/B56jBmCj6ns/?epik=dj0yJnU9UVpwY2ZwaW0tNjFwUHNPcGUydzJfT25qWlZ2dXBzLTMmcD0wJm49V0pwU0RXM3Z4ZmgxeFlqel8wZ19uQSZ0PUFBQUFBR1hpYVBF).

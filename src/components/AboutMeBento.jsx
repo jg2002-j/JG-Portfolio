@@ -49,9 +49,9 @@ function AboutMeBento() {
 			</div>
 			
 			<div className="row-start-6 col-start-1 row-span-6 col-span-8 rounded-xl bg-[#2a2744] hover:bg-[#44446c] cursor-default ease-in-out duration-700 text-slate-200 flex flex-col justify-between items-center p-4 peer/songs">
-				<Spotify wide link="https://open.spotify.com/track/5Y35SjAfXjjG0sFQ3KOxmm?si=8a6c496b86624b78" />
-				<Spotify wide link="https://open.spotify.com/track/3vkCueOmm7xQDoJ17W1Pm3?si=1a188c7af1084ddc" />
-				<Spotify wide link="https://open.spotify.com/track/0tkBOcK7oRVXQJY97zzSvr?si=47a25e084d4d4640" />
+				<Spotify wide link="https://open.spotify.com/track/2KnuaZYoGzDoHiBTNYOTXG?si=4761d01a93fb49a2" />
+				<Spotify wide link="https://open.spotify.com/track/180AbZduI6bYQIzwCHRwu9?si=ce1ed7bc3c2d479a" />
+				<Spotify wide link="https://open.spotify.com/track/4JJ5zGKnb1IpERyBrfmb1y?si=20091b36be924115" />
 			</div>
 			<div className="row-start-5 col-start-1 row-span-1 col-span-8 rounded-xl bg-slate-400 scale-0 peer-hover/songs:scale-100 ease-in-out duration-700 z-30 flex justify-center items-center p-4">
 				<h1 className="text-center text-xs text-[#2a2744]">These are some of the <strong>songs</strong> I'm listening to right now :)</h1>

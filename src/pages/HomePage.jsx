@@ -19,7 +19,7 @@ function HomePage() {
          <img className="homepage-img -z-10" src={bgImage} alt="bg art" />
          <Header />
          <div className="flex justify-center items-center h-1/2">
-            <h1 className="font-title pgtitle tracking-[12px] uppercase mix-blend-difference text-slate-200 mx-8 hover:tracking-[2rem] hover:scale-110 ease-in-out duration-1000 select-none">Jai Gandhi</h1>
+            <h1 className="font-title pgtitle text-center tracking-[12px] uppercase mix-blend-difference text-slate-200 mx-8 hover:tracking-[2rem] hover:scale-110 ease-in-out duration-1000 select-none">Jai Gandhi</h1>
          </div>
          <div className="grid 2xl:grid-cols-4 2xl:grid-rows-2 grid-cols-1 grid-rows-1 m-5">
             <div className="hidden h-32 2xl:block border-r-[1px] border-b-[1px] border-gray-400 w-full"></div>
