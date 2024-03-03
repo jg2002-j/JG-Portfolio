@@ -23,13 +23,13 @@ gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionP
 
 function App() {
 	return (
-		<div className="">
+		<>
 			<HomePage  />
 			<AboutMePage />
 			<ProjectsPage />
 			<Experience />
 			<ContactPage />
-		</div>
+		</>
 	);
 }
 
