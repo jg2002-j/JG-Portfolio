@@ -4,7 +4,7 @@ import Project from "../components/Project";
 
 function ProjectsPage() {
    return (
-	   <div id="projects">
+	   <div className="h-dvh" id="projects">
          <h1 className="font-title tracking-[0.7rem] text-5xl bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text inline-block">My Work</h1>
          <FeaturedProject />
          <Project />  

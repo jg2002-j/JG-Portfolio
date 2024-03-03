@@ -19,6 +19,10 @@
 
 }
 
+*{
+	scroll-padding: 5vh;
+}
+
 .font-title{
 	font-family: "Akira", sans-serif;
 }
