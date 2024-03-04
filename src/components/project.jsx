@@ -16,22 +16,27 @@ const techBadges = [
    {name: "Git", value: `![Git Badge](https://img.shields.io/badge/Git-white?logo=git&logoColor=%23F05032)`,},
    {name: "GitHub", value: `![GitHub Badge](https://img.shields.io/badge/GitHub-white?logo=github&logoColor=%23181717)`,},
    {name: "Bootstrap", value: `![Bootstrap Badge](https://img.shields.io/badge/Bootstrap-white?logo=bootstrap&logoColor=%237952B3)`,},
+   {name: "TailwindCSS", value: `![TailwindCSS Badge](https://img.shields.io/badge/TailwindCSS-white?logo=tailwindcss&logoColor=%2306B6D4)`,},
    {name: "jQuery", value: `![jQuery Badge](https://img.shields.io/badge/jQuery-white?logo=jquery&logoColor=%230769AD)`,},
    {name: "Node.js", value: `![Node.js Badge](https://img.shields.io/badge/Node.js-white?logo=nodedotjs&logoColor=%#339933)`,},
-   {name: "Next.js", value: `![Next.js Badge](https://img.shields.io/badge/Next.js-white?logo=next.js&logoColor=%23000000)`,},
    {name: "React.js", value: `![React.js Badge](https://img.shields.io/badge/React.js-white?logo=react&logoColor=%2361DAFB)`,},
+   {name: "Next.js", value: `![Next.js Badge](https://img.shields.io/badge/Next.js-white?logo=next.js&logoColor=%23000000)`,},
 ]
 
 function Project(props) {
-   let techs = props.techs;
+   
+   let projTechs = props.techs
+   console.log(projTechs)
+   // let techs = projTechs.map((projTechs) = projTechs == techBadges.name);
+   
    return (
 	   <div className="text-slate-200 hover:bg-[#1a1923] hover:p-4 hover:scale-150 hover:z-20 ease-in-out duration-1000 overflow-hidden">
          <img className="aspect-video w-full border-2 rounded mb-10" src={props.img} alt={props.name} />
          <h1 className="font-header text-4xl text-slate-300 mb-5">{props.title}</h1>
-         <div className="flex justify-start items-center mb-3 flex-nowrap overflow-x-auto">
-            {techs.map(tech => (
+         <div className="flex justify-start items-center mb-3">
+            {/* {techs.map(tech => (
                <span className="border-2 border-opacity-50 border-stone-200 rounded-md px-2 py-1 me-2 text-xs">{tech}</span>
-            ))}
+            ))} */}
          </div>
          <p className="max-w-[40ch] mb-5">{props.desc}</p>
          <div className="grid auto-rows-[1] auto-cols-[25%_25%_25%_25%] gap-y-2">

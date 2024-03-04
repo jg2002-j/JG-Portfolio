@@ -1,4 +1,5 @@
 import React from "react";
+import ContactForm from "../components/ContactForm";
 
 // TODO: Must have a contact form for handling events
 // TODO: Must include contact information:
@@ -12,6 +13,7 @@ function ContactPage() {
    return (
 	   <div id="contactme">
          ContactPage
+         <ContactForm />
       </div>
    )
 };
