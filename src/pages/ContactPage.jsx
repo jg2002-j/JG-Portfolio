@@ -1,7 +1,7 @@
 import React from "react";
 import ContactForm from "../components/ContactForm";
 
-// TODO: Must have a contact form for handling events
+//// Must have a contact form for handling events
 // TODO: Must include contact information:
    // Email address
    // Link to a PDF version of your CV

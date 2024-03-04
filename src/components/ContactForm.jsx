@@ -19,7 +19,23 @@ function ContactForm() {
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
-		alert(formData);
+		switch (formData.rating) {
+			case "0":
+			case "1":
+				alert(`Damn, only ${formData.rating}★? Don't worry, ${formData.name}, I'll get my site up to scratch in no time.`);
+				break;
+			case "2":
+			case "3":
+				alert(`Thanks for the ${formData.rating}★, ${formData.name}, I'll work on getting it improved ASAP!`);
+				break;
+			case "4":
+			case "5":
+				alert(`Woah! ${formData.name}, you really rated my site ${formData.rating}★? Thanks!`);
+				break;
+			default:
+				alert(":P")
+				break;
+		}
 		setFormData({
 			name: "",
 			email: "",
@@ -45,7 +61,7 @@ function ContactForm() {
 					value={formData.email}
 					name="email"
 					onChange={handleInputChange}
-					type="text"
+					type="email"
 					placeholder="What's your email?"
 					id="" 
 				/>
