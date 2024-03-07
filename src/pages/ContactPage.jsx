@@ -1,4 +1,5 @@
 import React from "react";
+import ContactMe from "../components/ContactMe";
 import ContactForm from "../components/ContactForm";
 
 //// Must have a contact form for handling events
@@ -11,9 +12,10 @@ import ContactForm from "../components/ContactForm";
 
 function ContactPage() {
    return (
-	   <div id="contactme">
-         ContactPage
-         <ContactForm />
+	   <div className="2xl:mx-60 m-20" id="contactme">
+         <div className="2xl:mx-60 m-20 flex flex-col justify-start items-center" id="contact">
+            <h1 className="font-title tracking-[0.7rem] text-5xl bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text inline-block">Contact Me</h1>
+         </div>
       </div>
    )
 };

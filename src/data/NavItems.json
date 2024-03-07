@@ -1,7 +1,35 @@
 [
-   {"id": 1, "name": "Home", "link": "", "icon": "Home"},
-   {"id": 2, "name": "About Me", "link": "aboutme", "icon": "CircleUserRound"},
-   {"id": 3, "name": "Projects", "link": "projects", "icon": "CodeSquare"},
-   {"id": 4, "name": "Experience", "link": "experience", "icon": "FileText"},
-   {"id": 5, "name": "Contact Me", "link": "contactme", "icon": "MessageSquareMore"}
+   {
+      "id": 1, 
+      "name": "Home", 
+      "link": "/", 
+      "route": "/",
+      "icon": "Home", 
+      "type": "page"
+   },
+   {
+      "id": 2, 
+      "name": "Projects", 
+      "link": "projects", 
+      "route": "projects/*",
+      "icon": "CodeSquare", 
+      "type": "page"
+   },
+   {
+      "id": 3, 
+      "name": "About Me", 
+      "link": "about", 
+      "route": "about",
+      "icon": "CircleUserRound", 
+      "type": "page"
+   },
+   {
+      "id": 4, 
+      "name": "Contact Me", 
+      "link": "contact", 
+      "route": "contact",
+      "icon": "MessageSquareMore", 
+      "type": "page"
+   }
 ]
+

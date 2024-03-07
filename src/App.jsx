@@ -1,10 +1,12 @@
 import React from "react";
+
 import HomePage from "./pages/HomePage";
-import AboutMePage from "./pages/AboutMePage";
 import ProjectsPage from "./pages/ProjectsPage";
-import Experience from "./pages/Experience";
+import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
+
 import Sidebar from "./components/Sidebar";
+import ContactMe from "./components/ContactMe";
 import NavItems from "./data/NavItems.json";
 
 import "./css/index.css";
@@ -25,6 +27,39 @@ import { PixiPlugin } from "gsap/PixiPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin);
 
+
+//* PAGE: Home
+	// COMPONENT: Header 
+	// COMPONENT: Featured Proj
+
+//* PAGE: Projects
+	//* COMPONENT: Featured Proj
+	//* COMPONENT: All Projects
+		// COMPONENT: Project
+		// COMPONENT: ProjectModal (Enlarged View)
+
+//* PAGE: About
+	// COMPONENT: About Me
+		// COMPONENT: AboutMeBento
+	//* COMPONENT: Experience
+
+//* PAGE: Contact
+
+//! ON ALL PAGES:
+	//! COMPONENT: Sidebar
+	//! Page Content
+	//! COMPONENT: ContactMe
+
+// NAVITEMS:
+	// Home (Page)
+	// Projects (Page)
+		// Projects/FeaturedProject (Section)
+		// Projects/AllProjects (Section)
+	// About (Page)
+		// About/Experience (Section)
+	// Contact (Page)
+
+
 function App() {
 
 	const [sidebarState, setsidebarState] = React.useState("hidden");
@@ -35,14 +70,14 @@ function App() {
 
 	return (
 		<Router>
-         <Sidebar state={sidebarState} toggleSidebar={toggleSidebar} />
 			<Routes>
-				<Route path={NavItems[0].link} element={<HomePage/>} />
-				<Route path={NavItems[1].link} element={<AboutMePage/>} />
-				<Route path={NavItems[2].link} element={<ProjectsPage/>} />
-				<Route path={NavItems[3].link} element={<Experience/>} />
-				<Route path={NavItems[4].link} element={<ContactPage/>} />
+				<Route path={NavItems[0].route} element={<HomePage/>} />
+				<Route path={NavItems[1].route} element={<ProjectsPage/>} />
+				<Route path={NavItems[2].route} element={<AboutPage/>} />
+				<Route path={NavItems[3].route} element={<ContactPage/>} />
 			</Routes>
+			<Sidebar state={sidebarState} toggleSidebar={toggleSidebar} />
+			<ContactMe />
 		</Router>
 	);
 }
