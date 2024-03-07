@@ -2,18 +2,18 @@ import React from "react";
 import { NavIcons } from "./NavIcons";
 import NavData from "../data/NavItems.json";
 import { MenuSquare } from "lucide-react";
-
+import { NavLink, Link } from "react-router-dom";
 
 
 const SidebarNavButton = (props) => {
    return (
 		<li>
-			<a href={props.link} className="rounded-lg px-4 py-2 mx-5 my-10 group hover:scale-110 ease-in-out duration-700 flex justify-start items-center">
+			<NavLink to={props.link} className={`${({isActive}) => isActive ? "active" : ""} rounded-lg px-4 py-2 mx-5 my-10 group hover:scale-110 ease-in-out duration-700 flex justify-start items-center`}>
 				{NavIcons(props)}
 				<h2 className="ms-5 font-title text-xl tracking-widest text-stone-200 group-hover:tracking-[0.5rem] origin-start ease-in-out duration-700">
 					{props.name}
 				</h2>
-			</a>
+			</NavLink>
 		</li>
    )
 }
