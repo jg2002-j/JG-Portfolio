@@ -34,6 +34,7 @@ Provide instructions and examples for use.
 ## Credits and Sources
 - Animation library from [GSAP](https://gsap.com/).
 - React Router from [NPM](https://www.npmjs.com/package/react-router-dom).
+- Axios from [NPM](https://www.npmjs.com/package/axios).
 - Icons from [Lucide icons](https://lucide.dev/).
 - Favicon from [_kkeopi on Instagram](https://www.instagram.com/p/B56jBmCj6ns/?epik=dj0yJnU9UVpwY2ZwaW0tNjFwUHNPcGUydzJfT25qWlZ2dXBzLTMmcD0wJm49V0pwU0RXM3Z4ZmgxeFlqel8wZ19uQSZ0PUFBQUFBR1hpYVBF).
 - HomePage background art from [Xebelion on Artstation](https://www.artstation.com/artwork/WB1JeE).
