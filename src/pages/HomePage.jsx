@@ -1,6 +1,5 @@
 import React from "react";
 import Header from "../components/Header";
-import Sidebar from "../components/Sidebar";
 import bgImage from "../assets/xebelion-15.jpg";
 
 //// This should be a welcome landing page that contains:
@@ -12,13 +11,6 @@ import bgImage from "../assets/xebelion-15.jpg";
 const currentTime = "{TIME}";
 
 function HomePage() {
-
-   const [sidebarState, setsidebarState] = React.useState("hidden");
-   const toggleSidebar = (state) => {
-      if (state == "hidden") {setsidebarState("visible");} 
-      else if (state == "visible") {setsidebarState("hidden");}
-   };
-
    return (
       <div className="h-dvh rounded-b-3xl" id="home">
          <img className="homepage-img -z-10" src={bgImage} alt="bg art" />
@@ -39,7 +31,6 @@ function HomePage() {
             <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div>
             <div className="hidden h-32 2xl:block w-full"></div>
          </div>
-         <Sidebar state={sidebarState} toggleSidebar={toggleSidebar} />
       </div>
    )
 };
