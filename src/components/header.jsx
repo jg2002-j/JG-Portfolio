@@ -10,7 +10,7 @@ const renderHeaderNavIcons = (NavItems) => {
    return NavItems.map(navItem => {
       if (navItem.type == "page") {
          return (
-            <NavLink to={navItem.link} className="rounded-lg px-4 py-2 mx-5 my-10 group ease-in-out duration-700 hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] flex justify-center items-center">
+            <NavLink to={navItem.link} key={navItem.id} className="rounded-lg px-4 py-2 mx-5 my-10 group ease-in-out duration-700 hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] flex justify-center items-center">
                {NavIcons(navItem.icon, "text-[#E0E2DB]")}
             </NavLink>
          )
