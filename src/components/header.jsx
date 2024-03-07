@@ -1,16 +1,22 @@
 import React from 'react';
 import { NavIcons } from "./NavIcons";
-import NavData from "../data/NavItems.json";
+import NavItems from "../data/NavItems.json";
+import { NavLink } from 'react-router-dom';
 
 // TODO: Must be rendered across every page component of the site
 //// Must contain a Navbar
 
-const HeaderNavButton = (props) => {
-   return (
-      <a href={props.link} className="rounded-lg px-4 py-2 mx-5 my-10 group ease-in-out duration-700 hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] flex justify-center items-center">
-         {NavIcons(props)}
-      </a>
-   )
+const renderHeaderNavIcons = (NavItems) => {
+   return NavItems.map(navItem => {
+      if (navItem.type == "page") {
+         return (
+            <NavLink to={navItem.link} className="rounded-lg px-4 py-2 mx-5 my-10 group ease-in-out duration-700 hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] flex justify-center items-center">
+               {NavIcons(navItem.icon, "text-[#E0E2DB]")}
+            </NavLink>
+         )
+      }
+      return null;
+   })
 }
 
 function Header() {
@@ -24,9 +30,7 @@ function Header() {
             <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div>
             <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div>
             <div className="h-32 flex 2xl:border-r-[1px] border-gray-400 w-full justify-evenly items-center px-3">
-               {NavData.map(navItem => (
-                  <HeaderNavButton key={navItem.id} name={navItem.name} link={navItem.link} icon={navItem.icon} />
-               ))}
+               {renderHeaderNavIcons(NavItems)}
             </div>
             <div className="hidden h-32 2xl:block w-full"></div>
          </div>

@@ -2,17 +2,25 @@ import React from "react";
 import { NavIcons } from "./NavIcons";
 import NavData from "../data/NavItems.json";
 import { MenuSquare } from "lucide-react";
-import { NavLink, Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 
 
 const SidebarNavButton = (props) => {
-   return (
-		<li>
-			<NavLink to={props.link} className={`rounded-lg px-4 py-2 mx-5 my-10 group hover:scale-110 ease-in-out duration-700 flex justify-start items-center`}>
-				{NavIcons(props)}<h2 className="ms-5 font-title text-xl tracking-widest text-stone-200 group-hover:tracking-[0.5rem] origin-start ease-in-out duration-700">{props.name}</h2>
+	if (props.type == "page") {
+		return(
+			<li>
+				<NavLink to={props.link} className={`rounded-lg px-4 py-2 mt-8 group ease-in-out duration-700 flex justify-start items-center`}>
+					{NavIcons(props.icon, "text-[#cdd2d4] group-hover:text-[#9d7d7d]")}<h2 className="ms-5 font-title tracking-[0.275rem] text-xl text-[#cdd2d4] group-hover:text-[#9d7d7d] origin-start ease-in-out duration-700">{props.name}</h2>
+				</NavLink>
+			</li>
+		)
+	} else if (props.type == "section") {
+		return(
+			<NavLink to={props.link} className={`rounded-lg px-4 py-2 ms-8 mt-1 group ease-in-out duration-700 flex justify-start items-center`}>
+				{NavIcons(props.icon, "text-[#cdd2d4] group-hover:text-[#9d7d7d]")}<h2 className="ms-5 font-title tracking-[0.275rem] text-sm text-[#cdd2d4] group-hover:text-[#9d7d7d] origin-start ease-in-out duration-700">{props.name}</h2>
 			</NavLink>
-		</li>
-   )
+		)
+	}
 }
 
 function Sidebar(props) {
@@ -29,7 +37,7 @@ function Sidebar(props) {
 					<h1 className="font-title text-3xl tracking-[5px] uppercase inline-block bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text">Where to?</h1>
 					<ul>
 						{NavData.map(navItem => (
-							<SidebarNavButton key={navItem.id} name={navItem.name} link={navItem.link} icon={navItem.icon} />
+							<SidebarNavButton key={navItem.id} name={navItem.name} link={navItem.link} icon={navItem.icon} type={navItem.type} />
 						))}
 					</ul>
 				</div>
