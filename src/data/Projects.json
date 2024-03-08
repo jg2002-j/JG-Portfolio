@@ -1,56 +1,56 @@
 [
 	{
 		"id": 1,
-		"title": "Project 2",
+		"title": "Web Development Notes",
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
-		"img": "imglink",
-		"deployed": "deployed app link",
-		"repo": "repolink",
-		"techs": ["HTML", "CSS", "JS"]
+		"img": "https://i.imgur.com/x0XRxDM.png",
+		"deployed": "https://jg2002-j.github.io/webdevnotes/",
+		"repo": "https://github.com/jg2002-j/webdevnotes",
+		"techs": ["HTML", "CSS", "JavaScript", "GitHub", "Bootstrap"]
 	},
 	{
 		"id": 2,
 		"title": "Project 3",
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
-		"img": "",
+		"img": "https://images.unsplash.com/photo-1709403338528-b1b853edd004?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		"deployed": "",
 		"repo": "",
-		"techs": ["HTML", "CSS", "JS"]
+		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Bootstrap", "TailwindCSS", "jQuery", "Node.js", "React.js", "Next.js"]
 	},
 	{
 		"id": 3,
 		"title": "Project 4",
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
-		"img": "",
+		"img": "https://images.unsplash.com/photo-1709403338204-fd3ebeb4582a?q=80&w=2704&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		"deployed": "",
 		"repo": "",
-		"techs": ["HTML", "CSS", "JS"]
+		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Bootstrap", "TailwindCSS", "jQuery", "Node.js", "React.js", "Next.js"]
 	},
 	{
 		"id": 4,
 		"title": "Project 5",
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
-		"img": "",
+		"img": "https://images.unsplash.com/photo-1709403338528-b1b853edd004?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		"deployed": "",
 		"repo": "",
-		"techs": ["HTML", "CSS", "JS"]
+		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Bootstrap", "TailwindCSS", "jQuery", "Node.js", "React.js", "Next.js"]
 	},
 	{
 		"id": 5,
 		"title": "Project 6",
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
-		"img": "",
+		"img": "https://images.unsplash.com/photo-1709142223251-f3c45261540e?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		"deployed": "",
 		"repo": "",
-		"techs": ["HTML", "CSS", "JS"]
+		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Bootstrap", "TailwindCSS", "jQuery", "Node.js", "React.js", "Next.js"]
 	},
 	{
 		"id": 6,
 		"title": "Project 7",
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
-		"img": "",
+		"img": "https://images.unsplash.com/photo-1708113457273-13c24aa3c220?q=80&w=2662&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		"deployed": "",
 		"repo": "",
-		"techs": ["HTML", "CSS", "JS"]
+		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Bootstrap", "TailwindCSS", "jQuery", "Node.js", "React.js", "Next.js"]
 	}
 ]

@@ -14,7 +14,7 @@ function ProjectsPage() {
    return (
       <>
          <div className="2xl:mx-60 m-20 flex flex-col justify-start items-center" id="projects">
-            <h1 className="font-title tracking-[0.7rem] text-5xl bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text inline-block">My Work</h1>
+            <h1 className="font-title text-center tracking-[0.7rem] text-5xl bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text inline-block">My Work</h1>
          </div>
          <Link to={NavItems[2].route} role="button" className="p-4 m-2 rounded-lg bg-slate-50">Show {NavItems[2].name}</Link>
          <Link to={NavItems[3].route} role="button" className="p-4 m-2 rounded-lg bg-slate-50">Show {NavItems[3].name}</Link>
