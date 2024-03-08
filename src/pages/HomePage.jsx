@@ -15,7 +15,6 @@ import dayjs from "dayjs";
 const currentTime = dayjs().format("HH:mm:ss");
 
 function HomePage() {
-   console.log(currentTime)
    return (
       <>
          <div className="h-dvh rounded-b-3xl" id="home">
