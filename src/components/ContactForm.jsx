@@ -1,4 +1,5 @@
 import React from "react";
+import { Pointer } from "lucide-react";
 
 function ContactForm() {
 
@@ -46,9 +47,10 @@ function ContactForm() {
 
   	return (
 		<>
-			<form className="flex flex-col gap-3 justify-center items-start m-5">
+			<form className="grid grid-rows-1 grid-cols-5 gap-3 ease-in-out duration-1000">
+				<h2 className="font-title text-4xl col-start-1 row-start-1 row-span-1 self-center col-span-5 mx-auto group-hover:hidden bg-gradient-to-r from-slate-300 to-neutral-500 text-transparent bg-clip-text">Get in touch<Pointer size={32} color="#737373 " className="ms-5 inline" /></h2>
 				<input 
-					className="px-3 py-1 rounded-lg"
+					className="text-center text-stone-400 px-3 py-5 rounded-lg bg-slate-200 bg-opacity-5 hover:bg-slate-400 hover:bg-opacity-15 ease-in-out duration-1000 col-span-1 row-span-1 row-start-1 col-start-1 opacity-0 group-hover:opacity-100"
 					value={formData.name}
 					name="name"
 					onChange={handleInputChange}
@@ -57,7 +59,7 @@ function ContactForm() {
 					id="" 
 				/>
 				<input 
-					className="px-3 py-1 rounded-lg"
+					className="text-center text-stone-400 px-3 py-5 rounded-lg bg-slate-200 bg-opacity-5 hover:bg-slate-400 hover:bg-opacity-15 ease-in-out duration-1000 col-span-1 row-span-1 row-start-1 col-start-2 opacity-0 group-hover:opacity-100"
 					value={formData.email}
 					name="email"
 					onChange={handleInputChange}
@@ -66,7 +68,7 @@ function ContactForm() {
 					id="" 
 				/>
 				<input 
-					className="px-3 py-1 rounded-lg"
+					className="text-center text-stone-400 px-3 py-5 rounded-lg bg-slate-200 bg-opacity-5 hover:bg-slate-400 hover:bg-opacity-15 ease-in-out duration-1000 col-span-1 row-span-1 row-start-1 col-start-3 opacity-0 group-hover:opacity-100"
 					value={formData.rating}
 					name="rating"
 					onChange={handleInputChange}
@@ -77,7 +79,7 @@ function ContactForm() {
 					id="" 
 				/>
 				<input 
-					className="px-3 py-1 rounded-lg"
+					className="text-center text-stone-400 px-3 py-5 rounded-lg bg-slate-200 bg-opacity-5 hover:bg-slate-400 hover:bg-opacity-15 ease-in-out duration-1000 col-span-1 row-span-1 row-start-1 col-start-4 opacity-0 group-hover:opacity-100"
 					value={formData.message}
 					name="message"
 					onChange={handleInputChange}
@@ -85,7 +87,7 @@ function ContactForm() {
 					placeholder="Leave a message for me :)"
 					id="" 
 				/>
-				<button className="text-slate-200 border-2 px-3 py-1 rounded-lg" type="submit" onClick={handleFormSubmit}>Submit</button>
+				<button className="text-slate-200 px-3 py-2 rounded-lg bg-slate-200 bg-opacity-5 hover:bg-slate-500 ease-in-out duration-1000 col-span-1 row-span-1 row-start-1 col-start-5 opacity-0 group-hover:opacity-100" type="submit" onClick={handleFormSubmit}>Submit</button>
 			</form>
 		</>
   	)
