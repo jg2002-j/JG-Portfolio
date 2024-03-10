@@ -15,9 +15,6 @@ import CurrentTime from "../components/CurrentTime";
 
 
 function HomePage() {
-
-
-
    return (
       <>
          <div className="h-dvh rounded-b-3xl" id="home">
