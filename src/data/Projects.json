@@ -10,47 +10,47 @@
 	},
 	{
 		"id": 2,
-		"title": "Project 3",
-		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
-		"img": "https://images.unsplash.com/photo-1709403338528-b1b853edd004?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-		"deployed": "",
-		"repo": "",
-		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Bootstrap", "TailwindCSS", "jQuery", "Node.js", "React.js", "Next.js"]
+		"title": "Bootstrap Portfolio",
+		"desc": "This challenge involved designing a web page that displayed my work to-date on a page designed with Bootstrap, HTML and CSS.",
+		"img": "https://github.com/jg2002-j/bootstrap-portfolio/blob/main/images/deployed.png?raw=true",
+		"deployed": "https://jg2002-j.github.io/bootstrap-portfolio/",
+		"repo": "https://github.com/jg2002-j/bootstrap-portfolio",
+		"techs": ["HTML", "CSS", "Git", "GitHub", "Bootstrap"]
 	},
 	{
 		"id": 3,
-		"title": "Project 4",
-		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
-		"img": "https://images.unsplash.com/photo-1709403338204-fd3ebeb4582a?q=80&w=2704&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-		"deployed": "",
-		"repo": "",
-		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Bootstrap", "TailwindCSS", "jQuery", "Node.js", "React.js", "Next.js"]
+		"title": "Weather Dashboard",
+		"desc": "This challenge involved designing a web page that pulled data from a Server API (OpenWeather API) and displaying that in 2 views: one for today's weather, and one section for a 5-day forecast. The web page also has functionality of storing the user's 5 most recent searches to assist with pulling up that data quicker.",
+		"img": "https://github.com/jg2002-j/weather-dashboard/blob/main/assets/deployed.png?raw=true",
+		"deployed": "https://jg2002-j.github.io/weather-dashboard/",
+		"repo": "https://github.com/jg2002-j/weather-dashboard",
+		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Bootstrap", "jQuery"]
 	},
 	{
 		"id": 4,
-		"title": "Project 5",
-		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
-		"img": "https://images.unsplash.com/photo-1709403338528-b1b853edd004?q=80&w=2564&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"title": "Team-Profile Generator",
+		"desc": "This project allowed me to hone my skills with npm, inquirer and node.js - and developed familiarity with test-driven development by writing code that had to pass the tests provided. By collecting user responses with inquirer, I then processed the data and accordingly wrote it to a HTML file to display the members of a team.",
+		"img": "https://github.com/jg2002-j/team-profile-generator/blob/main/assets/deployed.png?raw=true",
 		"deployed": "",
-		"repo": "",
-		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Bootstrap", "TailwindCSS", "jQuery", "Node.js", "React.js", "Next.js"]
+		"repo": "https://github.com/jg2002-j/team-profile-generator",
+		"techs": ["HTML", "JavaScript", "Git", "GitHub", "Node.js"]
 	},
 	{
 		"id": 5,
-		"title": "Project 6",
-		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
-		"img": "https://images.unsplash.com/photo-1709142223251-f3c45261540e?q=80&w=2664&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"title": "README Generator",
+		"desc": "This project helped me learn node.js by installing a third-party package (Inquirer) through npm. Using the readme docs for that package, I then created several questions, gathered the user input and implemented it via template literals into a 'write' function to a README.md document.",
+		"img": "https://github.com/jg2002-j/readme-generator/blob/main/assets/deployed_application.png?raw=true",
 		"deployed": "",
-		"repo": "",
-		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Bootstrap", "TailwindCSS", "jQuery", "Node.js", "React.js", "Next.js"]
+		"repo": "https://github.com/jg2002-j/readme-generator",
+		"techs": ["JavaScript", "Git", "GitHub", "Node.js"]
 	},
 	{
 		"id": 6,
-		"title": "Project 7",
+		"title": "Password Generator",
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
-		"img": "https://images.unsplash.com/photo-1708113457273-13c24aa3c220?q=80&w=2662&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-		"deployed": "",
-		"repo": "",
-		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "Bootstrap", "TailwindCSS", "jQuery", "Node.js", "React.js", "Next.js"]
+		"img": "https://github.com/jg2002-j/password-generator/raw/main/Screenshot%202024-01-23%20174657.png",
+		"deployed": "https://jg2002-j.github.io/password-generator/",
+		"repo": "https://github.com/jg2002-j/password-generator",
+		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub"]
 	}
 ]
