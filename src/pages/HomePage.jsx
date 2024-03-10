@@ -3,18 +3,21 @@ import Header from "../components/Header";
 import bgImage from "../assets/xebelion-15.jpg";
 import FeaturedProject from "../components/FeaturedProject";
 import Skills from "../components/Skills";
+import CurrentTime from "../components/CurrentTime";
 
-import dayjs from "dayjs";
 
 //// This should be a welcome landing page that contains:
-   //// Your Name
-   //// A headshot of you (or an avatar)
-   //// Your brand statement
-   //// Some indication that this is your portfolio site
+//// Your Name
+//// A headshot of you (or an avatar)
+//// Your brand statement
+//// Some indication that this is your portfolio site
 
-const currentTime = dayjs().format("HH:mm:ss");
+
 
 function HomePage() {
+
+
+
    return (
       <>
          <div className="h-dvh rounded-b-3xl" id="home">
@@ -27,7 +30,7 @@ function HomePage() {
                <div className="hidden h-32 2xl:block border-r-[1px] border-b-[1px] border-gray-400 w-full"></div>
                <div className="h-32 flex 2xl:border-r-[1px] 2xl:border-b-[1px] border-gray-400 w-full justify-evenly items-center px-3">
                   <h2 className="text-slate-200 text-md font-title tracking-[0.25rem] px-4 py-2 ease-in-out duration-700 rounded-lg hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] cursor-default">LONDON</h2>
-                  <h2 className="text-slate-200 text-md font-title tracking-[0.25rem] px-4 py-2 ease-in-out duration-700 rounded-lg hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] cursor-default">{currentTime}</h2>
+                  <h2 className="text-slate-200 text-md font-title tracking-[0.25rem] px-4 py-2 ease-in-out duration-700 rounded-lg hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] cursor-default">{<CurrentTime/>}</h2>
                </div>
                <div className="hidden h-32 2xl:block border-r-[1px] border-b-[1px] border-gray-400 w-full"></div>
                <div className="hidden h-32 2xl:block border-b-[1px] border-gray-400 w-full"></div>
