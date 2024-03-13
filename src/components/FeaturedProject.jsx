@@ -21,13 +21,13 @@ function FeaturedProject(project) {
    };
 
    return (
-      <div className="border-2 mx-10 2xl:mx-[5vw] rounded-3xl flex flex-col 2xl:flex-row gap-5 justify-evenly">
+      <div className="mx-10 2xl:mx-[7vw] rounded-3xl flex flex-col 2xl:flex-row gap-10 justify-evenly">
          
-         <div className="border-2 border-red-500 text-center flex-grow min-w-[30%]" id="featuredprojimg">
-            <img src={enlargedProj.img} alt="" className="aspect-video overflow-hidden object-cover rounded-3xl" />
+         <div className="text-center flex-grow min-w-[50%] border-2" id="featuredprojimg">
+            <img src={enlargedProj.img} alt="" className="w-full object-contain rounded-3xl border-2 border-yellow-300" />
          </div>
 
-         <div className="border-2 border-red-500 p-5 flex-grow min-w-[30%] flex flex-row 2xl:flex-col">
+         <div className="p-5 flex-grow min-w-[20%] flex flex-row 2xl:flex-col">
             <h1 className="font-header text-6xl text-slate-300 my-10">{enlargedProj.title}</h1>
             <div className="flex flex-wrap justify-start items-center gap-2 my-2">
                {enlargedProj.tags.map(tag => (<span className="py-1 px-2 border-2 border-slate-600 text-xs text-slate-300 uppercase tracking-widest rounded-lg select-none">{tag}</span>))}
