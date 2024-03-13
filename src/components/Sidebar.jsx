@@ -51,11 +51,11 @@ function Sidebar() {
 		<>
 			<div className="fixed top-0 left-0 w-vw h-dvh">
 				<button onClick={()=>document.getElementById("navigation").showModal()} className="absolute z-50 top-10 left-10 inline-flex items-center justify-center p-0.5 m-2 overflow-hidden text-sm font-medium text-gray-900 rounded-lg group bg-gradient-to-br from-purple-600 to-blue-500 group-hover:from-purple-600 group-hover:to-blue-500 hover:text-white dark:text-white">
-					<span className="relative px-3 py-1.5 transition-all ease-in duration-75 bg-white dark:bg-gray-900 rounded-md group-hover:bg-opacity-0"><MenuSquare /></span>
+					<span className="relative px-3 py-1.5 transition-all ease-in duration-200 bg-gray-900 rounded-md group-hover:bg-opacity-0"><MenuSquare /></span>
 				</button>
 			</div>
 
-			<dialog id="navigation" className="modal modal-start">
+			<dialog id="navigation" className="modal left-0">
 				<div className="modal-box">
 					<div className="flex flex-col justify-start items-start my-[6rem] mx-11">
 						<h1 className="font-title text-3xl tracking-[5px] uppercase inline-block bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text">Where to?</h1>
