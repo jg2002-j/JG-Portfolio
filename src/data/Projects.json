@@ -7,7 +7,7 @@
 		"img": "",
 		"deployed": "",
 		"repo": "",
-		"techs": ["EdX", "HTML", "CSS", "JavaScript", "NPM", "Vite", "React", "React Router", "Excalidraw", "PostCSS", "TailwindCSS", "DaisyUI", "MongoDB", "Git", "GitHub", "Netlify"]
+		"techs": ["EdX", "HTML", "CSS", "JavaScript", "NPM", "Vite", "React", "React Router", "Axios", "Excalidraw", "PostCSS", "TailwindCSS", "DaisyUI", "MongoDB", "Git", "GitHub", "Vercel"]
 	},
 	{
 		"id": 1,

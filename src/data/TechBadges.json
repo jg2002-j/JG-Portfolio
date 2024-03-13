@@ -16,6 +16,7 @@
 
    {"name": "React", "value": "https://img.shields.io/badge/React-232836?logo=react"},
    {"name": "React Router", "value": "https://img.shields.io/badge/React_Router-232836?logo=reactrouter"},
+   {"name": "Axios", "value": "https://img.shields.io/badge/Axios-232836?logo=axios&logoColor=5A29E4"},
 
    {"name": "Next.js", "value": "https://img.shields.io/badge/Next.js-232836?logo=nextdotjs"},
 
