@@ -1,13 +1,13 @@
 [
 	{
 		"id": 8,
-		"title": "Placeholder",
-		"tags": ["Placeholder"],
-		"desc": "[Placeholder]",
+		"title": "Nucleus",
+		"tags": ["collaborative", "design", "development"],
+		"desc": "Upcoming...",
 		"img": "",
 		"deployed": "",
 		"repo": "",
-		"techs": ["EdX", "HTML", "CSS", "JavaScript", "Markdown", "jQuery", "Node.js", "NPM", "Vite", "Yarn", "React", "React Router", "Next.js", "Vue.js", "Angular", "Figma", "Excalidraw", "Bootstrap", "SASS", "PostCSS", "TailwindCSS", "DaisyUI", "GSAP", "MongoDB", "Jest", "Git", "GitHub", "GitLab", "GitHub Pages", "Netlify", "Vercel"]
+		"techs": ["EdX", "HTML", "CSS", "JavaScript", "NPM", "Vite", "React", "React Router", "Excalidraw", "PostCSS", "TailwindCSS", "DaisyUI", "MongoDB", "Git", "GitHub", "Netlify"]
 	},
 	{
 		"id": 1,
@@ -17,7 +17,7 @@
 		"img": "https://i.postimg.cc/JhddzRVF/Screenshot-1.png",
 		"deployed": "https://anadomuta.github.io/paws-planner/",
 		"repo": "https://github.com/anadomuta/paws-planner",
-		"techs": ["EdX", "HTML", "CSS", "JavaScript", "GitHub", "GitHub Pages", "Bootstrap", "jQuery"]
+		"techs": ["EdX", "HTML", "CSS", "JavaScript", "Bootstrap", "GitHub", "GitHub Pages"]
 	},
 	{
 		"id": 2,
@@ -27,7 +27,7 @@
 		"img": "https://i.imgur.com/x0XRxDM.png",
 		"deployed": "https://jg2002-j.github.io/webdevnotes/",
 		"repo": "https://github.com/jg2002-j/webdevnotes",
-		"techs": ["EdX", "HTML", "CSS", "JavaScript", "Git", "GitHub", "GitHub Pages", "Bootstrap"]
+		"techs": ["EdX", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
 	},
 	{
 		"id": 3,
@@ -37,7 +37,7 @@
 		"img": "https://i.postimg.cc/FHGJcRKT/Screenshot-2.png",
 		"deployed": "https://jg2002-j.github.io/bootstrap-portfolio/",
 		"repo": "https://github.com/jg2002-j/bootstrap-portfolio",
-		"techs": ["EdX", "HTML", "CSS", "Git", "GitHub", "GitHub Pages", "Bootstrap"]
+		"techs": ["EdX", "HTML", "CSS", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
 	},
 	{
 		"id": 4,
@@ -47,7 +47,7 @@
 		"img": "https://github.com/jg2002-j/weather-dashboard/blob/main/assets/deployed.png?raw=true",
 		"deployed": "https://jg2002-j.github.io/weather-dashboard/",
 		"repo": "https://github.com/jg2002-j/weather-dashboard",
-		"techs": ["EdX", "HTML", "CSS", "JavaScript", "Git", "GitHub", "GitHub Pages", "Bootstrap", "jQuery"]
+		"techs": ["EdX", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
 	},
 	{
 		"id": 5,
