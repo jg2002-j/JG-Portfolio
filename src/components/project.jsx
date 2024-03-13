@@ -19,6 +19,9 @@ const getBadges = (props) => {
    return badgeElements;
 };
 
+
+
+
 function Project(props) {
    return (
       <div className="text-slate-200 2xl:w-1/5 2xl:hover:w-1/3 w-3/5 hover:w-4/5 ease-in-out duration-1000 rounded-lg py-12 p-3">

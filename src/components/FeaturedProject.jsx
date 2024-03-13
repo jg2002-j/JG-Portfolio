@@ -1,5 +1,6 @@
 import React from "react";
 import projects from "../data/Projects.json";
+import techBadges from "../data/TechBadges.json";
 
 function FeaturedProject(project) {
    const projChoice = project.project
@@ -9,14 +10,33 @@ function FeaturedProject(project) {
    if (!enlargedProj) {
       enlargedProj = projects[0]   
    }
-   
+
+   const getBadges = (proj) => {
+      const projTechs = proj.techs;
+      const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name)).map(tech => tech.value);
+      const badgeElements = matchingTechBadges.map(value => (
+         <img key={value} alt="Static Badge" src={value} />
+      ));
+      return badgeElements;
+   };
+
    return (
-	   <div className="2xl:m-40 mt-40 m-20 rounded-xl max-h-[70vh] grid grid-cols-12 grid-rows-12">
-         <div className="flex col-start-1 row-start-1 col-span-12 row-span-8">
-            <img id="featuredprojimg" src={enlargedProj.img} alt={enlargedProj.title} className="aspect-video rounded-lg object-cover" />
+      <div className="border-2 mx-10 2xl:mx-[5vw] rounded-3xl flex flex-col 2xl:flex-row gap-5 justify-evenly">
+         
+         <div className="border-2 border-red-500 text-center flex-grow min-w-[30%]" id="featuredprojimg">
+            <img src={enlargedProj.img} alt="" className="aspect-video overflow-hidden object-cover rounded-3xl" />
          </div>
-         <h1 className="col-start-1 row-start-9 row-span-4 col-span-4 font-header text-6xl text-slate-300 text-center my-auto">{enlargedProj.title}</h1>
-         <p className="row-start-9 col-start-6 col-span-5 row-span-4 my-auto text-slate-300">{enlargedProj.desc}</p>
+
+         <div className="border-2 border-red-500 p-5 flex-grow min-w-[30%] flex flex-row 2xl:flex-col">
+            <h1 className="font-header text-6xl text-slate-300 my-10">{enlargedProj.title}</h1>
+            <div className="flex flex-wrap justify-start items-center gap-2 my-2">
+               {enlargedProj.tags.map(tag => (<span className="py-1 px-2 border-2 border-slate-600 text-xs text-slate-300 uppercase tracking-widest rounded-lg select-none">{tag}</span>))}
+            </div>
+            <div className="flex flex-wrap justify-start items-center gap-2 my-5">
+               {getBadges(enlargedProj)}
+            </div>
+            <p className="max-w-[40ch] mb-5">{enlargedProj.desc}</p>
+         </div>
       </div>
    )
 };

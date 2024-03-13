@@ -4,9 +4,9 @@
 		"title": "Nucleus",
 		"tags": ["collaborative", "design", "development"],
 		"desc": "Upcoming...",
-		"img": "",
+		"img": "https://images.unsplash.com/photo-1564510714747-69c3bc1fab41?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
 		"deployed": "",
-		"repo": "",
+		"repo": "https://github.com/calltekk/nucleus",
 		"techs": ["EdX", "HTML", "CSS", "JavaScript", "NPM", "Vite", "React", "React Router", "Axios", "Excalidraw", "PostCSS", "TailwindCSS", "DaisyUI", "MongoDB", "Git", "GitHub", "Vercel"]
 	},
 	{
