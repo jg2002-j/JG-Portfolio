@@ -11,7 +11,8 @@ function AllProjects(props) {
                <Project 
 						enlargefunction={props.enlargefunction}
 						key={projItem.id} 
-						title={projItem.title} 
+						title={projItem.title}
+						tags={projItem.tags}
 						desc={projItem.desc} 
 						img={projItem.img} 
 						deployed={projItem.deployed} 

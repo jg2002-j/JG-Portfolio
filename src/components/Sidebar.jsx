@@ -55,7 +55,7 @@ function Sidebar() {
 				</button>
 			</div>
 
-			<dialog id="navigation" className="modal left-0">
+			<dialog id="navigation" className="modal">
 				<div className="modal-box">
 					<div className="flex flex-col justify-start items-start my-[6rem] mx-11">
 						<h1 className="font-title text-3xl tracking-[5px] uppercase inline-block bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text">Where to?</h1>

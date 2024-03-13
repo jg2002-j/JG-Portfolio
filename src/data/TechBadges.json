@@ -1,0 +1,47 @@
+[
+   {"name": "EdX", "value": "https://img.shields.io/badge/EdX-232836?logo=edx"},
+
+   {"name": "HTML", "value": "https://img.shields.io/badge/HTML-232836?logo=html5"},
+   {"name": "CSS", "value": "https://img.shields.io/badge/CSS-232836?logo=CSS3&logoColor=1572B6"},
+	{"name": "JavaScript", "value": "https://img.shields.io/badge/JavaScript-232836?logo=javascript"},
+	{"name": "Markdown", "value": "https://img.shields.io/badge/Markdown-232836?logo=markdown"},
+ 
+	{"name": "jQuery", "value": "https://img.shields.io/badge/jQuery-232836?logo=jquery&logoColor=0769AD"},   
+	
+   {"name": "Node.js", "value": "https://img.shields.io/badge/Node.js-232836?logo=nodedotjs"},
+   {"name": "NPM", "value": "https://img.shields.io/badge/NPM-232836?logo=npm"},
+   
+   {"name": "Vite", "value": "https://img.shields.io/badge/Vite-232836?logo=vite"},
+   {"name": "Yarn", "value": "https://img.shields.io/badge/Yarn-232836?logo=yarn"},
+
+   {"name": "React", "value": "https://img.shields.io/badge/React-232836?logo=react"},
+   {"name": "React Router", "value": "https://img.shields.io/badge/React_Router-232836?logo=reactrouter"},
+
+   {"name": "Next.js", "value": "https://img.shields.io/badge/Next.js-232836?logo=nextdotjs"},
+
+   {"name": "Vue.js", "value": "https://img.shields.io/badge/Vue.js-232836?logo=vuedotjs"},
+   
+   {"name": "Angular", "value": "https://img.shields.io/badge/Angular-232836?logo=angular"},
+   
+   {"name": "Figma", "value": "https://img.shields.io/badge/Figma-232836?logo=figma"},
+   {"name": "Excalidraw", "value": "https://img.shields.io/badge/Excalidraw-232836?logo=excalidraw"},
+
+	{"name": "Bootstrap", "value": "https://img.shields.io/badge/Bootstrap-232836?logo=bootstrap"},
+	{"name": "SASS", "value": "https://img.shields.io/badge/SASS-232836?logo=sass"},
+   {"name": "PostCSS", "value": "https://img.shields.io/badge/PostCSS-232836?logo=postcss&logoColor=DD3A0A"},
+   {"name": "TailwindCSS", "value": "https://img.shields.io/badge/TailwindCSS-232836?logo=tailwindcss"},
+   {"name": "DaisyUI", "value": "https://img.shields.io/badge/DaisyUI-232836?logo=daisyui&logoColor=5A0EF8"},
+   {"name": "GSAP", "value": "https://img.shields.io/badge/GSAP-232836?logo=greensock"},
+
+   {"name": "MongoDB", "value": "https://img.shields.io/badge/MongoDB-232836?logo=mongodb"},
+
+   {"name": "Jest", "value": "https://img.shields.io/badge/Jest-232836?logo=jest&logoColor=C21325"},
+
+   {"name": "Git", "value": "https://img.shields.io/badge/Git-232836?logo=git"},
+   {"name": "GitHub", "value": "https://img.shields.io/badge/GitHub-232836?logo=github"},
+   {"name": "GitLab", "value": "https://img.shields.io/badge/GitLab-232836?logo=gitlab"},
+   
+   {"name": "GitHub Pages", "value": "https://img.shields.io/badge/GitHub_Pages-232836?logo=githubpages"},
+   {"name": "Netlify", "value": "https://img.shields.io/badge/Netlify-232836?logo=netlify"},
+   {"name": "Vercel", "value": "https://img.shields.io/badge/Vercel-232836?logo=vercel"}
+]
