@@ -26,7 +26,7 @@ function AboutMeBento() {
 				<h1 className="text-center text-xs text-[#2a2744]">This is my <strong>art portfolio</strong>. To me, design and development go hand in hand, and I want to build my skills in both through my career!</h1>
 			</div>
 			<div className="row-start-1 col-start-6 row-span-3 col-span-3 rounded-xl bg-[#2a2744] hover:bg-[#44446c] cursor-default ease-in-out duration-700 text-slate-200 flex justify-center items-center p-4 peer/me">
-				<a className="aspect-square h-full w-full" target="_blank" href=""><img className="h-full w-full rounded-lg" src={pfp} alt="" /></a>
+				<img className="h-full w-full rounded-lg" src={pfp} alt="" />
 			</div>
 			<div className="row-start-4 col-start-6 row-span-1 col-span-3 rounded-xl bg-slate-400 scale-0 peer-hover/me:scale-100 ease-in-out duration-700 z-30 flex justify-center items-center p-4">
 				<h1 className="text-center text-xs text-[#2a2744]"><strong>Me</strong> :3</h1>

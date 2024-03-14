@@ -20,29 +20,18 @@ function ContactForm() {
 
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
-		switch (formData.rating) {
-			case "0":
-			case "1":
-				alert(`Damn, only ${formData.rating}★? Don't worry, ${formData.name}, I'll get my site up to scratch in no time.`);
-				break;
-			case "2":
-			case "3":
-				alert(`Thanks for the ${formData.rating}★, ${formData.name}, I'll work on getting it improved ASAP!`);
-				break;
-			case "4":
-			case "5":
-				alert(`Woah! ${formData.name}, you really rated my site ${formData.rating}★? Thanks!`);
-				break;
-			default:
-				alert(":P")
-				break;
+		if (!formData.email || !formData.message || !formData.name) {
+			alert("Hey, I need a little more info please - make sure the name, email and message forms are filled! Thanks ♥")
+		} else {			
+			document.getElementById("modalbody").textContent = `Hi Jai, I'm reaching out to you from your website! ${formData.message}. Get back to me on ${formData.email} Thanks, ${formData.name}.`
+			document.getElementById("formresponse").showModal()
+			setFormData({
+				name: "",
+				email: "",
+				rating: "",
+				message: "",
+			})
 		}
-		setFormData({
-			name: "",
-			email: "",
-			rating: "",
-			message: "",
-		})
 	}
 
   	return (
@@ -89,6 +78,23 @@ function ContactForm() {
 				/>
 				<button className="text-slate-200 px-3 py-2 rounded-lg bg-slate-200 bg-opacity-5 hover:bg-slate-500 ease-in-out duration-1000 col-span-1 row-span-1 row-start-1 col-start-5 opacity-0 group-hover:opacity-100" type="submit" onClick={handleFormSubmit}>Submit</button>
 			</form>
+			<dialog id="formresponse" className="modal">
+				<div className="modal-box">
+					<div className="flex flex-col justify-start items-start my-[6rem] mx-11">
+						<h1 className="font-title text-3xl tracking-[5px] uppercase inline-block bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text select-none">CONTACT ME</h1>
+						<h3 className="my-3 font-header text-lg select-none">Just copy the text below and send it to any of these:</h3>
+						<a className="rounded border-2 px-3 py-1 my-1 text-sm" href="mailto:jai.2002.gandhi@gmail.com" target="_blank">My Email</a>
+						<a className="rounded border-2 px-3 py-1 my-1 text-sm" href="https://www.linkedin.com/in/jg2002/" target="_blank">My LinkedIn</a>
+						<p className="my-5 select-all text-stone-400" id="modalbody"></p>
+					</div>
+					<form method="dialog">
+						<button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">✕</button>
+					</form>
+				</div>
+				<form method="dialog" className="modal-backdrop">
+					<button>close</button>
+				</form>
+			</dialog>
 		</>
   	)
 }

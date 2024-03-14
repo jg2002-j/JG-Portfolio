@@ -38,7 +38,7 @@ function HomePage() {
             </div>
          </div>
          <div className="2xl:mx-60 mt-60 m-10 flex flex-col justify-start items-center" id="experience">
-            <h1 className="font-title text-center tracking-[0.7rem] text-5xl bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text inline-block">What can I do?</h1>
+            <h1 className="font-title text-center tracking-[0.7rem] text-6xl bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text inline-block">What can I do?</h1>
          </div>
          <div className="2xl:mx-60 m-20 max-w-full flex-col justify-center" id="aboutme">
             <Skills />
