@@ -1,26 +1,61 @@
 [
 	{
 		"id": 1,
-		"title": "My tech stack!",
-		"body": "",
-		"tags": ""
+		"title": "What can I do?",
+		"body": [
+			{"name": "Web Development", "slug": ""}, 
+			{"name": "Web Design", "slug": ""},
+			{"name": "Wireframing", "slug": ""},
+			{"name": "UI/UX Design", "slug": ""}
+		]
 	},
 	{
 		"id": 2,
-		"title": "My tech stack!",
-		"body": "",
-		"tags": ""
+		"title": "What languages do I code in?",
+		"body": [
+			{"name": "HTML", "slug": "html5"},
+			{"name": "CSS", "slug": "css3"},
+			{"name": "JavaScript", "slug": "javascript"},
+			{"name": "Markdown", "slug": "markdown"}
+		]
 	},
 	{
 		"id": 3,
-		"title": "My tech stack!",
-		"body": "",
-		"tags": ""
+		"title": "What libraries & frameworks can I use?",
+		"body": [
+			{"name": "jQuery", "slug": "jquery"},
+			{"name": "React", "slug": "react"},
+			{"name": "Node.js", "slug": "nodedotjs"},
+			{"name": "Bootstrap", "slug": "bootstrap"},
+			{"name": "TailwindCSS", "slug": "tailwindcss"},
+			{"name": "GSAP", "slug": "greensock"},
+			{"name": "NPM", "slug": "npm"},
+			{"name": "React Router", "slug": "reactrouter"},
+			{"name": "Axios", "slug": "axios"}
+		]
 	},
 	{
 		"id": 4,
-		"title": "My tech stack!",
-		"body": "",
-		"tags": ""
+		"title": "What tools & software am I familiar with?",
+		"body": [
+			{"name": "Git", "slug": "git"},
+			{"name": "GitHub", "slug": "github"},
+			{"name": "GitHub Pages", "slug": "githubpages"},
+			{"name": "Netlify", "slug": "netlify"},
+			{"name": "Vercel", "slug": "vercel"},
+			{"name": "Excalidraw", "slug": "excalidraw"},
+			{"name": "Photoshop", "slug": "adobephotoshop"},
+			{"name": "InDesign", "slug": "adobeindesign"},
+			{"name": "Illustrator", "slug": "adobeillustrator"}
+		]
+	},
+	{
+		"id": 5,
+		"title": "What am I learning next?",
+		"body": [
+			{"name": "Next.js", "slug": "nextdotjs"},
+			{"name": "SASS", "slug": "sass"},
+			{"name": "Figma", "slug": "figma"}
+		]
 	}
 ]
