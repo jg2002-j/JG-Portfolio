@@ -1,25 +1,16 @@
 import React from "react";
-import { useRef } from "react";
 import Header from "../components/Header";
 import bgImage from "../assets/xebelion-15.jpg";
 import FeaturedProject from "../components/FeaturedProject";
 import Skills from "../components/Skills";
 import CurrentTime from "../components/CurrentTime";
 
-
-//// This should be a welcome landing page that contains:
-//// Your Name
-//// A headshot of you (or an avatar)
-//// Your brand statement
-//// Some indication that this is your portfolio site
-
 // GSAP
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-    
+import { useRef } from "react";
 import { CustomEase } from "gsap/CustomEase";
-import { RoughEase, ExpoScaleEase, SlowMo } from "gsap/EasePack";
-    
+import { RoughEase, ExpoScaleEase, SlowMo } from "gsap/EasePack"; 
 import { Flip } from "gsap/Flip";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { Observer } from "gsap/Observer";
@@ -29,22 +20,35 @@ import { MotionPathPlugin } from "gsap/MotionPathPlugin";
 import { EaselPlugin } from "gsap/EaselPlugin";
 import { PixiPlugin } from "gsap/PixiPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
-
-
 gsap.registerPlugin(useGSAP,Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin,RoughEase,ExpoScaleEase,SlowMo,CustomEase);
 
+//// This should be a welcome landing page that contains:
+//// Your Name
+//// A headshot of you (or an avatar)
+//// Your brand statement
+//// Some indication that this is your portfolio site
 
 function HomePage() {
 
-   const JGtitle = useRef(null)
+   const JGtitleRef = useRef(null)
+   useGSAP(() => {
+      gsap.from(JGtitleRef.current, {
+         y: 200,
+         opacity: 0, 
+         scale: 1.5, 
+         duration: 1.5,
+         ease: "power2.out"
+      });
+   });
 
    return (
       <>
          <div className="h-dvh rounded-b-3xl" id="home">
             <img className="homepage-img -z-10" src={bgImage} alt="bg art" />
             <Header />
+            <div ref={JGtitleRef} className="mx-auto h-16 w-16 border-4 bg-neutral-900"></div>
             <div className="flex justify-center items-center h-1/2">
-               <h1 ref={JGtitle} className="font-title pgtitle text-center tracking-[12px] uppercase mix-blend-difference text-slate-200 mx-8 hover:tracking-[2rem] hover:scale-110 ease-in-out duration-1000 select-none">Jai Gandhi</h1>
+               <h1 className="font-title pgtitle text-center tracking-[12px] uppercase mix-blend-difference text-slate-200 mx-8 select-none">Jai Gandhi</h1>
             </div>
             <div className="grid 2xl:grid-cols-4 2xl:grid-rows-2 grid-cols-1 grid-rows-1 m-5">
                <div className="hidden h-32 2xl:block border-r-[1px] border-b-[1px] border-gray-400 w-full"></div>
