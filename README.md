@@ -9,7 +9,6 @@ What was your motivation? Why did you build this project? What problem does it s
 ![JS Badge](https://img.shields.io/badge/JavaScript-white?logo=javascript&logoColor=%23F7DF1E) 
 ![TailwindCSS Badge](https://img.shields.io/badge/TailwindCSS-white?logo=tailwindcss&logoColor=%2306B6D4)
 ![GitHub Badge](https://img.shields.io/badge/GitHub-white?logo=github&logoColor=%23181717) 
-![Node.js Badge](https://img.shields.io/badge/Node.js-white?logo=nodedotjs&logoColor=%#339933) 
 ![React.js Badge](https://img.shields.io/badge/React.js-white?logo=react&logoColor=%2361DAFB)
 ![Vite Badge](https://img.shields.io/badge/Vite-white?logo=vite&logoColor=%23646CFF)
 
@@ -33,6 +32,7 @@ Provide instructions and examples for use.
 	
 ## Credits and Sources
 - Animation library from [GSAP](https://gsap.com/).
+- Demo code from [GSAP](https://react-6rzfpp.stackblitz.io).
 - React Router from [NPM](https://www.npmjs.com/package/react-router-dom).
 - [Dayjs](https://day.js.org/en/).
 - Icons from [Lucide icons](https://lucide.dev/).
