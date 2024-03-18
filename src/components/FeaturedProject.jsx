@@ -30,7 +30,7 @@ function FeaturedProject(project) {
          <div className="p-5 flex-grow min-w-[20%] flex flex-row 2xl:flex-col">
             <h1 className="font-header text-6xl text-slate-300 my-10">{enlargedProj.title}</h1>
             <div className="flex flex-wrap justify-start items-center gap-2 my-2">
-               {enlargedProj.tags.map(tag => (<span id={""} className="py-1 px-2 border-2 border-slate-600 text-xs text-slate-300 uppercase tracking-widest rounded-lg select-none">{tag}</span>))}
+               {enlargedProj.tags.map(tag => (<span key={tag} className="py-1 px-2 border-2 border-slate-600 text-xs text-slate-300 uppercase tracking-widest rounded-lg select-none">{tag}</span>))}
             </div>
             <div className="flex flex-wrap justify-start items-center gap-2 my-5">
                {getBadges(enlargedProj)}
