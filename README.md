@@ -4,14 +4,6 @@
 ## Description
 What was your motivation? Why did you build this project? What problem does it solve? What did you learn?
 
-![HTML Badge](https://img.shields.io/badge/HTML-white?logo=html5&logoColor=%23E34F26") 
-![CSS Badge](https://img.shields.io/badge/CSS-white?logo=CSS3&logoColor=%231572B6) 
-![JS Badge](https://img.shields.io/badge/JavaScript-white?logo=javascript&logoColor=%23F7DF1E) 
-![TailwindCSS Badge](https://img.shields.io/badge/TailwindCSS-white?logo=tailwindcss&logoColor=%2306B6D4)
-![GitHub Badge](https://img.shields.io/badge/GitHub-white?logo=github&logoColor=%23181717) 
-![React.js Badge](https://img.shields.io/badge/React.js-white?logo=react&logoColor=%2361DAFB)
-![Vite Badge](https://img.shields.io/badge/Vite-white?logo=vite&logoColor=%23646CFF)
-
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Netlify Status](https://api.netlify.com/api/v1/badges/14231588-305c-4339-b587-a3f73574c1e1/deploy-status)](https://app.netlify.com/sites/jg2002-portfolio/deploys)
 
@@ -42,6 +34,7 @@ Provide instructions and examples for use.
 - Pokemon sprites from [PokemonDB](https://pokemondb.net/sprites).
 - Spotify embeds from [Spotify](https://developer.spotify.com/documentation/embeds) and [React Spotify Embed NPM](https://www.npmjs.com/package/react-spotify-embed).
 - Screenshot from [Studio Ghibli](https://www.ghibli.jp/works/howl/).
+- Noise from [fffuel.co](https://fffuel.co/nnnoise/).
 
 
 ## Tests

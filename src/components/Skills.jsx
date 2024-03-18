@@ -1,6 +1,8 @@
 import React from "react";
 import skillslist from "../data/Skills.json";
 import { Globe, Paintbrush, Frame, MousePointerClick } from "lucide-react";
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 function Skills() {
 
@@ -25,6 +27,23 @@ function Skills() {
 		}
 	}
 
+   useGSAP(() => {
+		const skillbox = gsap.utils.toArray('.skillbox');
+		skillbox.forEach((box) => {
+			gsap.from(box, {
+				y: -150,
+				opacity: 0,
+				scrollTrigger: {
+					trigger: box,
+					start: 'bottom 95%',
+					end: 'top 65%',
+					scrub: true,
+					// markers: true,
+				},
+			});
+		});
+	});
+
   	return (
 	 	<>
 			<div className="flex flex-col 2xl:flex-row justify-center items-start mt-10 mb-40 gap-[5rem]">
@@ -32,7 +51,7 @@ function Skills() {
 					<div key={skill.id} className="2xl:w-1/5 w-4/5">
 						<h1 className="font-header text-4xl text-slate-300 mb-9">{skill.title}</h1>
 						{skill.body.map(item => (
-							<div key={item.name} className="rounded-lg bg-slate-300 bg-opacity-10 px-3 py-1 my-2 hover:bg-opacity-30 duration-500 group">
+							<div key={item.name} className="skillbox rounded-lg bg-slate-300 bg-opacity-10 px-3 py-1 my-2 hover:bg-opacity-30 duration-500 group">
 								{img(item)}
 								<span className="select-none" >{item.name}</span>
 							</div>
@@ -43,6 +62,5 @@ function Skills() {
 	 	</>
   	)
 };
-import { Import } from "lucide-react";
 
 export default Skills;

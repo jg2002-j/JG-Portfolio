@@ -15,7 +15,15 @@
 	--colLight: #9ca4ac;
 
 	scroll-behavior: smooth;
-	background-color: var(--colBackground);
+	background-image: 
+		url(../assets/nnnoise.svg),
+		url(../assets/uuunion.svg);
+	background-size: auto, cover;
+	background-position: center;
+}
+
+body {
+	/* background: rgb(38,36,79); */
 
 }
 
@@ -55,4 +63,3 @@
 	display: inline-block;
 	background-color: rgba(255,255,255,1);
 }
- 

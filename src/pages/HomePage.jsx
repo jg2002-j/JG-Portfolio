@@ -5,11 +5,8 @@ import FeaturedProject from "../components/FeaturedProject";
 import Skills from "../components/Skills";
 import CurrentTime from "../components/CurrentTime";
 
-//// This should be a welcome landing page that contains:
-//// Your Name
-//// A headshot of you (or an avatar)
-//// Your brand statement
-//// Some indication that this is your portfolio site
+import gsap from "gsap";
+import { useGSAP } from "@gsap/react";
 
 function HomePage() {
    return (

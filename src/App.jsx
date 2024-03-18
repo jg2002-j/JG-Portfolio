@@ -17,7 +17,6 @@ import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 // GSAP
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import { useRef } from "react";
 import { CustomEase } from "gsap/CustomEase";
 import { RoughEase, ExpoScaleEase, SlowMo } from "gsap/EasePack"; 
 import { Flip } from "gsap/Flip";
@@ -30,38 +29,6 @@ import { EaselPlugin } from "gsap/EaselPlugin";
 import { PixiPlugin } from "gsap/PixiPlugin";
 import { TextPlugin } from "gsap/TextPlugin";
 gsap.registerPlugin(useGSAP,Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable,MotionPathPlugin,EaselPlugin,PixiPlugin,TextPlugin,RoughEase,ExpoScaleEase,SlowMo,CustomEase);
-
-//* PAGE: Home
-	// COMPONENT: Header 
-	// COMPONENT: Featured Proj
-
-//* PAGE: Projects
-	//* COMPONENT: Featured Proj
-	//* COMPONENT: All Projects
-		// COMPONENT: Project
-		// COMPONENT: ProjectModal (Enlarged View)
-
-//* PAGE: About
-	// COMPONENT: About Me
-		// COMPONENT: AboutMeBento
-	//* COMPONENT: Experience
-
-//* PAGE: Contact
-
-//! ON ALL PAGES:
-	//! COMPONENT: Sidebar
-	//! Page Content
-	//! COMPONENT: ContactMe
-
-// NAVITEMS:
-	// Home (Page)
-	// Projects (Page)
-		// Projects/FeaturedProject (Section)
-		// Projects/AllProjects (Section)
-	// About (Page)
-		// About/Experience (Section)
-	// Contact (Page)
-
 
 function App() {
 
