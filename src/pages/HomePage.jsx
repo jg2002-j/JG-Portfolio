@@ -37,7 +37,6 @@ gsap.registerPlugin(useGSAP,Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable
 function HomePage() {
 
    const JGtitle = useRef(null)
-   console.log(JGtitle)
 
    return (
       <>
