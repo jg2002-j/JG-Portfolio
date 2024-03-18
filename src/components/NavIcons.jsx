@@ -3,15 +3,15 @@ import { Home, CircleUserRound, CodeSquare, FileText, MessageSquareMore } from '
 const NavIcons = (icon, iconcolor) => {
    switch (icon) {
       case "Home":
-         return <Home className={`${iconcolor} transition ease-in-out duration-700 origin-center w-5 h-5`} />;
+         return <Home size={15} className={`${iconcolor} transition ease-in-out duration-700 origin-center`} />;
       case "CircleUserRound":
-         return <CircleUserRound className={`${iconcolor} transition ease-in-out duration-700 origin-center w-5 h-5`} />;
+         return <CircleUserRound size={15} className={`${iconcolor} transition ease-in-out duration-700 origin-center`} />;
       case "CodeSquare":
-         return <CodeSquare className={`${iconcolor} transition ease-in-out duration-700 origin-center w-5 h-5`} />;
+         return <CodeSquare size={15} className={`${iconcolor} transition ease-in-out duration-700 origin-center`} />;
       case "FileText":
-         return <FileText className={`${iconcolor} transition ease-in-out duration-700 origin-center w-5 h-5`} />;
+         return <FileText size={15} className={`${iconcolor} transition ease-in-out duration-700 origin-center`} />;
       case "MessageSquareMore":
-         return <MessageSquareMore className={`${iconcolor} transition ease-in-out duration-700 origin-center w-5 h-5`} />;
+         return <MessageSquareMore size={15} className={`${iconcolor} transition ease-in-out duration-700 origin-center`} />;
       default:
          break;
    }

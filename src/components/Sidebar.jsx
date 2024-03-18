@@ -10,7 +10,7 @@ const SidebarNavButton = (props) => {
 		<li>
 			<NavLink to={props.link} className="rounded-lg px-4 py-2 mt-8 group ease-in-out duration-300 flex justify-start items-center">
 				{NavIcons(props.icon, "text-transparent group-hover:text-[#cdd2d4] duration-50")}
-				<h2 className="group-hover:ms-10 font-title tracking-[0.275rem] text-2xl text-[#cdd2d4] origin-start ease-in-out duration-700">{props.name}</h2>
+				<h2 className="group-hover:ms-10 font-title tracking-[0.275rem] text-2xl text-stone-400 hover:text-[#cdd2d4] origin-start ease-in-out duration-700">{props.name}</h2>
 			</NavLink>
 		</li>
 	)
@@ -27,9 +27,9 @@ function Sidebar() {
 
 			<dialog id="navigation" className="modal justify-start px-2">
 				<div className="modal-box h-screen lg:w-[30vw] rounded-e-[3rem]">
-					<div className="flex flex-col justify-start items-start mt-[6rem] mx-10 border-2">
+					<div className="flex flex-col justify-start items-start mt-[6rem] mx-10">
 						<h1 className="font-title text-3xl tracking-[5px] uppercase inline-block bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text">Where to?</h1>
-						<ul>
+						<ul> 	
 							{NavData.map(navItem => (
 								<SidebarNavButton key={navItem.id} name={navItem.name} link={navItem.link} icon={navItem.icon} type={navItem.type} />
 							))}

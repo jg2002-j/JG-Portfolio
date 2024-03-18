@@ -23,8 +23,8 @@ function FeaturedProject(project) {
    return (
       <div className="mx-10 2xl:mx-[7vw] rounded-3xl flex flex-col 2xl:flex-row gap-10 justify-evenly">
          
-         <div className="text-center flex-grow min-w-[50%] overflow-hidden rounded-3xl" id="featuredprojimg">
-            <img src={enlargedProj.img} alt="" className="w-full object-contain rounded-3xl object duration-700 ease-in-out hover:scale-110" />
+         <div className="text-center flex-grow min-w-[50%] overflow-hidden rounded-3xl scroll-p-10" id="featuredprojimg">
+            <img src={enlargedProj.img} className="w-full object-contain rounded-3xl object duration-700 ease-in-out hover:scale-110" />
          </div>
 
          <div className="p-5 flex-grow min-w-[20%] flex flex-row 2xl:flex-col">
