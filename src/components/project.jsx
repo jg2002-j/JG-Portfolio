@@ -12,9 +12,9 @@ import techBadges from "../data/TechBadges.json";
 
 const getBadges = (props) => {
    const projTechs = props.techs;
-   const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name)).map(tech => tech.value);
-   const badgeElements = matchingTechBadges.map(value => (
-      <img key={value} alt="Static Badge" src={value} />
+   const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name));
+   const badgeElements = matchingTechBadges.map(tech => (
+      <img key={tech.name} alt={`${tech.name}Static Badge`} src={tech.value} />
    ));
    return badgeElements;
 };
@@ -36,7 +36,7 @@ function Project(props) {
          <img src={props.img} alt="" className="aspect-video w-full rounded-lg object-cover" />
          <h1 className="font-header text-4xl text-slate-300 my-5">{props.title}</h1>
          <div className="flex flex-wrap justify-start items-center gap-2 my-2">
-            {props.tags.map(tag => (<span className="py-1 px-2 border-2 border-slate-600 text-xs text-slate-300 uppercase tracking-widest rounded-lg select-none">{tag}</span>))}
+            {props.tags.map(tag => (<span key={tag} className="py-1 px-2 border-2 border-slate-600 text-xs text-slate-300 uppercase tracking-widest rounded-lg select-none">{tag}</span>))}
          </div>
          <div className="flex flex-wrap justify-start items-center gap-2 my-5">
             {getBadges(props)}

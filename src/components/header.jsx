@@ -10,8 +10,8 @@ const renderHeaderNavIcons = (NavItems) => {
    return NavItems.map(navItem => {
       if (navItem.type == "page") {
          return (
-            <NavLink to={navItem.link} key={navItem.id} className="rounded-lg px-4 py-2 mx-5 my-10 group ease-in-out duration-700 hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] flex justify-center items-center">
-               {NavIcons(navItem.icon, "text-[#E0E2DB]")}
+            <NavLink to={navItem.link} key={navItem.id} className="rounded-lg px-4 py-2 my-10 group ease-in-out duration-700 hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] flex justify-center items-center">
+               {NavIcons(navItem.icon, "text-[#E0E2DB]", 20)}
             </NavLink>
          )
       }
@@ -29,7 +29,7 @@ function Header() {
             <div className="hidden h-32 2xl:block border-b-[1px] border-gray-400 w-full"></div>
             <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div>
             <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div>
-            <div className="h-32 flex 2xl:border-r-[1px] border-gray-400 w-full justify-evenly items-center px-3">
+            <div className="h-32 flex 2xl:border-r-[1px] border-gray-400 w-full justify-evenly items-center px-3 gap-2">
                {renderHeaderNavIcons(NavItems)}
             </div>
             <div className="hidden h-32 2xl:block w-full"></div>

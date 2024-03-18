@@ -9,7 +9,7 @@ const SidebarNavButton = (props) => {
 	return(
 		<li>
 			<NavLink to={props.link} className="rounded-lg px-4 py-2 mt-8 group ease-in-out duration-300 flex justify-start items-center">
-				{NavIcons(props.icon, "text-transparent group-hover:text-[#cdd2d4] duration-50")}
+				{NavIcons(props.icon, "text-transparent group-hover:text-[#cdd2d4] duration-50", 18)}
 				<h2 className="group-hover:ms-10 font-title tracking-[0.275rem] text-2xl text-stone-400 hover:text-[#cdd2d4] origin-start ease-in-out duration-700">{props.name}</h2>
 			</NavLink>
 		</li>
