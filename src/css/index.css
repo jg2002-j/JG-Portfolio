@@ -22,11 +22,6 @@
 	background-position: center;
 }
 
-body {
-	/* background: rgb(38,36,79); */
-
-}
-
 *{
 	scroll-padding: 5vh;
 }
@@ -37,6 +32,10 @@ body {
 
 .font-header {
 	font-family: "General Sans", sans-serif;
+}
+
+.noise {
+	background-image: url(../assets/nnnoise.svg);
 }
 
 .homepage-img{

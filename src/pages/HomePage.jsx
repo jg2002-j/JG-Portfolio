@@ -1,4 +1,5 @@
-import React from "react";
+import React, { useRef } from "react";
+import LoadingScreen from "../components/LoadingScreen";
 import Header from "../components/Header";
 import bgImage from "../assets/xebelion-15.jpg";
 import FeaturedProject from "../components/FeaturedProject";
@@ -7,15 +8,38 @@ import CurrentTime from "../components/CurrentTime";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/all";
+gsap.registerPlugin(ScrollTrigger)
 
 function HomePage() {
+
+   const JGtitle = useRef(null)
+   useGSAP(() => {
+      gsap.to(JGtitle.current, {
+         text: {
+            value: "Portfolio",
+            newClass: "text-slate-500",
+            speed: 1,
+         },
+         scrollTrigger: {
+            trigger: JGtitle.current,
+            start: 'center 35%',
+            end: 'center 15%',
+            scrub: true,
+            // delay: 3,
+            // markers: true,
+         },
+      });
+   })
+
    return (
       <>
+         <LoadingScreen />
          <div className="h-dvh rounded-b-3xl" id="home">
             <img className="homepage-img -z-10" src={bgImage} alt="bg art" />
             <Header />
             <div className="flex justify-center items-center h-1/2">
-               <h1 className="font-title pgtitle text-center tracking-[12px] uppercase mix-blend-difference text-slate-200 mx-8 select-none">Jai Gandhi</h1>
+               <h1 ref={JGtitle} className="font-title pgtitle text-center tracking-[12px] uppercase mix-blend-difference text-slate-200 mx-8 select-none hover:tracking-[30px] hover:scale-110 duration-500 ease-in-out">Jai Gandhi</h1>
             </div>
             <div className="grid 2xl:grid-cols-4 2xl:grid-rows-2 grid-cols-1 grid-rows-1 m-5">
                <div className="hidden h-32 2xl:block border-r-[1px] border-b-[1px] border-gray-400 w-full"></div>
