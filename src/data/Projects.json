@@ -1,16 +1,16 @@
 [
 	{
-		"id": 8,
+		"id": "008",
 		"title": "Nucleus",
 		"tags": ["collaborative", "design", "development", "apis"],
-		"desc": "Upcoming...",
-		"img": "https://images.unsplash.com/photo-1564510714747-69c3bc1fab41?q=80&w=2670&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
+		"desc": "The last few months of Bootcamp have taught us that time management is essential when it comes to studying. Our app is based on the Pomodoro Technique, a tried-and-tested learning method that intersperses periods of concentration with set breaks. Topics of study are broken down to sessions of around 25 minutes to maximise focus, with enforced breaks between sessions to help with memory retention and decrease fatigue. It’s not just helpful for filling your mind, you can empty it too by using Nucleus as a meditation and mindfulness aid. With a minimalist UI and customisable session and break lengths, Nucleus is a simple solution for tasks that may initially seem overwhelming, helps build better study habits and sends procrastination packing.",
+		"img": "https://github.com/calltekk/nucleus/raw/main/nucleus/frontend/src/assets/images/01-home-page.png",
 		"deployed": "",
 		"repo": "https://github.com/calltekk/nucleus",
 		"techs": ["EdX", "HTML", "CSS", "JavaScript", "NPM", "Vite", "React", "React Router", "Axios", "PostCSS", "TailwindCSS", "DaisyUI", "MongoDB", "Git", "GitHub", "Vercel"]
 	},
 	{
-		"id": 1,
+		"id": "001",
 		"title": "Paws Planner",
 		"tags": ["collaborative", "design", "development", "apis"],
 		"desc": "Welcome to Paws Planner, your go-to application for planning pet-friendly adventures around the world! Whether you're a pet owner or a pet lover, Paws Planner helps you discover and plan exciting activities for you and your furry friends in any location.",
@@ -20,7 +20,7 @@
 		"techs": ["EdX", "HTML", "CSS", "JavaScript", "NPM", "Bootstrap", "GitHub", "GitHub Pages"]
 	},
 	{
-		"id": 2,
+		"id": "002",
 		"title": "Web Development Notes",
 		"tags": ["individual"],
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
@@ -30,7 +30,7 @@
 		"techs": ["EdX", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
 	},
 	{
-		"id": 3,
+		"id": "003",
 		"title": "Bootstrap Portfolio",
 		"tags": ["individual", "design", "development"],
 		"desc": "This challenge involved designing a web page that displayed my work to-date on a page designed with Bootstrap, HTML and CSS.",
@@ -40,7 +40,7 @@
 		"techs": ["EdX", "HTML", "CSS", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
 	},
 	{
-		"id": 4,
+		"id": "004",
 		"title": "Weather Dashboard",
 		"tags": ["individual", "design", "development", "apis"],
 		"desc": "This challenge involved designing a web page that pulled data from a Server API (OpenWeather API) and displaying that in 2 views: one for today's weather, and one section for a 5-day forecast. The web page also has functionality of storing the user's 5 most recent searches to assist with pulling up that data quicker.",
@@ -50,7 +50,7 @@
 		"techs": ["EdX", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
 	},
 	{
-		"id": 5,
+		"id": "005",
 		"title": "Team-Profile Generator",
 		"tags": ["individual", "development"],
 		"desc": "This project allowed me to hone my skills with npm, inquirer and node.js - and developed familiarity with test-driven development by writing code that had to pass the tests provided. By collecting user responses with inquirer, I then processed the data and accordingly wrote it to a HTML file to display the members of a team.",
@@ -60,7 +60,7 @@
 		"techs": ["EdX", "HTML", "JavaScript", "Node.js", "Jest", "Git", "GitHub", "GitHub Pages"]
 	},
 	{
-		"id": 6,
+		"id": "006",
 		"title": "README Generator",
 		"tags": ["individual", "development"],
 		"desc": "This project helped me learn node.js by installing a third-party package (Inquirer) through npm. Using the readme docs for that package, I then created several questions, gathered the user input and implemented it via template literals into a 'write' function to a README.md document.",
@@ -70,7 +70,7 @@
 		"techs": ["EdX", "JavaScript", "Markdown", "Git", "GitHub", "GitHub Pages", "Node.js"]
 	},
 	{
-		"id": 7,
+		"id": "007",
 		"title": "Password Generator",
 		"tags": ["individual", "development"],
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",

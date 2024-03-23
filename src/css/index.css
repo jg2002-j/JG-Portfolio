@@ -49,10 +49,6 @@
 	z-index: -1;
 }
 
-.pgtitle{
-	font-size: calc(30px + 7.5vw);
-}
-
 .line {
 	width: 100%;
 	max-width: 800px;
