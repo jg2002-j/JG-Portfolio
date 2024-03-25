@@ -46,8 +46,8 @@ function App() {
 				<Route path={NavItems[4].route} element={<AboutPage/>} />
 				<Route path={NavItems[6].route} element={<ContactPage/>} />
 			</Routes>
-			<Sidebar state={sidebarState} toggleSidebar={toggleSidebar} />
-			<ContactMe />
+			{/* <Sidebar state={sidebarState} toggleSidebar={toggleSidebar} />
+			<ContactMe /> */}
 		</Router>
 	);
 }
