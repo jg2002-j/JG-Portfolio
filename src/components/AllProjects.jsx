@@ -1,12 +1,11 @@
 import React from "react";
 import Project from "./Project";
-import ProjectModal from "./ProjectModal";
 import projects from "../data/Projects.json";
 
 function AllProjects(props) {
   	return (
 	 	<>
-         <div className="flex flex-col 2xl:flex-row flex-wrap justify-center rounded-lg mx-5 2xl:m-40 gap-5">
+         <div className="flex flex-col lg:flex-row overflow-auto gap-x-10 mx-5 transpdiv">
             {projects.map(projItem => (
                <Project 
 						enlargefunction={props.enlargefunction}
@@ -21,7 +20,6 @@ function AllProjects(props) {
 						peer={projItem.id}/>
             ))} 
          </div>
-			<ProjectModal /> 
 		</>
   	)
 };

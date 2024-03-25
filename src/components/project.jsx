@@ -13,8 +13,8 @@ const getBadges = (props) => {
 
 function shortenDesc(props) {
    let originalDesc = props.desc;
-   if (originalDesc.length > 100) {
-      return originalDesc.substr(0,100) + "...";
+   if (originalDesc.length > 150) {
+      return originalDesc.substr(0,150) + "...";
    } else {
       return originalDesc;
    }
@@ -22,19 +22,21 @@ function shortenDesc(props) {
 
 function Project(props) {
    return (
-
-      <div className="w-[40%] flex flex-col gap-5 m-5">
-         <div className="min-h-60 rounded-3xl overflow-hidden">
+      <div className="select-none min-w-[35%] flex flex-col gap-5 m-5">
+         <div className="rounded-3xl overflow-hidden">
             <img src={props.img} className="aspect-video w-full object-cover" />
          </div>
          <div className="flex flex-wrap justify-start items-center gap-2 my-2">
-            {props.tags.map(tag => (<span key={tag} className="py-1 px-3 border-[1px] border-slate-600 text-xs text-slate-300 uppercase tracking-widest rounded-3xl select-none">{tag}</span>))}
+            {props.tags.map(tag => (<span key={tag} className="py-1 px-3 border-[1px] border-slate-600 text-xs capitalize tracking-widest text-slate-300 rounded-3xl select-none">{tag}</span>))}
          </div>
-         <h2 className="font-title text-5xl tracking-wider">{props.title}</h2>
+         <h2 className="font-title text-3xl lg:text-5xl tracking-wider">{props.title}</h2>
          <div className="flex flex-wrap justify-start items-center gap-2">
             {getBadges(props)}
          </div>
-         <div className="flex gap-x-5">
+         <div>
+            <p className="max-w-[40ch]">{shortenDesc(props)}</p>
+         </div>
+         <div className="flex flex-col lg:flex-row gap-5">
             <a target="_blank" href={props.deployed} className="rounded-3xl border-[1px] border-slate-600 py-1 flex items-center justify-center bg-slate-600 hover:bg-transparent group duration-700 ease-in-out">
                <span className="ms-9 me-2 group-hover:ms-5 duration-700 font-header group-hover:text-slate-200 text-xs">Visit Website</span>
                <MousePointerSquare size={12} className="inline ms-0 me-4 group-hover:ms-4 duration-700 text-slate-600 group-hover:text-slate-200" />

@@ -31,7 +31,7 @@ function ProjectsPage() {
         		<Route path={NavItems[2].route} element={<FeaturedProject />} />
         		<Route path={NavItems[3].route} element={<AllProjects />} />
       	</Routes> */}
-         <FeaturedProject project={project} />
+         {/* <FeaturedProject project={project} /> */}
          <AllProjects enlargefunction={enlargeProject} />
       </>      
    )

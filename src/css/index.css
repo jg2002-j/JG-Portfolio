@@ -65,3 +65,7 @@
 	background-position: center;
 	background-repeat: no-repeat;
 }
+
+.transpdiv{
+	mask-image: linear-gradient(to right, black, black 80%, transparent 100%);
+}
