@@ -2,7 +2,7 @@ import React, { useRef } from "react";
 import LoadingScreen from "../components/LoadingScreen";
 import MiniNav from "../components/MiniNav";
 import Title from "../components/Title";
-import bgImage from "../assets/xebelion-15.jpg";
+// import bgImage from "../assets/xebelion-15.jpg";
 import FeaturedProject from "../components/FeaturedProject";
 import Skills from "../components/Skills";
 import CurrentTime from "../components/CurrentTime";
@@ -13,18 +13,28 @@ import { ScrollTrigger } from "gsap/all";
 gsap.registerPlugin(ScrollTrigger)
 
 function HomePage() {
+
+   const border1 = useRef(null)
+
+   useGSAP(() => {
+
+   })
+
+
    return (
       <>
-         <div className="min-h-dvh max-w-screen-2xl border-2 mx-auto flex flex-col">
-            <div className="border-2 h-[40vh] w-full flex">
-               <div className="w-[40%] border-2"></div>
-               <div className="w-[60%] border-2"></div>
+         {/* <LoadingScreen/> */}
+         <div className="min-h-dvh max-w-screen-2xl mx-auto flex flex-col">
+            <div className="h-[40vh] w-full flex">
+               <div className="w-[40%] bg-stone-500 bg-opacity-55"></div>
+               <div className="w-[60%] bg-stone-500 bg-opacity-75"></div>
             </div>
-            <div className="border-2 h-[60vh] w-full bgimage">
+            <div className="h-[60vh] w-full bgimage">
                <Title />
                <MiniNav />
             </div>
          </div>
+         <FeaturedProject/>
       
       </>
       // <>

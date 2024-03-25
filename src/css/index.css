@@ -74,3 +74,10 @@
 	mask-image: linear-gradient(to bottom, transparent 5%, black 30%, black 70%, transparent 95%);
 	scrollbar-width: 0;
 }
+
+.hidescroll{
+	scrollbar-width: none;
+}
+.hidescroll::-webkit-scrollbar{
+	display: none;
+}
