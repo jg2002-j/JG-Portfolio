@@ -1,6 +1,4 @@
 import React from "react";
-import ContactMe from "../components/ContactMe";
-import ContactForm from "../components/ContactForm";
 
 //// Must have a contact form for handling events
 // TODO: Must include contact information:

@@ -6,7 +6,6 @@ import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 
 import Sidebar from "./components/Sidebar";
-import ContactMe from "./components/ContactMe";
 import NavItems from "./data/NavItems.json";
 
 import "./css/index.css";
