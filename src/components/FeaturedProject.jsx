@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import projects from "../data/Projects.json";
-import RepeatTextBG from "./RepeatTextBG";
 import techBadges from "../data/TechBadges.json";
 import { ChevronsDown } from "lucide-react";
 
@@ -40,10 +39,25 @@ function FeaturedProject(project) {
 
    const splitTitle = enlargedProj.title.split("")
 
+   const bgText = (text, repeats) => {
+      let finalArray = []
+      let lettersArray = text.split("")
+
+      for (let i = 0; i < repeats; i++) {
+         lettersArray.forEach(letter => {
+            finalArray.push(letter)
+         });
+      }
+
+      return(finalArray.map((letter, index) => (<span key={index} className="mx-1 font-title text-8xl ghosttext">{letter}</span>)))
+   }
+
    return (
       <>
          <div className="h-dvh w-vw mt-10 relative overflow-hidden">
-            <RepeatTextBG text={enlargedProj.title} repeats={100} />
+            <div className="absolute -top-5 -left-5 w-[120%] h-full -z-10 flex flex-wrap justify-start items-start transpdivtb">
+               {bgText(enlargedProj.title, 100)}
+            </div>
             <div className="absolute flex flex-col 2xl:flex-row gap-10 overflow-hidden" style={{left: ftprojPos.left, top: ftprojPos.top, width: ftprojPos.width, height: ftprojPos.height}}>
                <img className="aspect-video h-full object-cover" src={enlargedProj.img} alt={enlargedProj.title} />
                <div className="w-full overflow-auto hidescroll">
