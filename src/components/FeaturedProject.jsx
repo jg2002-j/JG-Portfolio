@@ -16,7 +16,7 @@ function FeaturedProject(project) {
       const projTechs = proj.techs;
       const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name)).map(tech => tech.value);
       const badgeElements = matchingTechBadges.map(value => (
-         <img key={value} alt="Static Badge" src={value} />
+         <img key={value} alt={value} src={value} />
       ));
       return badgeElements;
    };
@@ -36,18 +36,54 @@ function FeaturedProject(project) {
    };
    const ftprojPos = genPos(5,30)
 
-   
-   
+   const splitTitle = enlargedProj.title.split("")
+
+   const bgText = (text, repeats) => {
+      let finalArray = []
+      let lettersArray = text.split("")
+
+      for (let i = 0; i < repeats; i++) {
+         lettersArray.forEach(letter => {
+            finalArray.push(letter)
+         });
+      }
+
+      return(finalArray.map((letter, index) => (<span key={index} className="mx-1 font-title text-8xl ghosttext">{letter}</span>)))
+   }
+
    return (
       <>
-         <div className="h-dvh w-vw border-2 grid grid-cols-12 grid-rows-12 mt-10">
-            <div className="relative rounded-3xl flex flex-col 2xl:flex-row gap-5 overflow-hidden border-2" style={{left: ftprojPos.left, top: ftprojPos.top, width: ftprojPos.width, height: ftprojPos.height}}>
+         <div className="h-dvh w-vw mt-10 relative overflow-hidden">
+            <div className="absolute -top-5 -left-5 w-full h-full -z-10 flex flex-wrap justify-start items-start transpdivtb">
+               {bgText(enlargedProj.title, 100)}
+            </div>
+            <div className="absolute rounded-xl flex flex-col 2xl:flex-row gap-10 overflow-hidden" style={{left: ftprojPos.left, top: ftprojPos.top, width: ftprojPos.width, height: ftprojPos.height}}>
                <img className="aspect-video h-full object-cover" src={enlargedProj.img} alt={enlargedProj.title} />
-               <div className="w-full border-2 overflow-auto hidescroll">
-                  <div className="border-2 border-red-500 h-full">
-                     <h2></h2>
+               <div className="w-full overflow-auto hidescroll">
+                  <div className="h-full flex flex-col justify-between pb-[10%]">
+                     <div className="flex flex-wrap text-7xl font-title tracking-widest underline">
+                        {splitTitle.map((letter, index) => (
+                           <span className="select-none" key={index}>{letter}</span>
+                        ))}
+                     </div>
+                     <a href={`#${enlargedProj.title}nxtpg`} className="max-w-fit px-4 py-2 rounded-xl self-end border-2 text-xs uppercase">Scroll Down</a>
                   </div>
-                  <div className="border-2 border-blue-500 h-full"></div>
+                  <div id={`${enlargedProj.title}nxtpg`} className="min-h-full flex flex-col gap-8">
+                     <div>
+                        <div className="border-b-[1px] w-[25%]"></div>
+                        <h3 className="font-header text-2xl font-bold text-[${enlargedProj.swatch}] py-1 flex flex-wrap items-baseline" style={{color: enlargedProj.swatch}}>What's<span className="font-title mx-3">{enlargedProj.title}</span>about?</h3>
+                        <div className="border-t-[1px] w-[75%]"></div>
+                     </div>
+                     <p>{enlargedProj.desc}</p>
+                     <div className="self-end flex flex-col items-end">
+                        <div className="border-b-[1px] w-[25%]"></div>
+                        <h3 className="font-header text-2xl font-bold text-end py-1" style={{color: enlargedProj.swatch}}>What technologies were used?</h3>
+                        <div className="border-t-[1px] w-[75%]"></div>
+                     </div>
+                     <div className="flex flex-wrap gap-2">
+                        {getBadges(enlargedProj)}
+                     </div>
+                  </div>
                </div>
             </div>
          </div>

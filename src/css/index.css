@@ -24,6 +24,7 @@
 
 *{
 	scroll-padding: 5vh;
+	scroll-behavior: smooth;
 }
 
 .font-title{
@@ -80,4 +81,10 @@
 }
 .hidescroll::-webkit-scrollbar{
 	display: none;
+}
+
+.ghosttext{
+	color:transparent;
+	-webkit-text-stroke: 1px white;
+	opacity: 7%;
 }

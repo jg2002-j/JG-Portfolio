@@ -5,7 +5,7 @@
 		"tags": ["collaborative", "design", "development", "apis"],
 		"desc": "The last few months of Bootcamp have taught us that time management is essential when it comes to studying. Our app is based on the Pomodoro Technique, a tried-and-tested learning method that intersperses periods of concentration with set breaks. Topics of study are broken down to sessions of around 25 minutes to maximise focus, with enforced breaks between sessions to help with memory retention and decrease fatigue. It’s not just helpful for filling your mind, you can empty it too by using Nucleus as a meditation and mindfulness aid. With a minimalist UI and customisable session and break lengths, Nucleus is a simple solution for tasks that may initially seem overwhelming, helps build better study habits and sends procrastination packing.",
 		"img": "https://github.com/calltekk/nucleus/raw/main/nucleus/frontend/src/assets/images/01-home-page.png",
-		"swatch": "#4a5a68",
+		"swatch": "#a3acbc",
 		"deployed": "https://nucleus-plum-zeta.vercel.app/",
 		"repo": "https://github.com/calltekk/nucleus",
 		"techs": ["EdX", "HTML", "CSS", "JavaScript", "NPM", "Vite", "React", "React Router", "Axios", "PostCSS", "TailwindCSS", "DaisyUI", "MongoDB", "Git", "GitHub", "Vercel"]
@@ -16,7 +16,7 @@
 		"tags": ["collaborative", "design", "development", "apis"],
 		"desc": "Welcome to Paws Planner, your go-to application for planning pet-friendly adventures around the world! Whether you're a pet owner or a pet lover, Paws Planner helps you discover and plan exciting activities for you and your furry friends in any location.",
 		"img": "https://i.postimg.cc/JhddzRVF/Screenshot-1.png",
-		"swatch": "",
+		"swatch": "#72a3cb",
 		"deployed": "https://anadomuta.github.io/paws-planner/",
 		"repo": "https://github.com/anadomuta/paws-planner",
 		"techs": ["EdX", "HTML", "CSS", "JavaScript", "NPM", "Bootstrap", "GitHub", "GitHub Pages"]
@@ -27,7 +27,7 @@
 		"tags": ["individual"],
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
 		"img": "https://i.imgur.com/x0XRxDM.png",
-		"swatch": "",
+		"swatch": "#c19c3d",
 		"deployed": "https://jg2002-j.github.io/webdevnotes/",
 		"repo": "https://github.com/jg2002-j/webdevnotes",
 		"techs": ["EdX", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
@@ -49,7 +49,7 @@
 		"tags": ["individual", "design", "development", "apis"],
 		"desc": "This challenge involved designing a web page that pulled data from a Server API (OpenWeather API) and displaying that in 2 views: one for today's weather, and one section for a 5-day forecast. The web page also has functionality of storing the user's 5 most recent searches to assist with pulling up that data quicker.",
 		"img": "https://github.com/jg2002-j/weather-dashboard/blob/main/assets/deployed.png?raw=true",
-		"swatch": "",
+		"swatch": "#e7dace",
 		"deployed": "https://jg2002-j.github.io/weather-dashboard/",
 		"repo": "https://github.com/jg2002-j/weather-dashboard",
 		"techs": ["EdX", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
@@ -60,7 +60,7 @@
 		"tags": ["individual", "development"],
 		"desc": "This project allowed me to hone my skills with npm, inquirer and node.js - and developed familiarity with test-driven development by writing code that had to pass the tests provided. By collecting user responses with inquirer, I then processed the data and accordingly wrote it to a HTML file to display the members of a team.",
 		"img": "https://github.com/jg2002-j/team-profile-generator/blob/main/assets/deployed.png?raw=true",
-		"swatch": "",
+		"swatch": "#eeeeee",
 		"deployed": "",
 		"repo": "https://github.com/jg2002-j/team-profile-generator",
 		"techs": ["EdX", "HTML", "JavaScript", "Node.js", "Jest", "Git", "GitHub", "GitHub Pages"]
@@ -71,7 +71,7 @@
 		"tags": ["individual", "development"],
 		"desc": "This project helped me learn node.js by installing a third-party package (Inquirer) through npm. Using the readme docs for that package, I then created several questions, gathered the user input and implemented it via template literals into a 'write' function to a README.md document.",
 		"img": "https://github.com/jg2002-j/readme-generator/blob/main/assets/deployed_application.png?raw=true",
-		"swatch": "",
+		"swatch": "#4cae69",
 		"deployed": "",
 		"repo": "https://github.com/jg2002-j/readme-generator",
 		"techs": ["EdX", "JavaScript", "Markdown", "Git", "GitHub", "GitHub Pages", "Node.js"]
@@ -82,7 +82,7 @@
 		"tags": ["individual", "development"],
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
 		"img": "https://github.com/jg2002-j/password-generator/raw/main/Screenshot%202024-01-23%20174657.png",
-		"swatch": "",
+		"swatch": "#af0808",
 		"deployed": "https://jg2002-j.github.io/password-generator/",
 		"repo": "https://github.com/jg2002-j/password-generator",
 		"techs": ["EdX", "HTML", "JavaScript", "Git", "GitHub", "GitHub Pages"]
