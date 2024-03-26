@@ -28,10 +28,12 @@
 }
 
 .font-title{
+	user-select: none;
 	font-family: "Akira", sans-serif;
 }
 
 .font-header {
+	user-select: none;
 	font-family: "General Sans", sans-serif;
 }
 

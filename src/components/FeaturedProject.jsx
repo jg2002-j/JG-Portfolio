@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import projects from "../data/Projects.json";
 import techBadges from "../data/TechBadges.json";
+import { ChevronsDown } from "lucide-react";
 
 
 function FeaturedProject(project) {
@@ -57,7 +58,7 @@ function FeaturedProject(project) {
             <div className="absolute -top-5 -left-5 w-full h-full -z-10 flex flex-wrap justify-start items-start transpdivtb">
                {bgText(enlargedProj.title, 100)}
             </div>
-            <div className="absolute rounded-xl flex flex-col 2xl:flex-row gap-10 overflow-hidden" style={{left: ftprojPos.left, top: ftprojPos.top, width: ftprojPos.width, height: ftprojPos.height}}>
+            <div className="absolute flex flex-col 2xl:flex-row gap-10 overflow-hidden" style={{left: ftprojPos.left, top: ftprojPos.top, width: ftprojPos.width, height: ftprojPos.height}}>
                <img className="aspect-video h-full object-cover" src={enlargedProj.img} alt={enlargedProj.title} />
                <div className="w-full overflow-auto hidescroll">
                   <div className="h-full flex flex-col justify-between pb-[10%]">
@@ -66,7 +67,7 @@ function FeaturedProject(project) {
                            <span className="select-none" key={index}>{letter}</span>
                         ))}
                      </div>
-                     <a href={`#${enlargedProj.title}nxtpg`} className="max-w-fit px-4 py-2 rounded-xl self-end border-2 text-xs uppercase">Scroll Down</a>
+                     <span className="select-none max-w-fit px-4 py-2 self-end text-xs uppercase flex items-center gap-x-2 tracking-widest animate-pulse">Scroll Down <ChevronsDown size={13} className="inline"/> </span>
                   </div>
                   <div id={`${enlargedProj.title}nxtpg`} className="min-h-full flex flex-col gap-8">
                      <div>
