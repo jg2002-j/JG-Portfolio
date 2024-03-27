@@ -1,6 +1,4 @@
 [
-   {"name": "EdX", "value": "https://img.shields.io/badge/EdX-232836?logo=edx"},
-
    {"name": "HTML", "value": "https://img.shields.io/badge/HTML-232836?logo=html5"},
    {"name": "CSS", "value": "https://img.shields.io/badge/CSS-232836?logo=CSS3&logoColor=1572B6"},
 	{"name": "JavaScript", "value": "https://img.shields.io/badge/JavaScript-232836?logo=javascript"},

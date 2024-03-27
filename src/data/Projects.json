@@ -8,7 +8,7 @@
 		"swatch": "#85454d",
 		"deployed": "https://nucleus-plum-zeta.vercel.app/",
 		"repo": "https://github.com/calltekk/nucleus",
-		"techs": ["EdX", "HTML", "CSS", "JavaScript", "NPM", "Vite", "React", "React Router", "Axios", "PostCSS", "TailwindCSS", "DaisyUI", "MongoDB", "Git", "GitHub", "Vercel"]
+		"techs": ["HTML", "CSS", "JavaScript", "NPM", "Vite", "React", "React Router", "Axios", "PostCSS", "TailwindCSS", "DaisyUI", "MongoDB", "Git", "GitHub", "Vercel"]
 	},
 	{
 		"id": "001",
@@ -19,7 +19,7 @@
 		"swatch": "#72a3cb",
 		"deployed": "https://anadomuta.github.io/paws-planner/",
 		"repo": "https://github.com/anadomuta/paws-planner",
-		"techs": ["EdX", "HTML", "CSS", "JavaScript", "NPM", "Bootstrap", "GitHub", "GitHub Pages"]
+		"techs": ["HTML", "CSS", "JavaScript", "NPM", "Bootstrap", "GitHub", "GitHub Pages"]
 	},
 	{
 		"id": "002",
@@ -30,7 +30,7 @@
 		"swatch": "#c19c3d",
 		"deployed": "https://jg2002-j.github.io/webdevnotes/",
 		"repo": "https://github.com/jg2002-j/webdevnotes",
-		"techs": ["EdX", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
+		"techs": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
 	},
 	{
 		"id": "003",
@@ -41,7 +41,7 @@
 		"swatch": "",
 		"deployed": "https://jg2002-j.github.io/bootstrap-portfolio/",
 		"repo": "https://github.com/jg2002-j/bootstrap-portfolio",
-		"techs": ["EdX", "HTML", "CSS", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
+		"techs": ["HTML", "CSS", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
 	},
 	{
 		"id": "004",
@@ -52,7 +52,7 @@
 		"swatch": "#e7dace",
 		"deployed": "https://jg2002-j.github.io/weather-dashboard/",
 		"repo": "https://github.com/jg2002-j/weather-dashboard",
-		"techs": ["EdX", "HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
+		"techs": ["HTML", "CSS", "JavaScript", "jQuery", "Bootstrap", "Git", "GitHub", "GitHub Pages"]
 	},
 	{
 		"id": "005",
@@ -63,7 +63,7 @@
 		"swatch": "#eeeeee",
 		"deployed": "",
 		"repo": "https://github.com/jg2002-j/team-profile-generator",
-		"techs": ["EdX", "HTML", "JavaScript", "Node.js", "Jest", "Git", "GitHub", "GitHub Pages"]
+		"techs": ["HTML", "JavaScript", "Node.js", "Jest", "Git", "GitHub", "GitHub Pages"]
 	},
 	{
 		"id": "006",
@@ -74,7 +74,7 @@
 		"swatch": "#4cae69",
 		"deployed": "",
 		"repo": "https://github.com/jg2002-j/readme-generator",
-		"techs": ["EdX", "JavaScript", "Markdown", "Git", "GitHub", "GitHub Pages", "Node.js"]
+		"techs": ["JavaScript", "Markdown", "Git", "GitHub", "GitHub Pages", "Node.js"]
 	},
 	{
 		"id": "007",
@@ -85,6 +85,6 @@
 		"swatch": "#af0808",
 		"deployed": "https://jg2002-j.github.io/password-generator/",
 		"repo": "https://github.com/jg2002-j/password-generator",
-		"techs": ["EdX", "HTML", "JavaScript", "Git", "GitHub", "GitHub Pages"]
+		"techs": ["HTML", "JavaScript", "Git", "GitHub", "GitHub Pages"]
 	}
 ]
