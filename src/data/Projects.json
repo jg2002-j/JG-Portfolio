@@ -3,7 +3,7 @@
 		"id": "008",
 		"title": "Nucleus",
 		"tags": ["collaborative", "design", "development", "apis"],
-		"desc": "The last few months of Bootcamp have taught us that time management is essential when it comes to studying. Our app is based on the Pomodoro Technique, a tried-and-tested learning method that intersperses periods of concentration with set breaks. Topics of study are broken down to sessions of around 25 minutes to maximise focus, with enforced breaks between sessions to help with memory retention and decrease fatigue. It’s not just helpful for filling your mind, you can empty it too by using Nucleus as a meditation and mindfulness aid. With a minimalist UI and customisable session and break lengths, Nucleus is a simple solution for tasks that may initially seem overwhelming, helps build better study habits and sends procrastination packing.",
+		"desc": "Time management is essential when it comes to studying. Our app is based on the Pomodoro Technique, a tried-and-tested learning method that intersperses periods of concentration with set breaks. Topics of study are broken down to sessions of around 25 minutes to maximise focus, with enforced breaks between sessions to help with memory retention and decrease fatigue. It’s not just helpful for filling your mind, you can empty it too by using Nucleus as a meditation and mindfulness aid. With a minimalist UI and customisable session and break lengths, Nucleus is a simple solution for tasks that may initially seem overwhelming, helps build better study habits and sends procrastination packing.",
 		"img": "https://github.com/calltekk/nucleus/raw/main/nucleus/frontend/src/assets/images/01-home-page.png",
 		"swatch": "#85454d",
 		"deployed": "https://nucleus-plum-zeta.vercel.app/",
@@ -25,7 +25,7 @@
 		"id": "002",
 		"title": "Web Development Notes",
 		"tags": ["individual"],
-		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
+		"desc": "Learning how to use languages and tools can often be challenging, especially when covering a lot of material in a short amount of time. I found the best way to retain these newfound skills was to not only note them down, but also practice using them - which I did with this site.",
 		"img": "https://i.imgur.com/x0XRxDM.png",
 		"swatch": "#c19c3d",
 		"deployed": "https://jg2002-j.github.io/webdevnotes/",
@@ -63,7 +63,7 @@
 		"swatch": "#eeeeee",
 		"deployed": "",
 		"repo": "https://github.com/jg2002-j/team-profile-generator",
-		"techs": ["HTML", "JavaScript", "Node.js", "Jest", "Git", "GitHub", "GitHub Pages"]
+		"techs": ["HTML", "JavaScript", "Node.js", "NPM", "Boostrap", "Jest", "Git", "GitHub"]
 	},
 	{
 		"id": "006",
@@ -74,7 +74,7 @@
 		"swatch": "#4cae69",
 		"deployed": "",
 		"repo": "https://github.com/jg2002-j/readme-generator",
-		"techs": ["JavaScript", "Markdown", "Git", "GitHub", "GitHub Pages", "Node.js"]
+		"techs": ["JavaScript", "Markdown", "Node.js", "NPM", "Git", "GitHub"]
 	},
 	{
 		"id": "007",
@@ -85,6 +85,6 @@
 		"swatch": "#af0808",
 		"deployed": "https://jg2002-j.github.io/password-generator/",
 		"repo": "https://github.com/jg2002-j/password-generator",
-		"techs": ["HTML", "JavaScript", "Git", "GitHub", "GitHub Pages"]
+		"techs": ["HTML", "CSS", "JavaScript", "Git", "GitHub", "GitHub Pages"]
 	}
 ]
