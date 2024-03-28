@@ -9,30 +9,19 @@ function AllProjects() {
 	const [ focusProj, setfocusProj ] = useState(projects[1])
 	const [ secProj, setSecProj] = useState(projects[0])
 	const [ tertProj, setTertProj] = useState(projects[2])
-	// const [ quatProj, setQuatProj] = useState(projects[3])
 
 	const chooseProjfnct = (index) => {
 		setfocusProj(projects[index])
-		// secondary proj
 		if (index == 0){
 			setSecProj(projects[projects.length-1])
 		} else {
 			setSecProj(projects[index-1])
 		}
-		// tertiary proj
 		if (index == (projects.length-1)){
 			setTertProj(projects[0])
 		} else {
 			setTertProj(projects[index+1])
 		}
-		// // quaternary proj
-		// if (index == (projects.length-2)){
-		// 	setQuatProj(projects[0])
-		// } else if (index == (projects.length-1)) {
-		// 		setQuatProj(projects[1])
-		// } else {
-		// 	setQuatProj(projects[index+2])
-		// }
 	}
 	
    const getBadges = (proj) => {
@@ -44,7 +33,7 @@ function AllProjects() {
       return badgeElements;
    };
 
-	function shortenDesc(proj) {
+	const shortenDesc = (proj) => {
 		if (proj.desc.length > 250) {
 			return (
 				<>
