@@ -1,10 +1,8 @@
 import React from "react";
-
+import projects from "../data/Projects.json"
 import FeaturedProject from "../components/FeaturedProject";
 import AllProjects from "../components/AllProjects";
 
-import { Link, Route, Routes } from 'react-router-dom';
-import NavItems from "../data/NavItems.json";
 
 
 //// Must render six instances of the Project component dynamically
@@ -12,11 +10,12 @@ import NavItems from "../data/NavItems.json";
 
 function ProjectsPage() {
 
-   const [ project, setProject ] = React.useState()
+   // const [ project, setProject ] = React.useState()
    
-   const enlargeProject = (props) => {
-      setProject(props.title)
-      document.getElementById("featuredprojimg").scrollIntoView();
+   const chooseProjfnct = (index) => {
+      console.log(index)
+      console.log(projects[index])
+      // document.getElementById("featuredprojimg").scrollIntoView();
    }
 
    return (
@@ -32,7 +31,7 @@ function ProjectsPage() {
         		<Route path={NavItems[3].route} element={<AllProjects />} />
       	</Routes> */}
          {/* <FeaturedProject project={project} /> */}
-         <AllProjects enlargefunction={enlargeProject} />
+         <AllProjects chooseProjfnct={chooseProjfnct} />
       </>      
    )
 };

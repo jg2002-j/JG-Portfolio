@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ChevronsDown, ChevronsUp } from "lucide-react";
 
-function ProjectList() {
+function ProjectList(props) {
 
 	// GSAP Helper Function
 	function verticalLoop(items, config) {
@@ -207,6 +207,7 @@ function ProjectList() {
 			center: true,
 			onChange: (element, index) => {
 				setisprojItemActive(index);
+				props.chooseProjfnct(index);
 			}
 		}) ;
 		projItems.forEach((projItem, i) => projItem.addEventListener("click", () => loop.toIndex(i, {duration: 0.8, ease: "power1.inOut"})));
