@@ -1,25 +1,12 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import projects from "../data/Projects.json";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
+import { ChevronsDown, ChevronsUp } from "lucide-react";
 
 function ProjectList() {
 
-	/*
-	This helper function makes a group of elements animate along the y-axis in a seamless, responsive loop.
-
-	Features:
-	- Uses yPercent so that even if the widths change (like if the window gets resized), it should still work in most cases.
-	- When each item animates up or down enough, it will loop back to the other side
-	- Optionally pass in a config object with values like draggable: true, center: true, speed (default: 1, which travels at roughly 100 pixels per second), paused (boolean), repeat, reversed, enterAnimation, leaveAnimation, and paddingBottom.
-	- The returned timeline will have the following methods added to it:
-		- next() - animates to the next element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-		- previous() - animates to the previous element using a timeline.tweenTo() which it returns. You can pass in a vars object to control duration, easing, etc.
-		- toIndex() - pass in a zero-based index value of the element that it should animate to, and optionally pass in a vars object to control duration, easing, etc. Always goes in the shortest direction
-		- current() - returns the current index (if an animation is in-progress, it reflects the final index)
-		- times - an Array of the times on the timeline where each element hits the "starting" spot.
-		- elements - an Array of the elements that are being controlled by the timeline
-	*/
+	// GSAP Helper Function
 	function verticalLoop(items, config) {
 		items = gsap.utils.toArray(items);
 		config = config || {};
@@ -209,32 +196,34 @@ function ProjectList() {
 		return tl;
 	}
 	
-	const [ isprojItemActive, setisprojItemActive ] = React.useState(false)
-	
+	const [ isprojItemActive, setisprojItemActive ] = useState(false)
+	const projNext = useRef(null)
+	const projPrev = useRef(null)
+
 	useGSAP(() => {
 		const projItems = gsap.utils.toArray(".projItem");
 		const loop = verticalLoop(projItems, {
 			paused: true,
-			draggable: true,
 			center: true,
-			onChange: (element, index) => { // when the active element changes, this function gets called.
+			onChange: (element, index) => {
 				setisprojItemActive(index);
 			}
 		}) ;
-
 		projItems.forEach((projItem, i) => projItem.addEventListener("click", () => loop.toIndex(i, {duration: 0.8, ease: "power1.inOut"})));
-
-		// document.querySelector(".toggle").addEventListener("click", () => wrapper.classList.toggle("show-overflow"));
-		// document.querySelector(".next").addEventListener("click", () => loop.next({duration: 0.4, ease: "power1.inOut"}));
-		// document.querySelector(".prev").addEventListener("click", () => loop.previous({duration: 0.4, ease: "power1.inOut"}));
+		projNext.current.addEventListener("click", () => {loop.next({duration: 0.4, ease: "power1.inOut"})})
+		projPrev.current.addEventListener("click", () => {loop.previous({duration: 0.4, ease: "power1.inOut"})})
 	})
 
 	return (
-	 	<>
-			<div className="flex flex-col max-w-[30vw] overflow-hidden transpdivtb">
-				{projects.map((project, index) => (<h2 key={project.id} className={`border-2 px-5 py-5 my-3 font-title text-2xl tracking-widest projItem ${isprojItemActive === index ? "projItemActive" : ""}`}>{project.title}</h2>))}
+	 	<div className="flex flex-col">
+			<div className="flex justify-center items-center gap-4">
+				<button className="btn btn-ghost" ref={projPrev}><ChevronsUp/></button>
+				<button className="btn btn-ghost" ref={projNext}><ChevronsDown/></button>
 			</div>
-		</>
+			<div className="flex flex-col max-w-[30vw] overflow-hidden transpdivb">
+				{projects.map((project, index) => (<h2 key={project.id} className={`border-2 px-5 py-5 my-3 ${index === 0 ? "mt-6" : ""} font-title text-2xl tracking-widest projItem ${isprojItemActive === index ? "projItemActive" : ""}`}>{project.title}</h2>))}
+			</div>
+		</div>
  	)
 };
 
