@@ -10,8 +10,7 @@ function AllProjects(props) {
 			<div className="flex gap-10 justify-center">
 				<ProjectList />
 				<div className="grid grid-cols-12 grid-rows-12 border-2 w-[60vw] bg-red-200"></div>
-			</div>
-		
+			</div>		
 		</>
 
 		

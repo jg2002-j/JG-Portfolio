@@ -90,3 +90,7 @@
 	-webkit-text-stroke: 1px white;
 	opacity: 7%;
 }
+
+.projItemActive{
+	background: red;
+}
