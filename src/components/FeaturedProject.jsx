@@ -35,7 +35,7 @@ function FeaturedProject(project) {
          height: `${height}vh`,
       })
    };
-   const ftprojPos = genPos(5,30)
+   const ftprojPos = genPos(5,20)
 
    const splitTitle = enlargedProj.title.split("")
 
