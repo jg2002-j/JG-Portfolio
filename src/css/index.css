@@ -25,6 +25,11 @@
 *{
 	scroll-padding: 5vh;
 	scroll-behavior: smooth;
+	/* border: solid red 0.5px; */
+}
+
+.help{
+	border: solid yellow 1px;
 }
 
 .font-title{

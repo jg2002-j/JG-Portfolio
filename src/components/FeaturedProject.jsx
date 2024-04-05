@@ -35,7 +35,7 @@ function FeaturedProject(project) {
          height: `${height}vh`,
       })
    };
-   const ftprojPos = genPos(5,20)
+   const ftprojPos = genPos(2,10)
 
    const splitTitle = enlargedProj.title.split("")
 
@@ -62,7 +62,8 @@ function FeaturedProject(project) {
                <img className="aspect-video h-full object-cover" src={enlargedProj.img} alt={enlargedProj.title} />
                <div className="w-full overflow-auto hidescroll">
                   <div className="h-full flex flex-col justify-between pb-[10%]">
-                     <div className="flex flex-wrap text-7xl font-title tracking-widest underline">
+                     <img className="aspect-square object-cover object-left" src={enlargedProj.img2} alt={`${enlargedProj.title} View 2`} />
+                     <div className="flex flex-wrap text-[4.75rem] font-title tracking-widest underline">
                         {splitTitle.map((letter, index) => (
                            <span className="select-none" key={index}>{letter}</span>
                         ))}

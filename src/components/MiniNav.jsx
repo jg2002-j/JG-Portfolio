@@ -21,8 +21,8 @@ const renderHeaderNavIcons = (NavItems) => {
                   to={navItem.link} 
                   className="group-hover:px-8 px-4 py-2 ease-in-out duration-700 rounded-lg flex justify-center items-center bg-stone-900 bg-opacity-5 hover:bg-stone-900 hover:bg-opacity-50"
                >
-                  {NavIcons(navItem.icon, "text-stone-50 text-opacity-50 group-hover:text-opacity-100 ", 15)}
-                  <span className="font-header text-stone-50 text-opacity-50 group-hover:text-opacity-100 text-xs uppercase tracking-widest ms-4">{navItem.name}</span>
+                  {NavIcons(navItem.icon, "text-stone-50 text-opacity-60 group-hover:text-opacity-100 ", 15)}
+                  <span className="font-header text-stone-50 text-opacity-60 group-hover:text-opacity-100 text-xs uppercase tracking-widest ms-4">{navItem.name}</span>
                </NavLink>
             )
          }
