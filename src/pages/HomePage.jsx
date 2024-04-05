@@ -24,56 +24,37 @@ function HomePage() {
    return (
       <>
          {/* <LoadingScreen/> */}
-         <div className="min-h-dvh max-w-screen-2xl mx-auto flex flex-col">
-            <div className="h-[40vh] w-full flex">
-               <div className="w-[40%] bg-stone-500 bg-opacity-55"></div>
-               <div className="w-[60%] bg-stone-500 bg-opacity-75"></div>
+         <div className="min-h-dvh mx-auto flex flex-col">
+            <div className="min-h-[40vh] w-full relative">
+               <div className="absolute flex w-full h-full -z-10">
+                  <div className="w-[40%] bg-stone-300 bg-opacity-75 noise flex justify-start items-start"></div>
+                  <div className="w-[60%] bg-stone-50 bg-opacity-75 noise flex justify-end items-end"></div>
+               </div>
+               <div className="w-full min-h-[40vh] flex flex-col justify-center items-center py-10">
+                  <div className="self-start hidden 2xl:flex items-center justify-center w-full px-10 gap-10">
+                     <p className="text-[2vw] font-title tracking-[0.5rem] text-stone-500">LONDON</p>
+                     <div className="w-full 2xl:border-4 border-2 border-stone-600"></div>
+                  </div>
+                  <Title />
+                  <div className="self-end flex 2xl:hidden items-center justify-center w-full px-10 gap-10">
+                     <div className="w-full 2xl:border-4 border-2 border-stone-600"></div>
+                     <p className="text-[2vw] font-title tracking-[0.5rem] text-stone-500 text-nowrap">LONDON | {<CurrentTime/>}</p>
+                  </div>
+                  <div className="self-start hidden 2xl:flex items-center justify-center w-full px-10 gap-10">
+                     <div className="w-full 2xl:border-4 border-2 border-stone-600"></div>
+                     <p className="text-[2vw] font-title tracking-[0.5rem] text-stone-500">{<CurrentTime/>}</p>
+                  </div>
+               </div>
             </div>
-            <div className="h-[60vh] w-full bgimage">
-               <Title />
-               <MiniNav />
+            <div className="min-h-[90vh] w-full">
+               <div className="bgimage mx-10 max-w-full min-h-dvh">
+                  <MiniNav />
+               </div>
             </div>
          </div>
          <FeaturedProject/>
       
       </>
-      // <>
-      //    {/* <LoadingScreen /> */}
-      //    <div className="h-dvh rounded-b-3xl flex flex-col justify-between" id="home">
-      //       <img className="homepage-img -z-10" src={bgImage} alt="bg art" />
-      //       <div className="grid 2xl:grid-cols-3 2xl:grid-rows-2 grid-cols-1 grid-rows-1 m-5">
-      //          <div className="hidden h-32 2xl:block border-r-[1px] border-b-[1px] border-gray-300 w-full"></div>
-      //          <div className="hidden h-32 2xl:block border-r-[1px] border-b-[1px] border-gray-400 w-full"></div>
-      //          <div className="hidden h-32 2xl:block border-b-[1px] border-gray-400 w-full"></div>
-      //          <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div>
-      //          <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div>
-      //          <div className="h-32 border-gray-400 w-full px-5 flex flex-col justify-center">
-      //             <MiniNav />
-      //          </div>
-      //       </div>
-      //       <Title />
-      //       <div className="grid 2xl:grid-cols-3 2xl:grid-rows-2 grid-cols-1 grid-rows-1 m-5">
-      //          {/* <div className="hidden h-32 2xl:block border-r-[1px] border-b-[1px] border-gray-400 w-full"></div> */}
-      //          <div className="h-32 flex 2xl:border-r-[1px] 2xl:border-b-[1px] border-gray-400 w-full justify-evenly items-center px-3">
-      //             <h2 className="text-slate-200 text-md font-title tracking-[0.25rem] px-4 py-2 ease-in-out duration-700 rounded-lg hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] cursor-default">LONDON</h2>
-      //             <h2 className="text-slate-200 text-md font-title tracking-[0.25rem] px-4 py-2 ease-in-out duration-700 rounded-lg hover:scale-150 bg-[#722e58] bg-opacity-50 hover:bg-[#3f3c74] cursor-default">{<CurrentTime/>}</h2>
-      //          </div>
-      //          <div className="hidden h-32 2xl:block border-r-[1px] border-b-[1px] border-gray-400 w-full"></div>
-      //          <div className="hidden h-32 2xl:block border-b-[1px] border-gray-400 w-full"></div>
-      //          <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div>
-      //          {/* <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div> */}
-      //          <div className="hidden h-32 2xl:block border-r-[1px] border-gray-400 w-full"></div>
-      //          <div className="hidden h-32 2xl:block w-full"></div>
-      //       </div>
-      //    </div>
-      //    <div className="2xl:mx-60 mt-60 m-10 flex flex-col justify-start items-center" id="experience">
-      //       <h1 className="font-title text-center tracking-[0.7rem] text-6xl bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text inline-block">What can I do?</h1>
-      //    </div>
-      //    <div className="2xl:mx-60 m-20 max-w-full flex-col justify-center" id="aboutme">
-      //       <Skills />
-      //    </div>
-      //    <FeaturedProject />
-      // </>
    )
 };
 
