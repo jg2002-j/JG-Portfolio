@@ -1,8 +1,8 @@
 import React, { useState } from "react";
-import techBadges from "../data/TechBadges.json";
+import ProjectModals from "./ProjectModals";
 import ProjectList from "./ProjectList";
 import projects from "../data/Projects.json";
-import { Text, Image, Code, FolderGit2, Globe } from 'lucide-react';
+import { FolderGit2, Globe } from 'lucide-react';
 
 function AllProjects() {
   	
@@ -23,33 +23,6 @@ function AllProjects() {
 			setTertProj(projects[index+1])
 		}
 	}
-	
-   const getBadges = (proj) => {
-      const projTechs = proj.techs;
-      const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name)).map(tech => tech.value);
-      const badgeElements = matchingTechBadges.map(value => (
-         <img key={value} alt={value} src={value} />
-      ));
-      return badgeElements;
-   };
-
-	const shortenDesc = (proj) => {
-		if (proj.desc.length > 250) {
-			return (
-				<>
-					<p className="text-center text-lg">{proj.desc.substr(0,250)}...
-						<a target="_blank" href={`${proj.repo}/blob/main/README.md`} className="inline border-[1px] border-slate-200 border-opacity-25 ms-3 text-sm rounded-lg px-2 py-1 hover:cursor-pointer hover:bg-stone-600 hover:bg-opacity-50 duration-500 ease-in-out select-none">View full README</a>		
-					</p>
-				</>
-				);
-		} else {
-			return (
-				<>
-					<p className="text-center text-lg">{proj.desc}</p>
-				</>
-			);
-		}
-	}
 
 	return (
 		<>
@@ -64,9 +37,7 @@ function AllProjects() {
 						<img src={focusProj.img} alt={focusProj.title} className="aspect-video object-cover object-top max-w-[70%] rounded-lg" />
 						<div className="flex flex-col justify-center items-end gap-5">
 							<h2 className="font-title font-bold tracking-widest text-3xl text-end p-5 bg-stone-300 bg-opacity-10 rounded-s-lg mb-10">{focusProj.title}</h2>
-							<a href="http://" target="_blank" className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Text size={12} className="inline me-2"/> description</a>
-							<a href="http://" target="_blank" className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Image size={12} className="inline me-2"/> screenshots</a>
-							<a href="http://" target="_blank" className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Code size={12} className="inline me-2"/> tech stack</a>
+							<ProjectModals focusProj={focusProj}/>
 							<a href={focusProj.repo} target="_blank" className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><FolderGit2 size={12} className="inline me-2"/> see repo</a>
 							<a href={focusProj.deployed} target="_blank" className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Globe size={12} className="inline me-2"/> visit site</a>
 						</div>
@@ -76,7 +47,7 @@ function AllProjects() {
 						<img src={tertProj.img} alt={tertProj.title} className="bg-stone-300 bg-opacity-10 rounded-lg p-5 aspect-video object-cover object-top max-w-[40%] self-end" />
 					</div>
 				</div>
-			</div>		
+			</div>
 		</>
   	)
 };

@@ -111,8 +111,8 @@ function FeaturedProject(project) {
                </div>
             </div>
             <div className="col-start-2 col-span-4 row-start-12 row-span-1 bg-stone-300 bg-opacity-10 rounded-lg flex justify-center items-center gap-[20%]">
-               <button onClick={imgBack} className="w-16 flex justify-center items-center ease-in-out duration-300 border-[1px] border-stone-200 border-opacity-40 hover:border-opacity-0 rounded-lg bg-stone-900 bg-opacity-5 hover:bg-stone-900 hover:bg-opacity-50"><StepBack size={18} className="m-2"/></button>
-               <button onClick={imgForward} className="w-16 flex justify-center items-center ease-in-out duration-300 border-[1px] border-stone-200 border-opacity-40 hover:border-opacity-0 rounded-lg bg-stone-900 bg-opacity-5 hover:bg-stone-900 hover:bg-opacity-50"><StepForward size={18} className="m-2"/></button>
+               <button onClick={() => imgBack} className="w-16 flex justify-center items-center ease-in-out duration-300 border-[1px] border-stone-200 border-opacity-40 hover:border-opacity-0 rounded-lg bg-stone-900 bg-opacity-5 hover:bg-stone-900 hover:bg-opacity-50"><StepBack size={18} className="m-2"/></button>
+               <button onClick={() => imgForward} className="w-16 flex justify-center items-center ease-in-out duration-300 border-[1px] border-stone-200 border-opacity-40 hover:border-opacity-0 rounded-lg bg-stone-900 bg-opacity-5 hover:bg-stone-900 hover:bg-opacity-50"><StepForward size={18} className="m-2"/></button>
             </div>
             <div className="col-start-6 col-span-6 row-start-7 row-span-1 px-10 bg-stone-300 bg-opacity-10 rounded-lg flex flex-wrap items-center text-[5vw] 2xl:text-6xl font-title tracking-widest">
                {splitTitle.map((letter, index) => (

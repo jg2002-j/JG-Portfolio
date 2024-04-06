@@ -59,7 +59,7 @@ function ContactPage() {
                <input className="text-center text-stone-400 px-3 py-5 rounded-lg bg-stone-600 bg-opacity-15 text-3xl" value={formData.email} name="email" onChange={handleInputChange} type="email" placeholder="What's your email?"/>
                <input className="text-center text-stone-400 px-3 py-5 rounded-lg bg-stone-600 bg-opacity-15 text-3xl" value={formData.rating} name="rating" onChange={handleInputChange} type="number" placeholder="Rate my site out of 5?" min={0} max={5}/>
                <input className="text-center text-stone-400 px-3 py-5 rounded-lg bg-stone-600 bg-opacity-15 text-3xl" value={formData.message} name="message" onChange={handleInputChange} type="text" placeholder="Leave a message for me :)"/>
-               <button className="text-slate-200 px-3 py-5 rounded-lg bg-slate-200 bg-opacity-15 text-3xl duration-300 hover:bg-opacity-40" type="submit" onClick={handleFormSubmit}>Submit</button>
+               <button className="text-slate-200 px-3 py-5 rounded-lg bg-slate-200 bg-opacity-15 text-3xl duration-300 hover:bg-opacity-40" type="submit" onClick={() => handleFormSubmit}>Submit</button>
             </form>
             <dialog id="formresponse" className="modal">
                <div className="modal-box">
