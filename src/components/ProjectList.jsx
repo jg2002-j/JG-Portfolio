@@ -217,13 +217,13 @@ function ProjectList(props) {
 
 	return (
 	 	<div className="flex flex-col">
-			<div className="flex justify-center items-center gap-4">
+			<div className="flex justify-center items-center gap-4 mb-4">
 				<button className="btn btn-ghost" ref={projPrev}><ChevronsUp/></button>
 				<button className="btn btn-ghost" ref={projNext}><ChevronsDown/></button>
 			</div>
 			<div className="flex flex-col max-w-[30vw] overflow-hidden transpdivb">
 				{projects.map((project, index) => (
-				<h2 key={project.id} className={`border-2 px-5 py-5 my-3 ${index === 0 ? "mt-6" : ""} font-title text-2xl tracking-widest projItem ${isprojItemActive === index ? "projItemActive" : ""}`}>
+				<h2 key={project.id} className={`bg-stone-300 bg-opacity-10 rounded-lg px-5 py-5 my-3 ${index === 0 ? "mt-6" : ""} font-title text-2xl tracking-widest projItem ${isprojItemActive === index ? "bg-stone-100 bg-opacity-30" : ""}`}>
 					<span className="text-sm me-4 opacity-60">{index+1}</span>
 					{project.title}
 				</h2>

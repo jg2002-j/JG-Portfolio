@@ -1,5 +1,4 @@
 import React from "react";
-import FeaturedProject from "../components/FeaturedProject";
 import AllProjects from "../components/AllProjects";
 
 function ProjectsPage() {
