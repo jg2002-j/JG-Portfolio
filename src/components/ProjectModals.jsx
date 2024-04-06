@@ -17,7 +17,7 @@ function ProjectModals(props) {
       if (proj.desc.length > 500) {
          return (
             <>
-               <p className="text-xl text-pretty max-w-prose">{proj.desc.substr(0,500)}...
+               <p className="text-lg text-pretty max-w-prose">{proj.desc.substr(0,500)}...
                   <a target="_blank" href={`${proj.repo}/blob/main/README.md`} className="inline border-[1px] border-slate-200 border-opacity-25 ms-3 text-sm rounded-lg px-2 py-1 hover:cursor-pointer hover:bg-stone-600 hover:bg-opacity-50 duration-500 ease-in-out select-none">View full README</a>		
                </p>
             </>
@@ -25,7 +25,7 @@ function ProjectModals(props) {
       } else {
          return (
             <>
-               <p className="text-xl text-pretty max-w-prose">{proj.desc}</p>
+               <p className="text-lg text-pretty max-w-prose">{proj.desc}</p>
             </>
          );
       }
@@ -91,12 +91,12 @@ function ProjectModals(props) {
                   
          <dialog id="projDetails" className="modal bg-stone-900  noise bg-opacity-80 grid grid-cols-12 grid-rows-12 gap-5">
             
-            <div id="desc" className={`${descFocus} col-start-2 col-span-5 row-start-2 row-span-4 modal-box hidescroll p-10 max-w-full w-full h-full noise rounded-lg shadow-none`}>
+            <div id="desc" className={`${descFocus} col-start-2 col-span-5 row-start-2 row-span-3 modal-box hidescroll p-10 max-w-full w-full h-full noise rounded-lg shadow-none`}>
                <div className="flex flex-col gap-7">
-                  <h3 className="font-header font-bold text-3xl">Description</h3>
+                  <h3 className="font-title text-xl tracking-widest">Description</h3>
                   {shortenDesc(props.focusProj)}
-                  <h3 className="font-header font-bold text-3xl">What problems did this app solve?</h3>
-                  <ul className="text-xl">
+                  <h3 className="font-title tracking-widest">What problems did this app solve?</h3>
+                  <ul className="text-lg">
                      {props.focusProj.keypoints.map((item) => (
                         <li key={item}>{item}</li>
                      ))}
@@ -105,26 +105,26 @@ function ProjectModals(props) {
 
             </div>
             
-            <div id="techstack" className={`${techFocus} col-start-7 col-span-3 row-start-2 row-span-4 modal-box hidescroll p-10 max-w-full w-full h-full noise rounded-lg shadow-none`}>
-               <h3 className="font-header font-bold text-3xl">Tech Stack</h3>
+            <div id="techstack" className={`${techFocus} col-start-7 col-span-3 row-start-2 row-span-3 modal-box hidescroll p-10 max-w-full w-full h-full noise rounded-lg shadow-none`}>
+               <h3 className="font-title text-xl tracking-widest">Tech Stack</h3>
                <div className="mt-7 flex flex-wrap gap-4">
                   {getBadges(props.focusProj)}
                </div>
             </div>
             
-            <div id="screenshots" className={`${ssFocus} col-start-2 col-span-8 row-start-6 row-span-6 modal-box hidescroll p-10 max-w-full w-full h-full noise rounded-lg shadow-none flex flex-col justify-center items-center gap-4`}>
+            <div id="screenshots" className={`${ssFocus} col-start-2 col-span-8 row-start-5 row-span-7 modal-box hidescroll p-10 max-w-full w-full h-full noise rounded-lg shadow-none flex flex-col justify-center items-center gap-4`}>
                <div className="carousel w-full rounded-lg overflow-hidden border-2 border-stone-400 border-opacity-50 h-full">
                   <div id="item1" className="carousel-item w-full">
-                     <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="object-contain w-full" />
+                     <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="object-contain" />
                   </div> 
                   <div id="item2" className="carousel-item w-full">
-                     <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="object-contain w-full" />
+                     <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="object-contain" />
                   </div> 
                   <div id="item3" className="carousel-item w-full">
-                     <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="object-contain w-full" />
+                     <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="object-contain" />
                   </div> 
                   <div id="item4" className="carousel-item w-full">
-                     <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="object-contain w-full" />
+                     <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="object-contain" />
                   </div>
                </div> 
                <div className="flex justify-center w-full py-2 gap-2">
@@ -138,17 +138,17 @@ function ProjectModals(props) {
             <div id="control" className="col-start-10 col-span-2 row-start-2 row-span-10 modal-box p-10 ps-5 max-w-full w-full h-full noise rounded-lg shadow-none relative overflow-hidden">
                <div className="absolute -top-5 -left-5 w-[120%] h-full -z-10 flex flex-wrap justify-start items-start transpdivtb">{bgText(props.focusProj.title, 100)}</div>
                <div className="flex flex-col justify-end gap-7 ms-5 h-full">
-                  <h3 className="font-header text-5xl font-bold">{props.focusProj.title}</h3>
+               <h3 className="font-title text-2xl tracking-widest ">{props.focusProj.title}</h3>
                   <div className="flex flex-wrap gap-3">
                      {props.focusProj.tags.map((tag, index) => (
                         <span key={tag+index} className="px-3 py-1 rounded-lg border-2 border-stone-400 border-opacity-50 text-stone-300 text-xs font-bold tracking-wide uppercase">{tag}</span>
                      ))}
                   </div>
                   <div className="flex flex-col flex-grow justify-end items-end gap-4">
-                     <button onClick={() => switchFocus("desc")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:pe-16 hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Text size={12} className="inline me-2"/> description</button>
-                     <button onClick={() => switchFocus("techstack")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:pe-16 hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Code size={12} className="inline me-2"/> tech stack</button>
-                     <button onClick={() => switchFocus("screenshots")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:pe-16 hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Image size={12} className="inline me-2"/> screenshots</button>
-                     <button onClick={() => switchFocus("all")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:pe-16 hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Lightbulb size={12} className="inline me-2"/> all</button>
+                     <button onClick={() => switchFocus("desc")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Text size={12} className="inline me-2"/> description</button>
+                     <button onClick={() => switchFocus("techstack")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Code size={12} className="inline me-2"/> tech stack</button>
+                     <button onClick={() => switchFocus("screenshots")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Image size={12} className="inline me-2"/> screenshots</button>
+                     <button onClick={() => switchFocus("all")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Lightbulb size={12} className="inline me-2"/> all</button>
                   </div>
                </div>
             </div>
@@ -167,7 +167,7 @@ function ProjectModals(props) {
       //    <div className="flex flex-wrap justify-start items-center gap-2 my-2">
       //       {props.tags.map(tag => (<span key={tag} className="py-1 px-3 border-[1px] border-slate-600 text-xs capitalize tracking-widest text-slate-300 rounded-3xl select-none">{tag}</span>))}
       //    </div>
-      //    <h2 className="font-title text-3xl lg:text-5xl tracking-wider">{props.title}</h2>
+      //    <h2 className="font-title text-xl lg:text-5xl tracking-wider">{props.title}</h2>
       //    <div className="flex flex-wrap justify-start items-center gap-2">
       //       {getBadges(props)}
       //    </div>

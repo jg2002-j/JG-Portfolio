@@ -52,41 +52,41 @@ function FeaturedProject(project) {
       return(finalArray.map((letter, index) => (<span key={index} className="mx-1 font-title text-8xl ghosttext">{letter}</span>)))
    }
 
-   const [ img1, setimg1 ] = useState(enlargedProj.mobileImgs.img1)
-   const [ img2, setimg2 ] = useState(enlargedProj.mobileImgs.img2)
-   const [ img3, setimg3 ] = useState(enlargedProj.mobileImgs.img3)
+   const [ img1, setimg1 ] = useState(enlargedProj.mobileImgs[0])
+   const [ img2, setimg2 ] = useState(enlargedProj.mobileImgs[1])
+   const [ img3, setimg3 ] = useState(enlargedProj.mobileImgs[2])
 
    const imgForward = () => {
-      if (img1 == enlargedProj.mobileImgs.img1){
-         setimg1(enlargedProj.mobileImgs.img2)
-         setimg2(enlargedProj.mobileImgs.img3)
-         setimg3(enlargedProj.mobileImgs.img1)
-      } else if (img1 == enlargedProj.mobileImgs.img2){
-         setimg1(enlargedProj.mobileImgs.img3)
-         setimg2(enlargedProj.mobileImgs.img1)
-         setimg3(enlargedProj.mobileImgs.img2)
-      } else if (img1 == enlargedProj.mobileImgs.img3){
-         setimg1(enlargedProj.mobileImgs.img1)
-         setimg2(enlargedProj.mobileImgs.img2)
-         setimg3(enlargedProj.mobileImgs.img3)
+      if (img1 == enlargedProj.mobileImgs[0]){
+         setimg1(enlargedProj.mobileImgs[1])
+         setimg2(enlargedProj.mobileImgs[2])
+         setimg3(enlargedProj.mobileImgs[0])
+      } else if (img1 == enlargedProj.mobileImgs[1]){
+         setimg1(enlargedProj.mobileImgs[2])
+         setimg2(enlargedProj.mobileImgs[0])
+         setimg3(enlargedProj.mobileImgs[1])
+      } else if (img1 == enlargedProj.mobileImgs[2]){
+         setimg1(enlargedProj.mobileImgs[0])
+         setimg2(enlargedProj.mobileImgs[1])
+         setimg3(enlargedProj.mobileImgs[2])
       } else {
          alert("Error")
       }
    }
 
    const imgBack = () => {
-      if (img1 == enlargedProj.mobileImgs.img1){
-         setimg1(enlargedProj.mobileImgs.img3)
-         setimg2(enlargedProj.mobileImgs.img1)
-         setimg3(enlargedProj.mobileImgs.img2)
-      } else if (img1 == enlargedProj.mobileImgs.img2){
-         setimg1(enlargedProj.mobileImgs.img1)
-         setimg2(enlargedProj.mobileImgs.img2)
-         setimg3(enlargedProj.mobileImgs.img3)
-      } else if (img1 == enlargedProj.mobileImgs.img3){
-         setimg1(enlargedProj.mobileImgs.img2)
-         setimg2(enlargedProj.mobileImgs.img3)
-         setimg3(enlargedProj.mobileImgs.img1)
+      if (img1 == enlargedProj.mobileImgs[0]){
+         setimg1(enlargedProj.mobileImgs[2])
+         setimg2(enlargedProj.mobileImgs[0])
+         setimg3(enlargedProj.mobileImgs[1])
+      } else if (img1 == enlargedProj.mobileImgs[1]){
+         setimg1(enlargedProj.mobileImgs[0])
+         setimg2(enlargedProj.mobileImgs[1])
+         setimg3(enlargedProj.mobileImgs[2])
+      } else if (img1 == enlargedProj.mobileImgs[2]){
+         setimg1(enlargedProj.mobileImgs[1])
+         setimg2(enlargedProj.mobileImgs[2])
+         setimg3(enlargedProj.mobileImgs[0])
       } else {
          alert("Error")
       }
@@ -97,7 +97,7 @@ function FeaturedProject(project) {
          <div className="w-vw h-dvh min-h-[1491px] my-10 relative overflow-hidden grid grid-cols-12 grid-rows-12 gap-5">
             <div className="absolute -top-5 -left-5 w-[120%] h-full -z-10 flex flex-wrap justify-start items-start transpdivtb">{bgText(enlargedProj.title, 100)}</div>
             <div className="col-start-2 col-span-10 row-start-1 row-span-6 rounded-lg overflow-hidden">
-               <img src={enlargedProj.desktopImgs.img1} alt="" className="w-full h-full object-cover object-left-top" />
+               <img src={enlargedProj.desktopImgs[0]} alt="" className="w-full h-full object-cover object-left-top" />
             </div>
             <div className="col-start-2 col-span-4 row-start-7 row-span-5 rounded-lg overflow-hidden grid grid-cols-9">
                <div className="h-full aspect-[320/568] col-start-1 z-20">
@@ -143,7 +143,7 @@ function FeaturedProject(project) {
       //          <img className="aspect-video h-full object-cover" src={enlargedProj.img} alt={enlargedProj.title} />
       //          <div className="w-full overflow-auto hidescroll">
       //             <div className="min-h-full flex flex-col justify-between pb-[10%]">
-      //                <img className=" object-cover" src={enlargedProj.mobileImgs.img1} alt={`${enlargedProj.title} View 2`} />
+      //                <img className=" object-cover" src={enlargedProj.mobileImgs[0]} alt={`${enlargedProj.title} View 2`} />
       //                <div className="flex flex-wrap text-[4.75rem] font-title tracking-widest underline">
       //                   {splitTitle.map((letter, index) => (
       //                      <span className="select-none" key={index}>{letter}</span>
