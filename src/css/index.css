@@ -83,6 +83,11 @@
 	scrollbar-width: 0;
 }
 
+.transpdivt{
+	mask-image: linear-gradient(to bottom, transparent 5%, black 30%);
+	scrollbar-width: 0;
+}
+
 .transpdivlr{
 	mask-image: linear-gradient(to right, transparent 2.5%, black 20%, black 80%, transparent 97.5%);
 	scrollbar-width: 0;

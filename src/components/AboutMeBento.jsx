@@ -33,7 +33,7 @@ function AboutMeBento() {
 			</div>
 			
 			<div className="row-start-4 col-start-6 row-span-2 col-span-3 rounded-xl bg-[#2a2744] hover:bg-[#44446c] cursor-default ease-in-out duration-700 text-slate-200 flex justify-center items-center p-4 group peer/poke">
-				<button className="scale-75 ease-in-out duration-700 group-hover:scale-100" type="button" onClick={switchPoke}><img className="w-full h-full" src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon}.gif`} alt={`${pokemon}`}></img></button>
+				<button className="scale-75 ease-in-out duration-700 group-hover:scale-100" type="button" onClick={() => switchPoke()}><img className="w-full h-full" src={`https://img.pokemondb.net/sprites/black-white/anim/normal/${pokemon}.gif`} alt={`${pokemon}`}></img></button>
 			</div>
 			<div className="row-start-6 col-start-6 row-span-2 col-span-3 rounded-xl bg-slate-400 scale-0 peer-hover/poke:scale-100 ease-in-out duration-700 z-30 flex justify-center items-center p-4">
 				<h1 className="text-center text-xs text-[#2a2744]">Click to see some of my favourite <strong>Pokémon</strong>, can you guess all {pokeOptions.length}? &gt;:&#41;</h1>

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import projects from "../data/Projects.json";
 import techBadges from "../data/TechBadges.json";
-import { ChevronsDown, StepForward, StepBack } from "lucide-react";
+import { StepForward, StepBack } from "lucide-react";
 
 
 function FeaturedProject(project) {
@@ -17,7 +17,7 @@ function FeaturedProject(project) {
       const projTechs = proj.techs;
       const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name)).map(tech => tech.value);
       const badgeElements = matchingTechBadges.map(value => (
-         <img className="h-7 select-none" key={value} alt={value} src={value} />
+         <img className="h-6 select-none" key={value} alt={value} src={value} />
       ));
       return badgeElements;
    };
@@ -52,41 +52,41 @@ function FeaturedProject(project) {
       return(finalArray.map((letter, index) => (<span key={index} className="mx-1 font-title text-8xl ghosttext">{letter}</span>)))
    }
 
-   const [ img1, setimg1 ] = useState(enlargedProj.mobileImg1)
-   const [ img2, setimg2 ] = useState(enlargedProj.mobileImg2)
-   const [ img3, setimg3 ] = useState(enlargedProj.mobileImg3)
+   const [ img1, setimg1 ] = useState(enlargedProj.mobileImgs.img1)
+   const [ img2, setimg2 ] = useState(enlargedProj.mobileImgs.img2)
+   const [ img3, setimg3 ] = useState(enlargedProj.mobileImgs.img3)
 
    const imgForward = () => {
-      if (img1 == enlargedProj.mobileImg1){
-         setimg1(enlargedProj.mobileImg2)
-         setimg2(enlargedProj.mobileImg3)
-         setimg3(enlargedProj.mobileImg1)
-      } else if (img1 == enlargedProj.mobileImg2){
-         setimg1(enlargedProj.mobileImg3)
-         setimg2(enlargedProj.mobileImg1)
-         setimg3(enlargedProj.mobileImg2)
-      } else if (img1 == enlargedProj.mobileImg3){
-         setimg1(enlargedProj.mobileImg1)
-         setimg2(enlargedProj.mobileImg2)
-         setimg3(enlargedProj.mobileImg3)
+      if (img1 == enlargedProj.mobileImgs.img1){
+         setimg1(enlargedProj.mobileImgs.img2)
+         setimg2(enlargedProj.mobileImgs.img3)
+         setimg3(enlargedProj.mobileImgs.img1)
+      } else if (img1 == enlargedProj.mobileImgs.img2){
+         setimg1(enlargedProj.mobileImgs.img3)
+         setimg2(enlargedProj.mobileImgs.img1)
+         setimg3(enlargedProj.mobileImgs.img2)
+      } else if (img1 == enlargedProj.mobileImgs.img3){
+         setimg1(enlargedProj.mobileImgs.img1)
+         setimg2(enlargedProj.mobileImgs.img2)
+         setimg3(enlargedProj.mobileImgs.img3)
       } else {
          alert("Error")
       }
    }
 
    const imgBack = () => {
-      if (img1 == enlargedProj.mobileImg1){
-         setimg1(enlargedProj.mobileImg3)
-         setimg2(enlargedProj.mobileImg1)
-         setimg3(enlargedProj.mobileImg2)
-      } else if (img1 == enlargedProj.mobileImg2){
-         setimg1(enlargedProj.mobileImg1)
-         setimg2(enlargedProj.mobileImg2)
-         setimg3(enlargedProj.mobileImg3)
-      } else if (img1 == enlargedProj.mobileImg3){
-         setimg1(enlargedProj.mobileImg2)
-         setimg2(enlargedProj.mobileImg3)
-         setimg3(enlargedProj.mobileImg1)
+      if (img1 == enlargedProj.mobileImgs.img1){
+         setimg1(enlargedProj.mobileImgs.img3)
+         setimg2(enlargedProj.mobileImgs.img1)
+         setimg3(enlargedProj.mobileImgs.img2)
+      } else if (img1 == enlargedProj.mobileImgs.img2){
+         setimg1(enlargedProj.mobileImgs.img1)
+         setimg2(enlargedProj.mobileImgs.img2)
+         setimg3(enlargedProj.mobileImgs.img3)
+      } else if (img1 == enlargedProj.mobileImgs.img3){
+         setimg1(enlargedProj.mobileImgs.img2)
+         setimg2(enlargedProj.mobileImgs.img3)
+         setimg3(enlargedProj.mobileImgs.img1)
       } else {
          alert("Error")
       }
@@ -97,7 +97,7 @@ function FeaturedProject(project) {
          <div className="w-vw h-dvh min-h-[1491px] my-10 relative overflow-hidden grid grid-cols-12 grid-rows-12 gap-5">
             <div className="absolute -top-5 -left-5 w-[120%] h-full -z-10 flex flex-wrap justify-start items-start transpdivtb">{bgText(enlargedProj.title, 100)}</div>
             <div className="col-start-2 col-span-10 row-start-1 row-span-6 rounded-lg overflow-hidden">
-               <img src={enlargedProj.img} alt="" className="w-full h-full object-cover object-left-top" />
+               <img src={enlargedProj.desktopImgs.img1} alt="" className="w-full h-full object-cover object-left-top" />
             </div>
             <div className="col-start-2 col-span-4 row-start-7 row-span-5 rounded-lg overflow-hidden grid grid-cols-9">
                <div className="h-full aspect-[320/568] col-start-1 z-20">
@@ -111,8 +111,8 @@ function FeaturedProject(project) {
                </div>
             </div>
             <div className="col-start-2 col-span-4 row-start-12 row-span-1 bg-stone-300 bg-opacity-10 rounded-lg flex justify-center items-center gap-[20%]">
-               <button onClick={() => imgBack} className="w-16 flex justify-center items-center ease-in-out duration-300 border-[1px] border-stone-200 border-opacity-40 hover:border-opacity-0 rounded-lg bg-stone-900 bg-opacity-5 hover:bg-stone-900 hover:bg-opacity-50"><StepBack size={18} className="m-2"/></button>
-               <button onClick={() => imgForward} className="w-16 flex justify-center items-center ease-in-out duration-300 border-[1px] border-stone-200 border-opacity-40 hover:border-opacity-0 rounded-lg bg-stone-900 bg-opacity-5 hover:bg-stone-900 hover:bg-opacity-50"><StepForward size={18} className="m-2"/></button>
+               <button onClick={() => imgBack()} className="w-16 flex justify-center items-center ease-in-out duration-300 border-[1px] border-stone-200 border-opacity-40 hover:border-opacity-0 rounded-lg bg-stone-900 bg-opacity-5 hover:bg-stone-900 hover:bg-opacity-50"><StepBack size={18} className="m-2"/></button>
+               <button onClick={() => imgForward()} className="w-16 flex justify-center items-center ease-in-out duration-300 border-[1px] border-stone-200 border-opacity-40 hover:border-opacity-0 rounded-lg bg-stone-900 bg-opacity-5 hover:bg-stone-900 hover:bg-opacity-50"><StepForward size={18} className="m-2"/></button>
             </div>
             <div className="col-start-6 col-span-6 row-start-7 row-span-1 px-10 bg-stone-300 bg-opacity-10 rounded-lg flex flex-wrap items-center text-[5vw] 2xl:text-6xl font-title tracking-widest">
                {splitTitle.map((letter, index) => (
@@ -143,7 +143,7 @@ function FeaturedProject(project) {
       //          <img className="aspect-video h-full object-cover" src={enlargedProj.img} alt={enlargedProj.title} />
       //          <div className="w-full overflow-auto hidescroll">
       //             <div className="min-h-full flex flex-col justify-between pb-[10%]">
-      //                <img className=" object-cover" src={enlargedProj.mobileImg1} alt={`${enlargedProj.title} View 2`} />
+      //                <img className=" object-cover" src={enlargedProj.mobileImgs.img1} alt={`${enlargedProj.title} View 2`} />
       //                <div className="flex flex-wrap text-[4.75rem] font-title tracking-widest underline">
       //                   {splitTitle.map((letter, index) => (
       //                      <span className="select-none" key={index}>{letter}</span>

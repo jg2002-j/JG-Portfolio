@@ -1,57 +1,60 @@
 import React, { useState } from "react";
 import techBadges from "../data/TechBadges.json";
-import { Text, Image, Code } from 'lucide-react';
-
-
-const getBadges = (props) => {
-   const projTechs = props.techs;
-   const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name));
-   const badgeElements = matchingTechBadges.map(tech => (
-      <img key={tech.name} alt={`${tech.name}Static Badge`} src={tech.value} />
-   ));
-   return badgeElements;
-};
-
-const shortenDesc = (proj) => {
-   if (proj.desc.length > 250) {
-      return (
-         <>
-            <p className="text-center text-lg">{proj.desc.substr(0,250)}...
-               <a target="_blank" href={`${proj.repo}/blob/main/README.md`} className="inline border-[1px] border-slate-200 border-opacity-25 ms-3 text-sm rounded-lg px-2 py-1 hover:cursor-pointer hover:bg-stone-600 hover:bg-opacity-50 duration-500 ease-in-out select-none">View full README</a>		
-            </p>
-         </>
-         );
-   } else {
-      return (
-         <>
-            <p className="text-center text-lg">{proj.desc}</p>
-         </>
-      );
-   }
-}
+import { Text, Image, Code, Lightbulb } from 'lucide-react';
 
 function ProjectModals(props) {
 
-   const [ descFocus, setdescFocus ] = useState("opacity-60")
-   const [ ssFocus, setssFocus ] = useState("opacity-60")
-   const [ techFocus, settechFocus ] = useState("opacity-60")
+   const getBadges = (props) => {
+      const projTechs = props.techs;
+      const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name));
+      const badgeElements = matchingTechBadges.map(tech => (
+         <img className="h-6 select-none" key={tech.name} alt={`${tech.name}Static Badge`} src={tech.value} />
+      ));
+      return badgeElements;
+   };
+   
+   const shortenDesc = (proj) => {
+      if (proj.desc.length > 500) {
+         return (
+            <>
+               <p className="text-xl text-pretty max-w-prose">{proj.desc.substr(0,500)}...
+                  <a target="_blank" href={`${proj.repo}/blob/main/README.md`} className="inline border-[1px] border-slate-200 border-opacity-25 ms-3 text-sm rounded-lg px-2 py-1 hover:cursor-pointer hover:bg-stone-600 hover:bg-opacity-50 duration-500 ease-in-out select-none">View full README</a>		
+               </p>
+            </>
+            );
+      } else {
+         return (
+            <>
+               <p className="text-xl text-pretty max-w-prose">{proj.desc}</p>
+            </>
+         );
+      }
+   }
 
-   const openModalwithFocus = (button) => {
-      document.getElementById("projDetails").showModal()
-      switch (button) {
+   const [ descFocus, setdescFocus ] = useState("opacity-30")
+   const [ ssFocus, setssFocus ] = useState("opacity-30")
+   const [ techFocus, settechFocus ] = useState("opacity-30")
+
+   const switchFocus = (target) => {
+      switch (target) {
          case "desc":
             setdescFocus("opacity-100")
-            setssFocus("opacity-60")
-            settechFocus("opacity-60")
+            setssFocus("opacity-30")
+            settechFocus("opacity-30")
             break;
          case "screenshots":
-            setdescFocus("opacity-60")
+            setdescFocus("opacity-30")
             setssFocus("opacity-100")
-            settechFocus("opacity-60")
+            settechFocus("opacity-30")
             break;
          case "techstack":
-            setdescFocus("opacity-60")
-            setssFocus("opacity-60")
+            setdescFocus("opacity-30")
+            setssFocus("opacity-30")
+            settechFocus("opacity-100")
+            break;
+         case "all":
+            setdescFocus("opacity-100")
+            setssFocus("opacity-100")
             settechFocus("opacity-100")
             break;
          default:
@@ -60,26 +63,94 @@ function ProjectModals(props) {
       }
    }
 
+   const openModalwithFocus = (target) => {
+      document.getElementById("projDetails").showModal()
+      switchFocus(target)
+   }
+
+   const bgText = (text, repeats) => {
+      let finalArray = []
+      let lettersArray = text.split("")
+
+      for (let i = 0; i < repeats; i++) {
+         lettersArray.forEach(letter => {
+            finalArray.push(letter)
+         });
+      }
+
+      return(finalArray.map((letter, index) => (<span key={index} className="mx-1 font-title text-8xl ghosttext">{letter}</span>)))
+   }
+
    return (
       <>
          <button onClick={() => openModalwithFocus("desc")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Text size={12} className="inline me-2"/> description</button>
-         <button onClick={() => openModalwithFocus("screenshots")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Image size={12} className="inline me-2"/> screenshots</button>
          <button onClick={() => openModalwithFocus("techstack")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Code size={12} className="inline me-2"/> tech stack</button>
+         <button onClick={() => openModalwithFocus("screenshots")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Image size={12} className="inline me-2"/> screenshots</button>
                   
-         <dialog id="projDetails" className="modal bg-stone-300 bg-opacity-10 grid grid-cols-12 grid-rows-12 gap-5">
+         <dialog id="projDetails" className="modal bg-stone-900  noise bg-opacity-80 grid grid-cols-12 grid-rows-12 gap-5">
             
-            <div id="desc" className={`${descFocus} col-start-2 col-span-6 row-start-2 row-span-4 modal-box max-w-full w-full h-full noise rounded-lg shadow-none`}>
-               <h3 className="font-bold text-lg">{props.focusProj.title}</h3>
-               <p className="py-4">Press ESC key or click outside to close</p>
+            <div id="desc" className={`${descFocus} col-start-2 col-span-5 row-start-2 row-span-4 modal-box hidescroll p-10 max-w-full w-full h-full noise rounded-lg shadow-none`}>
+               <div className="flex flex-col gap-7">
+                  <h3 className="font-title text-3xl tracking-widest">Description</h3>
+                  {shortenDesc(props.focusProj)}
+                  <h3 className="font-title text-3xl tracking-widest">What problems did this app solve?</h3>
+                  <ul className="text-xl">
+                     {props.focusProj.keypoints.map((item) => (
+                        <li key={item}>{item}</li>
+                     ))}
+                  </ul>
+               </div>
+
             </div>
             
-            <div id="techstack" className={`${techFocus} col-start-8 col-span-2 row-start-2 row-span-4 modal-box max-w-full w-full h-full noise rounded-lg shadow-none`}>
-               hello
+            <div id="techstack" className={`${techFocus} col-start-7 col-span-3 row-start-2 row-span-4 modal-box hidescroll p-10 max-w-full w-full h-full noise rounded-lg shadow-none`}>
+               <h3 className="font-title text-3xl">Tech Stack</h3>
+               <div className="mt-7 flex flex-wrap gap-4">
+                  {getBadges(props.focusProj)}
+               </div>
             </div>
             
-            <div id="screenshots" className={`${ssFocus} col-start-2 col-span-8 row-start-6 row-span-6 modal-box max-w-full w-full h-full noise rounded-lg shadow-none`}></div>
+            <div id="screenshots" className={`${ssFocus} col-start-2 col-span-8 row-start-6 row-span-6 modal-box hidescroll p-10 max-w-full w-full h-full noise rounded-lg shadow-none flex flex-col justify-center items-center gap-4`}>
+               <div className="carousel w-full rounded-lg overflow-hidden border-2 border-stone-400 border-opacity-50 h-full">
+                  <div id="item1" className="carousel-item w-full">
+                     <img src="https://daisyui.com/images/stock/photo-1625726411847-8cbb60cc71e6.jpg" className="object-contain w-full" />
+                  </div> 
+                  <div id="item2" className="carousel-item w-full">
+                     <img src="https://daisyui.com/images/stock/photo-1609621838510-5ad474b7d25d.jpg" className="object-contain w-full" />
+                  </div> 
+                  <div id="item3" className="carousel-item w-full">
+                     <img src="https://daisyui.com/images/stock/photo-1414694762283-acccc27bca85.jpg" className="object-contain w-full" />
+                  </div> 
+                  <div id="item4" className="carousel-item w-full">
+                     <img src="https://daisyui.com/images/stock/photo-1665553365602-b2fb8e5d1707.jpg" className="object-contain w-full" />
+                  </div>
+               </div> 
+               <div className="flex justify-center w-full py-2 gap-2">
+                  <a href="#item1" className="btn btn-sm">1</a> 
+                  <a href="#item2" className="btn btn-sm">2</a> 
+                  <a href="#item3" className="btn btn-sm">3</a> 
+                  <a href="#item4" className="btn btn-sm">4</a>
+               </div>
+            </div>
             
-            <div id="control" className="col-start-10 col-span-2 row-start-2 row-span-10 modal-box max-w-full w-full h-full noise rounded-lg shadow-none"></div>
+            <div id="control" className="col-start-10 col-span-2 row-start-2 row-span-10 modal-box p-10 max-w-full w-full h-full noise rounded-lg shadow-none relative overflow-hidden">
+               <div className="absolute -top-5 -left-5 w-[120%] h-full -z-10 flex flex-wrap justify-start items-start transpdivtb">{bgText(props.focusProj.title, 100)}</div>
+               <div className="flex flex-col gap-7 h-full">
+                  <h3 className="font-title text-[180%] tracking-widest">{props.focusProj.title}</h3>
+                  <div className="flex flex-wrap gap-3">
+                     {props.focusProj.tags.map((tag, index) => (
+                        <span key={tag+index} className="px-3 py-1 rounded-lg border-2 border-stone-400 border-opacity-50 text-stone-300 text-xs font-bold tracking-wide uppercase">{tag}</span>
+                     ))}
+                  </div>
+                  <div className="flex flex-col flex-grow justify-end items-end gap-4">
+                     <button onClick={() => switchFocus("desc")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Text size={12} className="inline me-2"/> description</button>
+                     <button onClick={() => switchFocus("techstack")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Code size={12} className="inline me-2"/> tech stack</button>
+                     <button onClick={() => switchFocus("screenshots")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Image size={12} className="inline me-2"/> screenshots</button>
+                     <button onClick={() => switchFocus("all")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Lightbulb size={12} className="inline me-2"/> all</button>
+                  </div>
+                  
+               </div>
+            </div>
             
             <form method="dialog" className="col-start-1 col-span-12 row-start-1 row-span-12 modal-backdrop">
                <button>close</button>
@@ -87,10 +158,6 @@ function ProjectModals(props) {
             
          </dialog>
       </>
-
-
-
-
 
       // <div className="select-none min-w-[35%] flex flex-col gap-5 m-5">
       //    <div className="rounded-3xl overflow-hidden">
