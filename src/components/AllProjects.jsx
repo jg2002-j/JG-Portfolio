@@ -76,27 +76,6 @@ function AllProjects() {
 						<img src={tertProj.img} alt={tertProj.title} className="bg-stone-300 bg-opacity-10 rounded-lg p-5 aspect-video object-cover object-top max-w-[40%] self-end" />
 					</div>
 				</div>
-
-				{/* <div className="grid grid-cols-12 grid-rows-12 w-[60vw] transpdivlr">
-					<div className="col-start-1 row-start-1 row-span-2 col-span-2 flex flex-col justify-center items-center rounded-md overflow-hidden">
-						<img src={secProj.img} className="aspect-video object-cover rounded-md"></img>
-						<h2 className="text-xs font-title tracking-widest my-2 whitespace-nowrap">{secProj.title}</h2>
-					</div>
-					<div className="col-start-4 row-start-3 row-span-5 col-span-5 flex flex-col justify-center items-center rounded-md overflow-hidden scale-125">
-						<img src={focusProj.img} className="aspect-video object-cover object-left rounded-md"></img>
-						<h2 className="text-2xl font-title tracking-widest mt-5">{focusProj.title}</h2>
-					</div>
-					<div className="col-start-4 row-start-9 col-span-5 row-span-3 flex flex-col gap-5 justify-start items-center rounded-md overflow-hidden">
-						<div className="flex flex-wrap gap-2 justify-center items-center">
-							{getBadges(focusProj)}
-						</div>
-						{shortenDesc(focusProj)}
-					</div>
-					<div className="col-start-10 row-start-7 col-span-3 row-span-3 flex flex-col justify-center items-center rounded-md overflow-hidden">
-						<img src={tertProj.img} className="aspect-video object-cover rounded-md"></img>
-						<h2 className="text-xs font-title tracking-widest my-2 whitespace-nowrap">{tertProj.title}</h2>
-					</div>
-				</div> */}
 			</div>		
 		</>
   	)
