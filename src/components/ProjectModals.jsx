@@ -8,7 +8,7 @@ function ProjectModals(props) {
       const projTechs = props.techs;
       const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name));
       const badgeElements = matchingTechBadges.map(tech => (
-         <img className="h-6 select-none" key={tech.name} alt={`${tech.name}Static Badge`} src={tech.value} />
+         <img className="h-6 w-fit  select-none" key={tech.name} alt={`${tech.name}Static Badge`} src={tech.value} />
       ));
       return badgeElements;
    };
@@ -81,19 +81,21 @@ function ProjectModals(props) {
       return(finalArray.map((letter, index) => (<span key={index} className="mx-1 font-title text-8xl ghosttext">{letter}</span>)))
    }
 
+   const splitTitle = props.focusProj.title.split("")
+
    return (
       <>
-         <button onClick={() => openModalwithFocus("desc")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Text size={12} className="inline me-2"/> description</button>
-         <button onClick={() => openModalwithFocus("techstack")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Code size={12} className="inline me-2"/> tech stack</button>
-         <button onClick={() => openModalwithFocus("screenshots")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Image size={12} className="inline me-2"/> screenshots</button>
+         <button onClick={() => openModalwithFocus("desc")} className="font-title text-lg tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Text size={20} className="inline me-5"/> description</button>
+         <button onClick={() => openModalwithFocus("techstack")} className="font-title text-lg tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Code size={20} className="inline me-5"/> tech stack</button>
+         <button onClick={() => openModalwithFocus("screenshots")} className="font-title text-lg tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Image size={20} className="inline me-5"/> screenshots</button>
                   
          <dialog id="projDetails" className="modal bg-stone-900  noise bg-opacity-80 grid grid-cols-12 grid-rows-12 gap-5">
             
             <div id="desc" className={`${descFocus} col-start-2 col-span-5 row-start-2 row-span-4 modal-box hidescroll p-10 max-w-full w-full h-full noise rounded-lg shadow-none`}>
                <div className="flex flex-col gap-7">
-                  <h3 className="font-title text-3xl tracking-widest">Description</h3>
+                  <h3 className="font-header font-bold text-3xl">Description</h3>
                   {shortenDesc(props.focusProj)}
-                  <h3 className="font-title text-3xl tracking-widest">What problems did this app solve?</h3>
+                  <h3 className="font-header font-bold text-3xl">What problems did this app solve?</h3>
                   <ul className="text-xl">
                      {props.focusProj.keypoints.map((item) => (
                         <li key={item}>{item}</li>
@@ -104,7 +106,7 @@ function ProjectModals(props) {
             </div>
             
             <div id="techstack" className={`${techFocus} col-start-7 col-span-3 row-start-2 row-span-4 modal-box hidescroll p-10 max-w-full w-full h-full noise rounded-lg shadow-none`}>
-               <h3 className="font-title text-3xl">Tech Stack</h3>
+               <h3 className="font-header font-bold text-3xl">Tech Stack</h3>
                <div className="mt-7 flex flex-wrap gap-4">
                   {getBadges(props.focusProj)}
                </div>
@@ -133,22 +135,21 @@ function ProjectModals(props) {
                </div>
             </div>
             
-            <div id="control" className="col-start-10 col-span-2 row-start-2 row-span-10 modal-box p-10 max-w-full w-full h-full noise rounded-lg shadow-none relative overflow-hidden">
+            <div id="control" className="col-start-10 col-span-2 row-start-2 row-span-10 modal-box p-10 ps-5 max-w-full w-full h-full noise rounded-lg shadow-none relative overflow-hidden">
                <div className="absolute -top-5 -left-5 w-[120%] h-full -z-10 flex flex-wrap justify-start items-start transpdivtb">{bgText(props.focusProj.title, 100)}</div>
-               <div className="flex flex-col gap-7 h-full">
-                  <h3 className="font-title text-[180%] tracking-widest">{props.focusProj.title}</h3>
+               <div className="flex flex-col justify-end gap-7 ms-5 h-full">
+                  <h3 className="font-header text-5xl font-bold">{props.focusProj.title}</h3>
                   <div className="flex flex-wrap gap-3">
                      {props.focusProj.tags.map((tag, index) => (
                         <span key={tag+index} className="px-3 py-1 rounded-lg border-2 border-stone-400 border-opacity-50 text-stone-300 text-xs font-bold tracking-wide uppercase">{tag}</span>
                      ))}
                   </div>
                   <div className="flex flex-col flex-grow justify-end items-end gap-4">
-                     <button onClick={() => switchFocus("desc")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Text size={12} className="inline me-2"/> description</button>
-                     <button onClick={() => switchFocus("techstack")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Code size={12} className="inline me-2"/> tech stack</button>
-                     <button onClick={() => switchFocus("screenshots")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Image size={12} className="inline me-2"/> screenshots</button>
-                     <button onClick={() => switchFocus("all")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Lightbulb size={12} className="inline me-2"/> all</button>
+                     <button onClick={() => switchFocus("desc")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:pe-16 hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Text size={12} className="inline me-2"/> description</button>
+                     <button onClick={() => switchFocus("techstack")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:pe-16 hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Code size={12} className="inline me-2"/> tech stack</button>
+                     <button onClick={() => switchFocus("screenshots")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:pe-16 hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Image size={12} className="inline me-2"/> screenshots</button>
+                     <button onClick={() => switchFocus("all")} className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:pe-16 hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Lightbulb size={12} className="inline me-2"/> all</button>
                   </div>
-                  
                </div>
             </div>
             

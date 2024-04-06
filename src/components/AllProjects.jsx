@@ -58,7 +58,7 @@ function AllProjects() {
 
 	return (
 		<>
-			<div className="flex gap-10 justify-center items-center">
+			<div className="flex gap-10 justify-center items-center mb-20 h-fit">
 				<ProjectList chooseProjfnct={chooseProjfnct} />
 				<div className="w-[60vw] flex flex-col gap-5 transpdivt">
 					<div className="flex justify-between items-center gap-5">
@@ -69,14 +69,17 @@ function AllProjects() {
 						</div>
 						<img src={proj2.desktopImgs.img1} alt={proj2.title} className="bg-stone-300 bg-opacity-10 rounded-lg p-5 aspect-video object-cover object-top max-w-[40%] self-end" />
 					</div>
-					<div className="bg-stone-300 bg-opacity-10 rounded-lg p-5 pe-0 gap-5 flex justify-between items-start relative">
-						<img src={focusProj.desktopImgs.img1} alt={focusProj.title} className="aspect-video object-cover object-top max-w-[70%] rounded-lg" />
-						<div className="flex flex-col justify-center items-end gap-5">
-							<h2 className="font-title font-bold tracking-widest text-3xl text-end p-5 bg-stone-300 bg-opacity-10 rounded-s-lg mb-10">{focusProj.title}</h2>
+					<div className="bg-stone-300 bg-opacity-10 rounded-lg p-5 gap-5 items-center h-[60vh] flex relative">
+						
+						<img src={focusProj.desktopImgs.img1} alt={focusProj.title} className="aspect-[9/6] flex-grow h-full object-cover object-left-top rounded-lg" />
+						
+						<div className="h-full flex flex-col justify-center items-start gap-8 p-5 bg-stone-300 bg-opacity-10 rounded-lg">
+							{/* <h2 className="font-title font-bold tracking-widest text-3xl text-center p-5 bg-stone-300 bg-opacity-10 rounded-lg mb-10">{focusProj.title}</h2> */}
 							<ProjectModals focusProj={focusProj}/>
-							<a href={focusProj.repo} target="_blank" className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><FolderGit2 size={12} className="inline me-2"/> see repo</a>
-							<a href={focusProj.deployed} target="_blank" className="font-title text-xs tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-s-lg hover:pe-20 hover:bg-stone-600 hover:bg-opacity-50 ease-in-out duration-500"><Globe size={12} className="inline me-2"/> visit site</a>
+							<a href={focusProj.repo} target="_blank" className="font-title text-lg tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><FolderGit2 size={20} className="inline me-5"/> see repo</a>
+							<a href={focusProj.deployed} target="_blank" className="font-title text-lg tracking-widest text-end p-3 px-5 flex items-center bg-stone-300 bg-opacity-10 rounded-lg hover:bg-stone-900 hover:bg-opacity-50 ease-in-out duration-500"><Globe size={20} className="inline me-5"/> visit site</a>
 						</div>
+
 					</div>
 				</div>
 			</div>

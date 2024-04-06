@@ -110,3 +110,8 @@
 	-webkit-text-stroke: 1px white;
 	opacity: 7%;
 }
+
+.textsidewaysup{
+	writing-mode:vertical-lr;
+	rotate: 180deg;
+}
