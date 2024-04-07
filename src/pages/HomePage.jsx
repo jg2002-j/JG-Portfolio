@@ -24,7 +24,13 @@ function HomePage() {
    return (
       <>
          {/* <LoadingScreen/> */}
-         <div className="min-h-dvh mx-auto flex flex-col">
+
+         <div className="min-h-dvh w-vw help">
+
+         </div>
+
+
+         {/* <div className="min-h-dvh mx-auto flex flex-col">
             <div className="min-h-[40vh] w-full relative">
                <div className="absolute flex w-full h-full -z-10">
                   <div className="w-[40%] bg-stone-300 bg-opacity-50 noise flex justify-start items-start"></div>
@@ -55,7 +61,7 @@ function HomePage() {
                   <MiniNav />
                </div>
             </div>
-         </div>
+         </div> */}
          <FeaturedProject/>
       
       </>

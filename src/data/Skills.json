@@ -53,8 +53,8 @@
 		"id": 5,
 		"title": "What am I learning next?",
 		"body": [
+			{"name": "Vue.js", "slug": "vuedotjs"},
 			{"name": "Next.js", "slug": "nextdotjs"},
-			{"name": "SASS", "slug": "sass"},
 			{"name": "Figma", "slug": "figma"}
 		]
 	}
