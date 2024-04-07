@@ -1,15 +1,5 @@
 import React, { useState } from "react";
-import { Pointer } from "lucide-react";
 import ContactForm from "../components/ContactForm";
-
-
-//// Must have a contact form for handling events
-// TODO: Must include contact information:
-   // Email address
-   // Link to a PDF version of your CV
-   // Link to your GitHub profile
-   // Link to your LinkedIn page
-
 
 function ContactPage() {
 
@@ -34,9 +24,14 @@ function ContactPage() {
    return (
       <>
          <div className="min-h-dvh w-vw flex flex-col 2xl:flex-row-reverse justify-center items-center gap-10 p-10 2xl:px-[20vw]">
-            <div className="w-full 2xl:max-w-[20vw] bg-stone-300 bg-opacity-10 rounded-lg p-10">
-               <h2>Contact Information</h2>
-               <p>email</p>
+            <div className="w-full bg-stone-300 bg-opacity-10 rounded-lg p-10 flex flex-col gap-14 max-w-[600px]">
+               <h2 className="text-5xl font-title tracking-widest">Get in Touch</h2>
+               <div className="flex flex-col gap-2">
+                  <h3 className="font-header text-stone-300 text-4xl mb-5">Contact Me</h3>
+                  <a href="mailto:jai.2002.gandhi@gmail.com" className="text-stone-400 text-2xl">jai.2002.gandhi@gmail.com</a>
+                  <a href="tel:+447481861855" className="text-stone-400 text-2xl">+44 7481 861 855</a>
+                  <p className="text-stone-400 text-2xl"></p>
+               </div>
                <p>phone</p>
                <p>city</p>
             </div>

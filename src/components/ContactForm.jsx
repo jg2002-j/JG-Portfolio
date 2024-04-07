@@ -4,8 +4,6 @@ import emailjs from "@emailjs/browser";
 
 function ContactForm() {
 
-	emailjs.init({publicKey: "4FBsH5PiZG-DtlPBvDDNI"});
-
 	const [ formData, setFormData ] = useState({
 		name: "",
 		email: "",
@@ -36,7 +34,7 @@ function ContactForm() {
 			setFfields(incompleteFormFields)
 		} else {			
 			emailjs.sendForm(
-				"service_do36c8y",
+				"service_i1u1bok",
 				"contact_form",
 				form.current, 
 				{publicKey: "qJeXSY6H4bUGT4v3R"}
@@ -106,7 +104,6 @@ function ContactForm() {
 					<button>close</button>
 				</form>
 			</dialog>
-
 		</>
 	)
 };
