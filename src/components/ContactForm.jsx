@@ -28,9 +28,9 @@ function ContactForm() {
 		incompleteFormFields = []
 		if (!formData.email || !formData.message || !formData.name) {
 			document.getElementById("incompleteform").showModal()
-			if (!formData.email) {incompleteFormFields.push("Email")}
-			if (!formData.message) {incompleteFormFields.push("Message")}
-			if (!formData.name) {incompleteFormFields.push("Name")}
+			for (const key of Object.keys(formData)) {
+				if (!(formData[key])) {incompleteFormFields.push(key)}
+			}
 			setFfields(incompleteFormFields)
 		} else {			
 			emailjs.sendForm(
@@ -41,7 +41,7 @@ function ContactForm() {
 			).then(
 				() => {
 					document.getElementById("messagesuccess").showModal();
-					setFormData({name: "", email: "", rating: "", message: "",})
+					setFormData({name: "", email: "", message: "",})
 				},
 				(error) => {
 					document.getElementById("messagefailure").showModal();
@@ -75,7 +75,7 @@ function ContactForm() {
 					<p className="text-lg">Please fill out the following fields:</p>
 					<ul className="list-disc list-inside">
 						{ffields.map((field) => (
-							<li>{field}</li>
+							<li key={field} className="capitalize">{field}</li>
 						))}
 					</ul>
 				</div>

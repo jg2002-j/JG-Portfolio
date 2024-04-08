@@ -26,6 +26,7 @@ function HomePage() {
          {/* <LoadingScreen/> */}
 
          <div className="min-h-dvh w-vw help">
+            <MiniNav />
 
          </div>
 
