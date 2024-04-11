@@ -17,8 +17,6 @@ gsap.registerPlugin(ScrollTrigger)
 
 function HomePage() {
 
-   const elRefs = useRef([])
-
    const linkIcons = (name) => {
       switch (name) {
          case "GitHub":
@@ -51,14 +49,14 @@ function HomePage() {
                   ))}
                </div>
                <div className="flex justify-end gap-x-2 m-2">
-                  <span className="tracking-wider select-none font-semibold text-stone-400 bg-stone-300 bg-opacity-10 rounded-lg px-5 py-2"><CurrentTime/></span>
-                  <span className="tracking-wider select-none font-semibold text-stone-400 bg-stone-300 bg-opacity-10 rounded-lg px-5 py-2">London, United Kingdom</span>
+                  <span className="tracking-wider select-none font-semibold text-stone-400 bg-stone-300 bg-opacity-10 hover:bg-opacity-70 hover:text-stone-600 duration-500 ease-in-out rounded-lg px-5 py-2"><CurrentTime/></span>
+                  <span className="tracking-wider select-none font-semibold text-stone-400 bg-stone-300 bg-opacity-10 hover:bg-opacity-70 hover:text-stone-600 duration-500 ease-in-out rounded-lg px-5 py-2">London, United Kingdom</span>
                </div>
             </div>
             <Title/>
          </div>
-         <MiniNav/>
-            <div className="w-full lg:max-w-[80%] min-h-[50vh] mx-auto my-10 help"></div> 
+         {/* <MiniNav/> */}
+         <div className="w-full lg:max-w-[80%] min-h-[50vh] mx-auto my-10 help"></div> 
          <FeaturedProject/>
       </>
    )

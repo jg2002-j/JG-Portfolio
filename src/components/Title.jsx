@@ -12,7 +12,6 @@ function Title() {
 	const renderNavLinks = (NavItems) => {
 		let oddCol = 0
 		let evenCol = 0
-
 		return (
 			NavItems.map((navItem, index) => {
 				if (navItem.id % 2 !== 0) { // odd
@@ -130,12 +129,12 @@ function Title() {
 
   	return (
 
-		<div className="w-vw h-[40vh] bg-stone-900 noise p-8 flex justify-between items-center gap-10">
+		<div className="w-vw min-h-[40vh] bg-stone-900 noise p-10 flex justify-between items-center gap-10">
 			<div className="flex flex-col font-title text-[7vw] leading-none text-stone-600 select-none tracking-widest">
 				<h1 ref={NavAnimateTarget} className="text-stone-400">Jai</h1>
 				<h1 ref={JGtitle} className="">Gandhi</h1>
 			</div>
-			<div className="p-10 h-full grid grid-cols-2 justify-center items-center gap-10">
+			<div className="h-full grid grid-cols-2 justify-center items-center gap-10">
 				{renderNavLinks(NavItems)}
 			</div>
 		</div>

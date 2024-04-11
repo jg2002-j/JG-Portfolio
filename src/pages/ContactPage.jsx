@@ -27,7 +27,7 @@ function ContactPage() {
             <div className="w-full bg-stone-300 bg-opacity-10 rounded-lg p-10 flex flex-col gap-2">
             <h3 className="font-header text-stone-300 text-4xl mb-5">Found a Bug?</h3>
                <a target="_blank" href="https://github.com/jg2002-j/react-portfolio/issues/new" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center"><Bug className="inline me-5"/>Report it here!</a>
-               <p className="max-w-fit text-stone-400 text-lg py-2 flex items-center">Or include it in the FeedBack form.</p>
+               <p className="max-w-fit text-stone-400 text-lg py-2 flex items-center">Or include it in the Feedback form.</p>
             </div> 
          )
       }
