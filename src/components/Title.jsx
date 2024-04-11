@@ -17,7 +17,7 @@ function Title() {
 				if (navItem.id % 2 !== 0) { // odd
 					oddCol++
 					return (
-						<NavLink onMouseEnter={() => enterAnimate(navItem.id)} onMouseLeave={() => leaveAnimate(navItem.id)} key={index} to={navItem.link} className={`col-start-${oddCol} row-start-1 bg-stone-300 bg-opacity-10 rounded-lg aspect-square h-24 p-5 hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}>
+						<NavLink onClick={() => scrollDownHome(navItem.name)} onMouseEnter={() => enterAnimate(navItem.id)} onMouseLeave={() => leaveAnimate(navItem.id)} key={index} to={navItem.link} className={`col-start-${oddCol} row-start-1 bg-stone-300 bg-opacity-10 rounded-lg aspect-square h-24 p-5 hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}>
 							{NavIcons(navItem.icon, "text-[#a7a29f]")}
 						</NavLink>
 					)
@@ -127,9 +127,14 @@ function Title() {
 		}
 	}
 
-  	return (
+	const scrollDownHome = (name) => {
+		if (name == "Home"){
+			document.getElementById("titleBar").scrollIntoView();
+		}
+	}
 
-		<div className="w-vw min-h-[40vh] bg-stone-900 noise p-10 flex justify-between items-center gap-10">
+  	return (
+		<div id="titleBar" className="w-vw min-h-[40vh] bg-stone-900 noise p-10 flex justify-between items-center gap-10">
 			<div className="flex flex-col font-title text-[7vw] leading-none text-stone-600 select-none tracking-widest">
 				<h1 ref={NavAnimateTarget} className="text-stone-400">Jai</h1>
 				<h1 ref={JGtitle} className="">Gandhi</h1>
@@ -138,7 +143,6 @@ function Title() {
 				{renderNavLinks(NavItems)}
 			</div>
 		</div>
-
   	)
 };
 

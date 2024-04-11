@@ -131,46 +131,6 @@ function FeaturedProject(project) {
             </div>
          </div>
       </>
-
-
-
-      // <>
-      //    <div className="min-h-dvh w-vw mt-10 relative overflow-hidden">
-      //       <div className="absolute -top-5 -left-5 w-[120%] h-full -z-10 flex flex-wrap justify-start items-start transpdivtb">
-      //          {bgText(enlargedProj.title, 100)}
-      //       </div>
-      //       <div className="absolute flex flex-col 2xl:flex-row gap-10 overflow-hidden" style={{left: ftprojPos.left, top: ftprojPos.top, width: ftprojPos.width, height: ftprojPos.height}}>
-      //          <img className="aspect-video h-full object-cover" src={enlargedProj.img} alt={enlargedProj.title} />
-      //          <div className="w-full overflow-auto hidescroll">
-      //             <div className="min-h-full flex flex-col justify-between pb-[10%]">
-      //                <img className=" object-cover" src={enlargedProj.mobileImgs[0]} alt={`${enlargedProj.title} View 2`} />
-      //                <div className="flex flex-wrap text-[4.75rem] font-title tracking-widest underline">
-      //                   {splitTitle.map((letter, index) => (
-      //                      <span className="select-none" key={index}>{letter}</span>
-      //                   ))}
-      //                </div>
-      //                <span className="select-none max-w-fit px-4 py-2 self-end text-xs uppercase flex items-center gap-x-2 tracking-widest animate-pulse">Scroll Down <ChevronsDown size={13} className="inline"/> </span>
-      //             </div>
-      //             <div id={`${enlargedProj.title}nxtpg`} className="min-h-full flex flex-col gap-8">
-      //                <div>
-      //                   <div className="border-b-[1px] w-[25%]"></div>
-      //                   <h3 className="font-header text-2xl font-bold text-[${enlargedProj.swatch}] py-1 flex flex-wrap items-baseline" style={{color: enlargedProj.swatch}}>What's<span className="font-title mx-3">{enlargedProj.title}</span>about?</h3>
-      //                   <div className="border-t-[1px] w-[75%]"></div>
-      //                </div>
-      //                <p>{enlargedProj.desc}</p>
-      //                <div className="self-end flex flex-col items-end">
-      //                   <div className="border-b-[1px] w-[25%]"></div>
-      //                   <h3 className="font-header text-2xl font-bold text-end py-1" style={{color: enlargedProj.swatch}}>What technologies were used?</h3>
-      //                   <div className="border-t-[1px] w-[75%]"></div>
-      //                </div>
-      //                <div className="flex flex-wrap gap-2">
-      //                   {getBadges(enlargedProj)}
-      //                </div>
-      //             </div>
-      //          </div>
-      //       </div>
-      //    </div>
-      // </>
    )
 };
 
