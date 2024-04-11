@@ -18,7 +18,7 @@ function AboutMeBento() {
    };
 
 	return (
-	 	<div className="aspect-square hidden 2xl:grid 2xl:w-2/5 grid-cols-12 grid-rows-12 gap-4">
+	 	<div className="aspect-square hidden lg:grid lg:w-2/5 grid-cols-12 grid-rows-12 gap-4">
 			<div className="row-start-1 col-start-1 row-span-5 col-span-5 rounded-xl bg-[#2a2744] hover:bg-[#44446c] cursor-default ease-in-out duration-700 text-slate-200 flex flex-col justify-center items-center p-4 peer/designs">
 				<a className="aspect-square h-full w-full" target="_blank" href="https://www.dropbox.com/s/p69ej2jq38mdphi/JG-SKETCHBOOK-01.pdf?dl=0"><img className="h-full w-full object-cover rounded-lg" src={artImg} alt="My Art Portfolio" /></a>
 			</div>

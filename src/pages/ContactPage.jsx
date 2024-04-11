@@ -49,9 +49,18 @@ function ContactPage() {
                   </div>
                   <div className="flex flex-col gap-2">
                      <h3 className="font-header text-stone-300 text-4xl mb-5">Links</h3>
-                     <a target="_blank" href="https://github.com/jg2002-j" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center"><Github className="inline me-5"/>GitHub</a>
-                     <a target="_blank" href="https://www.linkedin.com/in/jg2002/" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center"><Linkedin className="inline me-5"/>LinkedIn</a>
-                     <a target="_blank" href="https://www.dropbox.com/scl/fi/2y6z2e05ia477za2cebtz/JaiGandhiCV.pdf?rlkey=ssr2bkcj5l1xts5wliez85kol&dl=0" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center"><FileText className="inline me-5"/>My CV</a>
+                     <a target="_blank" href="https://github.com/jg2002-j" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center ">
+                        <img className="aspect-square h-5 me-4" src="https://cdn.simpleicons.org/github/a7a29f" alt="GitHub"/>
+                        <span>GitHub</span>
+                     </a>
+                     <a target="_blank" href="https://www.linkedin.com/in/jg2002/" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center ">
+                        <img className="aspect-square h-5 me-4" src="https://cdn.simpleicons.org/linkedin/a7a29f" alt="LinkedIn"/>
+                        <span>LinkedIn</span>
+                     </a>
+                     <a target="_blank" href="https://www.dropbox.com/scl/fi/2y6z2e05ia477za2cebtz/JaiGandhiCV.pdf?rlkey=ssr2bkcj5l1xts5wliez85kol&dl=0" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center ">
+                        <img className="aspect-square h-5 me-4" src="https://cdn.simpleicons.org/googledocs/a7a29f" alt="My CV"/>
+                        <span>My CV</span>
+                     </a>
                   </div>
                </div>
                {loadBugReport()}

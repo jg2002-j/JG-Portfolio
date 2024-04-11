@@ -1,5 +1,5 @@
 import React, { useRef } from "react";
-import { NavIcons } from "./NavIcons";
+import NavIcons from "./NavIcons";
 import NavItems from "../data/NavItems.json";
 import { NavLink } from "react-router-dom";
 import { useGSAP } from "@gsap/react";
@@ -38,7 +38,7 @@ function MiniNav() {
    // })
 
    return (
-      <div className="px-20 py-[5vh] max-w-fit group mx-auto">
+      <div className="px-20 py-[5vh] max-w-fit group mx-auto" id="mininav">
          <div className="max-w-fit bg-slate-50 bg-blend-difference bg-opacity-10 mx-auto rounded-lg px-5 py-1 group-hover:py-2 flex flex-col lg:flex-row justify-center items-center gap-5 group-hover:gap-x-8 group-hover:bg-opacity-30 group-hover:px-20 duration-700">
             {renderHeaderNavIcons(NavItems)}
          </div>

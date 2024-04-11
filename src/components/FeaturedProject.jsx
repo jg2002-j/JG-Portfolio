@@ -94,7 +94,7 @@ function FeaturedProject(project) {
 
    return (
       <>
-         <div className="w-vw h-dvh min-h-[1491px] my-10 relative overflow-hidden grid grid-cols-12 grid-rows-12 gap-5">
+         <div id="ftproj" className="w-vw h-dvh min-h-[1491px] my-10 relative overflow-hidden grid grid-cols-12 grid-rows-12 gap-5">
             <div className="absolute -top-5 -left-5 w-[120%] h-full -z-10 flex flex-wrap justify-start items-start transpdivtb">{bgText(enlargedProj.title, 100)}</div>
             <div className="col-start-2 col-span-10 row-start-1 row-span-6 rounded-lg overflow-hidden">
                <img src={enlargedProj.desktopImgs[0]} alt="" className="w-full h-full object-cover object-left-top" />

@@ -1,5 +1,5 @@
 import React from "react";
-import { NavIcons } from "./NavIcons";
+import NavIcons from "./NavIcons";
 import NavData from "../data/NavItems.json";
 import { MenuSquare } from "lucide-react";
 import { NavLink } from "react-router-dom";

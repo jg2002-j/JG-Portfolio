@@ -17,4 +17,4 @@ const NavIcons = (icon, iconcolor, size) => {
    }
 };
 
-export { NavIcons };
+export default NavIcons;
