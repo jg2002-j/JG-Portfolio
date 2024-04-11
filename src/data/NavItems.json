@@ -17,22 +17,6 @@
    },
    {
       "id": 3, 
-      "name": "Featured Project", 
-      "link": "projects/featuredproj", 
-      "route": "featuredproj",
-      "icon": "CodeSquare", 
-      "type": "section"
-   },
-   {
-      "id": 4, 
-      "name": "All Projects", 
-      "link": "projects/allprojs", 
-      "route": "allprojs",
-      "icon": "CodeSquare", 
-      "type": "section"
-   },
-   {
-      "id": 5, 
       "name": "About Me", 
       "link": "about", 
       "route": "about/*",
@@ -40,15 +24,7 @@
       "type": "page"
    },
    {
-      "id": 6, 
-      "name": "Experience", 
-      "link": "about/experience", 
-      "route": "experience",
-      "icon": "FileText", 
-      "type": "section"
-   },
-   {
-      "id": 7, 
+      "id": 4, 
       "name": "Contact Me", 
       "link": "contact", 
       "route": "contact",

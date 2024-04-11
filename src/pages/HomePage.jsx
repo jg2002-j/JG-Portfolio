@@ -5,7 +5,6 @@ import MiniNav from "../components/MiniNav";
 import Title from "../components/Title";
 import FeaturedProject from "../components/FeaturedProject";
 import CurrentTime from "../components/CurrentTime";
-import TitleLinks from "../components/TitleLinks";
 
 import Links from "../data/Links.json";
 
@@ -56,10 +55,7 @@ function HomePage() {
                   <span className="tracking-wider select-none font-semibold text-stone-400 bg-stone-300 bg-opacity-10 rounded-lg px-5 py-2">London, United Kingdom</span>
                </div>
             </div>
-            <div className="w-vw h-[40vh] bg-stone-900 noise p-8 flex justify-between items-center gap-10">
-               <Title/>
-               <TitleLinks/>
-            </div>
+            <Title/>
          </div>
          <MiniNav/>
             <div className="w-full lg:max-w-[80%] min-h-[50vh] mx-auto my-10 help"></div> 

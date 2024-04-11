@@ -42,8 +42,8 @@ function App() {
 			<Routes>
 				<Route path={NavItems[0].route} element={<HomePage/>} />
 				<Route path={NavItems[1].route} element={<ProjectsPage/>} />
-				<Route path={NavItems[4].route} element={<AboutPage/>} />
-				<Route path={NavItems[6].route} element={<ContactPage/>} />
+				<Route path={NavItems[2].route} element={<AboutPage/>} />
+				<Route path={NavItems[3].route} element={<ContactPage/>} />
 			</Routes>
 			{/* <Sidebar state={sidebarState} toggleSidebar={toggleSidebar} />
 			<ContactMe /> */}
