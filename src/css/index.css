@@ -115,3 +115,7 @@
 	writing-mode:vertical-lr;
 	rotate: 180deg;
 }
+
+#titlebar{
+	scroll-padding: 0vh;
+}

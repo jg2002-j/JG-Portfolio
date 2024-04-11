@@ -17,15 +17,28 @@ function Title() {
 				if (navItem.id % 2 !== 0) { // odd
 					oddCol++
 					return (
-						<NavLink onClick={() => scrollDownHome(navItem.name)} onMouseEnter={() => enterAnimate(navItem.id)} onMouseLeave={() => leaveAnimate(navItem.id)} key={index} to={navItem.link} className={`col-start-${oddCol} row-start-1 bg-stone-300 bg-opacity-10 rounded-lg aspect-square h-24 p-5 hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}>
-							{NavIcons(navItem.icon, "text-[#a7a29f]")}
+						<NavLink 
+							key={index} 
+							to={navItem.link} 
+							className={`col-start-${oddCol} row-start-1 bg-stone-300 bg-opacity-10 rounded-lg h-full aspect-square p-5 hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}
+							onClick={() => scrollDownHome(navItem.name)} 
+							onMouseEnter={() => enterAnimate(navItem.id)} 
+							onMouseLeave={() => leaveAnimate(navItem.id)} 
+						>
+							{NavIcons(navItem.icon, "text-[#a7a29f]", 30)}
 						</NavLink>
 					)
 				} else if (navItem.id % 2 === 0) { //even
 					evenCol++
 					return (
-						<NavLink onMouseEnter={() => enterAnimate(navItem.id)} onMouseLeave={() => leaveAnimate(navItem.id)} key={index} to={navItem.link} className={`col-start-${evenCol} row-start-2 bg-stone-300 bg-opacity-10 rounded-lg aspect-square h-24 p-5 hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}>
-							{NavIcons(navItem.icon, "text-[#a7a29f]")}
+						<NavLink 
+							key={index} 
+							to={navItem.link} 
+							className={`col-start-${evenCol} row-start-2 bg-stone-300 bg-opacity-10 rounded-lg h-full aspect-square p-5 hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}
+							onMouseEnter={() => enterAnimate(navItem.id)} 
+							onMouseLeave={() => leaveAnimate(navItem.id)}
+						>
+							{NavIcons(navItem.icon, "text-[#a7a29f]", 30)}
 						</NavLink>
 					)
 				}
@@ -134,12 +147,12 @@ function Title() {
 	}
 
   	return (
-		<div id="titleBar" className="w-vw min-h-[40vh] bg-stone-900 noise p-10 flex justify-between items-center gap-10">
+		<div id="titleBar" className="w-vw h-[40vh] bg-stone-900 noise p-10 flex justify-between items-center gap-10">
 			<div className="flex flex-col font-title text-[7vw] leading-none text-stone-600 select-none tracking-widest">
 				<h1 ref={NavAnimateTarget} className="text-stone-400">Jai</h1>
 				<h1 ref={JGtitle} className="">Gandhi</h1>
 			</div>
-			<div className="h-full grid grid-cols-2 justify-center items-center gap-10">
+			<div className="h-full aspect-square grid auto-cols-fr justify-center items-center gap-10">
 				{renderNavLinks(NavItems)}
 			</div>
 		</div>
