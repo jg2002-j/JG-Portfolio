@@ -5,7 +5,6 @@
 What was your motivation? Why did you build this project? What problem does it solve? What did you learn?
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Netlify Status](https://api.netlify.com/api/v1/badges/14231588-305c-4339-b587-a3f73574c1e1/deploy-status)](https://app.netlify.com/sites/jg2002-portfolio/deploys)
 
 ## Table of Contents
 - [Installation](#installation)
@@ -35,6 +34,18 @@ Provide instructions and examples for use.
 - Spotify embeds from [Spotify](https://developer.spotify.com/documentation/embeds) and [React Spotify Embed NPM](https://www.npmjs.com/package/react-spotify-embed).
 - Screenshot from [Studio Ghibli](https://www.ghibli.jp/works/howl/).
 - Noise from [fffuel.co](https://fffuel.co/nnnoise/).
+
+- Photo by <a href="https://unsplash.com/@ilgmyzin?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">ilgmyzin</a> on <a href="https://unsplash.com/photos/a-green-abstract-background-with-curves-and-curves-xyWs4zOs-WE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+- Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/background-pattern-yIbz_ts9-tQ?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+- Photo by <a href="https://unsplash.com/@ilgmyzin?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">ilgmyzin</a> on <a href="https://unsplash.com/photos/a-brown-abstract-background-with-wavy-lines-5lk2642XbzE?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+- Photo by <a href="https://unsplash.com/@ilgmyzin?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">ilgmyzin</a> on <a href="https://unsplash.com/photos/background-pattern-HCI4StcEvRc?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+- Photo by <a href="https://unsplash.com/@ilgmyzin?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">ilgmyzin</a> on <a href="https://unsplash.com/photos/a-blue-and-green-wave-FshMTx4ZEqM?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+- Photo by <a href="https://unsplash.com/@steve_j?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Steve Johnson</a> on <a href="https://unsplash.com/photos/a-hand-with-a-finger-pointing-at-the-camera-n1PufI05GMo?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+- Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/background-pattern-px-d44bbe7o?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+- Photo by <a href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Pawel Czerwinski</a> on <a href="https://unsplash.com/photos/background-pattern-YAtspJ-HV2E?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash">Unsplash</a>
+- 
+  
+
 
 
 ## Tests

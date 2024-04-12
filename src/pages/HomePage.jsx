@@ -57,6 +57,7 @@ function HomePage() {
          </div>
          {/* <MiniNav/> */}
          <div className="w-full lg:max-w-[80%] min-h-[50vh] mx-auto my-10 help"></div> 
+         <div className="w-full h-[20vh] noise bg-stone-900"></div>
          <FeaturedProject/>
       </>
    )

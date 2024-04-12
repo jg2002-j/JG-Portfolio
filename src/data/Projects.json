@@ -2,6 +2,7 @@
 	{
 		"id": "008",
 		"title": "Nucleus",
+		"synopsis": "A time management app with task tracking and minimalist design.",
 		"tags": ["collaborative", "design", "development", "apis"],
 		"desc": "Time management is essential when it comes to studying. Our app is based on the Pomodoro Technique, a tried-and-tested learning method that intersperses periods of concentration with set breaks. Topics of study are broken down to sessions of around 25 minutes to maximise focus, with enforced breaks between sessions to help with memory retention and decrease fatigue. It’s not just helpful for filling your mind, you can empty it too by using Nucleus as a meditation and mindfulness aid. With a minimalist UI and customisable session and break lengths, Nucleus is a simple solution for tasks that may initially seem overwhelming, helps build better study habits and sends procrastination packing.",
 		"keypoints": ["Time management", "NPM packages", "Teamwork"],
@@ -23,6 +24,7 @@
 	{
 		"id": "001",
 		"title": "Paws Planner",
+		"synopsis": "",
 		"tags": ["collaborative", "design", "development", "apis"],
 		"desc": "Welcome to Paws Planner, your go-to application for planning pet-friendly adventures around the world! Whether you're a pet owner or a pet lover, Paws Planner helps you discover and plan exciting activities for you and your furry friends in any location.",
 		"keypoints": [],
@@ -38,6 +40,7 @@
 	{
 		"id": "002",
 		"title": "Web Development Notes",
+		"synopsis": "",
 		"tags": ["individual"],
 		"desc": "Learning how to use languages and tools can often be challenging, especially when covering a lot of material in a short amount of time. I found the best way to retain these newfound skills was to not only note them down, but also practice using them - which I did with this site.",
 		"keypoints": [],
@@ -53,6 +56,7 @@
 	{
 		"id": "003",
 		"title": "Bootstrap Portfolio",
+		"synopsis": "",
 		"tags": ["individual", "design", "development"],
 		"desc": "This challenge involved designing a web page that displayed my work to-date on a page designed with Bootstrap, HTML and CSS.",
 		"keypoints": [],
@@ -68,6 +72,7 @@
 	{
 		"id": "004",
 		"title": "Weather Dashboard",
+		"synopsis": "",
 		"tags": ["individual", "design", "development", "apis"],
 		"desc": "This challenge involved designing a web page that pulled data from a Server API (OpenWeather API) and displaying that in 2 views: one for today's weather, and one section for a 5-day forecast. The web page also has functionality of storing the user's 5 most recent searches to assist with pulling up that data quicker.",
 		"keypoints": [],
@@ -83,6 +88,7 @@
 	{
 		"id": "005",
 		"title": "Team-Profile Generator",
+		"synopsis": "",
 		"tags": ["individual", "development"],
 		"desc": "This project allowed me to hone my skills with npm, inquirer and node.js - and developed familiarity with test-driven development by writing code that had to pass the tests provided. By collecting user responses with inquirer, I then processed the data and accordingly wrote it to a HTML file to display the members of a team.",
 		"keypoints": [],
@@ -98,6 +104,7 @@
 	{
 		"id": "006",
 		"title": "README Generator",
+		"synopsis": "",
 		"tags": ["individual", "development"],
 		"desc": "This project helped me learn node.js by installing a third-party package (Inquirer) through npm. Using the readme docs for that package, I then created several questions, gathered the user input and implemented it via template literals into a 'write' function to a README.md document.",
 		"keypoints": [],
@@ -113,6 +120,7 @@
 	{
 		"id": "007",
 		"title": "Password Generator",
+		"synopsis": "",
 		"tags": ["individual", "development"],
 		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
 		"keypoints": [],

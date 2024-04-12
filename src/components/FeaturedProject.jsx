@@ -1,17 +1,13 @@
 import React, { useState } from "react";
 import projects from "../data/Projects.json";
 import techBadges from "../data/TechBadges.json";
-import { StepForward, StepBack } from "lucide-react";
+import { StepForward, StepBack, ArrowUpRight } from "lucide-react";
 
+import bgtexture1 from "../assets/bgTextures/pawel-czerwinski-px-d44bbe7o-unsplash.jpg"
+import bgtexture2 from "../assets/bgTextures/pawel-czerwinski-YAtspJ-HV2E-unsplash.jpg"
+import bgtexture3 from "../assets/bgTextures/pawel-czerwinski-yIbz_ts9-tQ-unsplash.jpg"
 
-function FeaturedProject(project) {
-   const projChoice = project.project
-
-   let enlargedProj = projects.find(proj => proj.title === projChoice)
-   
-   if (!enlargedProj) {
-      enlargedProj = projects[0]   
-   }
+function FeaturedProject() {
 
    const getBadges = (proj) => {
       const projTechs = proj.techs;
@@ -21,23 +17,6 @@ function FeaturedProject(project) {
       ));
       return badgeElements;
    };
-
-   // const genPos = (min, max) => {
-   //    let left = Math.floor(Math.random()*(max-min)+min);
-   //    let top = Math.floor(Math.random()*(max-min)+min);
-   //    let width = 100-((left) + Math.floor(Math.random()*(max-min)+min));
-   //    // let height = 100-((top) + Math.floor(Math.random()*(max-min)+min));
-   //    let height = width*(7/8)
-   //    return ({
-   //       left: `${left}vw`,
-   //       top: `${top}vh`,
-   //       width: `${width}vw`,
-   //       height: `${height}vh`,
-   //    })
-   // };
-   // const ftprojPos = genPos(2,10)
-
-   const splitTitle = enlargedProj.title.split("")
 
    const bgText = (text, repeats) => {
       let finalArray = []
@@ -52,82 +31,67 @@ function FeaturedProject(project) {
       return(finalArray.map((letter, index) => (<span key={index} className="mx-1 font-title text-8xl ghosttext">{letter}</span>)))
    }
 
-   const [ img1, setimg1 ] = useState(enlargedProj.mobileImgs[0])
-   const [ img2, setimg2 ] = useState(enlargedProj.mobileImgs[1])
-   const [ img3, setimg3 ] = useState(enlargedProj.mobileImgs[2])
-
-   const imgForward = () => {
-      if (img1 == enlargedProj.mobileImgs[0]){
-         setimg1(enlargedProj.mobileImgs[1])
-         setimg2(enlargedProj.mobileImgs[2])
-         setimg3(enlargedProj.mobileImgs[0])
-      } else if (img1 == enlargedProj.mobileImgs[1]){
-         setimg1(enlargedProj.mobileImgs[2])
-         setimg2(enlargedProj.mobileImgs[0])
-         setimg3(enlargedProj.mobileImgs[1])
-      } else if (img1 == enlargedProj.mobileImgs[2]){
-         setimg1(enlargedProj.mobileImgs[0])
-         setimg2(enlargedProj.mobileImgs[1])
-         setimg3(enlargedProj.mobileImgs[2])
-      } else {
-         alert("Error")
-      }
+   const fsImage = (image) => {
+      alert(image)
    }
 
-   const imgBack = () => {
-      if (img1 == enlargedProj.mobileImgs[0]){
-         setimg1(enlargedProj.mobileImgs[2])
-         setimg2(enlargedProj.mobileImgs[0])
-         setimg3(enlargedProj.mobileImgs[1])
-      } else if (img1 == enlargedProj.mobileImgs[1]){
-         setimg1(enlargedProj.mobileImgs[0])
-         setimg2(enlargedProj.mobileImgs[1])
-         setimg3(enlargedProj.mobileImgs[2])
-      } else if (img1 == enlargedProj.mobileImgs[2]){
-         setimg1(enlargedProj.mobileImgs[1])
-         setimg2(enlargedProj.mobileImgs[2])
-         setimg3(enlargedProj.mobileImgs[0])
-      } else {
-         alert("Error")
-      }
+   const backgrounds = [bgtexture1, bgtexture2, bgtexture3]
+   
+   const [ enlargedProj, setEnlargedProj ] = useState(projects[0])
+   const [ bgTexture, setBgTexture ] = useState(backgrounds[0])
+
+   const nextProj = (enlargedProj, bgTexture) => {
+      let currentProj = (projects.findIndex(proj => (proj.id == enlargedProj.id)))
+         if (currentProj+1 >= projects.length){
+            setEnlargedProj(projects[0])
+         } else {
+            setEnlargedProj(projects[currentProj+1])
+         }
+      let currentBg = (backgrounds.findIndex(bg => (bg == bgTexture)))
+         if (currentBg+1 >= backgrounds.length){
+            setBgTexture(backgrounds[0])
+         } else {
+            setBgTexture(backgrounds[currentBg+1])
+         }
    }
 
    return (
       <>
-         <div id="ftproj" className="w-vw h-dvh min-h-[1491px] my-10 relative overflow-hidden grid grid-cols-12 grid-rows-12 gap-5">
-            <div className="absolute -top-5 -left-5 w-[120%] h-full -z-10 flex flex-wrap justify-start items-start transpdivtb">{bgText(enlargedProj.title, 100)}</div>
-            <div className="col-start-2 col-span-10 row-start-1 row-span-6 rounded-lg overflow-hidden">
-               <img src={enlargedProj.desktopImgs[0]} alt="" className="w-full h-full object-cover object-left-top" />
-            </div>
-            <div className="col-start-2 col-span-4 row-start-7 row-span-5 rounded-lg overflow-hidden grid grid-cols-9">
-               <div className="h-full aspect-[320/568] col-start-1 z-20">
-                  <img className="overflow-hidden w-full h-full object-cover object-right" src={img1} alt="Mobile View 1" />
+         <div className="hidden 2xl:block max-w-[80%] min-h-dvh mx-auto my-10 bg1 relative rounded-lg overflow-hidden">
+            <img className="absolute -z-10 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgTexture} alt="Background texture" />
+            <div className="absolute -z-10 left-[-5%] top-[-5%] h-[110%] w-[110%] flex flex-wrap transpdivtb">{bgText(enlargedProj.title,250)}</div>
+            <div className="my-20 flex flex-col justify-center gap-10">
+               
+               <div className="mx-20 bg-stone-300 bg-opacity-10 rounded-lg p-10 flex justify-between items-center gap-10">
+                  <div className="flex flex-col justify-start gap-3">
+                     <h1 className="text-[4vw] font-title tracking-wider leading-none">{enlargedProj.title}</h1>
+                     <h2 className="select-none text-2xl text-wrap w-fit mb-2">{enlargedProj.synopsis}</h2>
+                     <div className="flex items-center gap-5">
+                        {enlargedProj.tags.map((tag, index) => (
+                           <span key={index} className="select-none uppercase text-sm tracking-wider px-3 py-1 bg-stone-300 bg-opacity-10 rounded-lg">{tag}</span>
+                        ))}
+                     </div>
+                  </div>
+                  <div className="flex justify-end gap-5 min-w-[15%]">
+                     <a target="_blank" href={enlargedProj.deployed} className="h-full aspect-square p-5 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-600 hover:bg-opacity-300 ease-in-out duration-500"><ArrowUpRight className="h-12 w-full"/></a>
+                     <button onClick={() => nextProj(enlargedProj, bgTexture)} className="h-full aspect-square p-5 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-600 hover:bg-opacity-300 ease-in-out duration-500"><StepForward className="h-12 w-full"/></button>
+                  </div>
                </div>
-               <div className="h-full aspect-[320/568] col-start-7 justify-self-end z-10 opacity-70">
-                  <img className="overflow-hidden w-full h-full object-cover object-right" src={img2} alt="Mobile View 2" />
+               <div className="bg-stone-900 noise w-full h-[40vh] p-10 flex justify-start items-center gap-5 overflow-auto hidescroll">
+                  {enlargedProj.desktopImgs.map((image, index) => (
+                     <img key={index} onClick={() => fsImage(image)} className="h-full w-fit rounded-lg cursor-pointer" src={image} />
+                  ))}
+                  {enlargedProj.mobileImgs.map((image, index) => (
+                     <img key={index} onClick={() => fsImage(image)} className="h-full w-fit rounded-lg cursor-pointer" src={image} />
+                  ))}
                </div>
-               <div className="h-full col-start-8 col-span-2 opacity-50">
-                  <img className="overflow-hidden w-full h-full object-cover object-right" src={img3} alt="Mobile View 3" />
+               <div className="mx-20 bg-stone-300 bg-opacity-10 rounded-lg p-10 flex justify-between items-center gap-10">
+                  <p className="w-[65ch] max-w-[60%] text-wrap-pretty text-xl">{enlargedProj.desc}</p>
+                  <div className="max-w-[30%] flex flex-wrap justify-start items-center gap-4">
+                     {getBadges(enlargedProj)}
+                  </div>
                </div>
-            </div>
-            <div className="col-start-2 col-span-4 row-start-12 row-span-1 bg-stone-300 bg-opacity-10 rounded-lg flex justify-center items-center gap-[20%]">
-               <button onClick={() => imgBack()} className="w-16 flex justify-center items-center ease-in-out duration-300 border-[1px] border-stone-200 border-opacity-40 hover:border-opacity-0 rounded-lg bg-stone-900 bg-opacity-5 hover:bg-stone-900 hover:bg-opacity-50"><StepBack size={18} className="m-2"/></button>
-               <button onClick={() => imgForward()} className="w-16 flex justify-center items-center ease-in-out duration-300 border-[1px] border-stone-200 border-opacity-40 hover:border-opacity-0 rounded-lg bg-stone-900 bg-opacity-5 hover:bg-stone-900 hover:bg-opacity-50"><StepForward size={18} className="m-2"/></button>
-            </div>
-            <div className="col-start-6 col-span-6 row-start-7 row-span-1 px-10 bg-stone-300 bg-opacity-10 rounded-lg flex flex-wrap items-center text-[5vw] 2xl:text-6xl font-title tracking-widest">
-               {splitTitle.map((letter, index) => (
-                  <span className="select-none" key={index}>{letter}</span>
-               ))}
-            </div>
-            <div className="col-start-6 col-span-6 row-start-8 row-span-3 p-10 bg-stone-300 bg-opacity-10 rounded-lg overflow-auto hidescroll">
-               <h3 className="font-header text-2xl font-bold text-[${enlargedProj.swatch}] flex flex-wrap items-baseline" style={{color: enlargedProj.swatch}}>What's<span className="font-title mx-3">{enlargedProj.title}</span>about?</h3>
-               <p className="mt-10 text-xl leading-8">{enlargedProj.desc}</p>
-            </div>
-            <div className="col-start-6 col-span-6 row-start-11 row-span-2 p-10 bg-stone-300 bg-opacity-10 rounded-lg overflow-auto hidescroll">
-               <h3 className="font-header text-2xl font-bold" style={{color: enlargedProj.swatch}}>What technologies were used?</h3>
-               <div className="flex flex-wrap gap-3 mt-10">
-                  {getBadges(enlargedProj)}
-               </div>
+
             </div>
          </div>
       </>
