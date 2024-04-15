@@ -216,18 +216,28 @@ function ProjectList(props) {
 	})
 
 	return (
-	 	<div className="flex flex-col">
+	 	<div className="sticky top-0 w-[30vw] max-h-dvh flex flex-col bg-stone-300 bg-opacity-10 rounded-lg p-10">
 			<div className="flex justify-center items-center gap-4 mb-4">
 				<button className="btn btn-ghost" ref={projPrev}><ChevronsUp/></button>
 				<button className="btn btn-ghost" ref={projNext}><ChevronsDown/></button>
 			</div>
-			<div className="flex flex-col max-w-[30vw] overflow-hidden transpdivb">
-				{projects.map((project, index) => (
-				<h2 key={project.id} className={`bg-stone-300 bg-opacity-10 rounded-lg px-5 py-5 my-3 ${index === 0 ? "mt-6" : ""} font-title text-2xl tracking-widest projItem ${isprojItemActive === index ? "bg-stone-100 bg-opacity-30" : ""}`}>
-					<span className="text-sm me-4 opacity-60">{index+1}</span>
-					{project.title}
-				</h2>
-				))}
+			<div className="flex justify-center items-start overflow-hidden">
+				<div className="w-full flex flex-col gap-8">
+					{projects.map((project, index) => (
+						<div key={project.id} className={`flex flex-col justify-between gap-3 projItem bg-stone-300 bg-opacity-10 rounded-lg p-8 ${index === 0 ? "mt-8" : ""} ${isprojItemActive === index ? "bg-stone-900 bg-opacity-90 noise" : ""}`}>
+							<h2 className={`flex items-center justify-start font-title leading-none text-2xl tracking-widest`}>
+								<span className="font-header font-bold text-lg me-4 opacity-60">{index+1}</span>
+								{project.title}
+							</h2>
+							<h3 className="font-header">{project.synopsis}</h3>
+							<div className="flex justify-start items-center">
+								{project.tags.map((tag, index) => (
+									<span key={index} className="border-2 border-stone-300 border-opacity-10 rounded-lg px-3 py-1 me-2 text-xs tracking-wider uppercase select-none">{tag}</span>
+								))}
+							</div>
+						</div>
+					))}
+				</div>
 			</div>
 		</div>
  	)
