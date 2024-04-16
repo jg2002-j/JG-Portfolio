@@ -25,9 +25,9 @@ function SmSocialLinks() {
 			Links.map((item, index) => {
 			createRef(index);
 			return(
-				<a ref={linkRefs.current[index]} onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave(index)} key={index} target="_blank" href={item.link} className="tracking-wider font-semibold text-stone-400 bg-stone-300 bg-opacity-10 rounded-lg px-5 py-2 hover:bg-stone-400 hover:bg-opacity-30 hover:px-8 ease-in-out duration-500 flex items-center">
+				<a onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave(index)} key={index} target="_blank" href={item.link} className="bg-stone-300 bg-opacity-10 rounded-lg px-6 py-3 hover:bg-stone-400 hover:bg-opacity-30 ease-in-out duration-500 flex items-center group">
 					{linkIcons(item.name)}
-					<span className="ms-3 ">{item.name}</span>
+					<span ref={linkRefs.current[index]} className="group-hover:ms-3 tracking-wider font-semibold text-stone-400 leading-none ease-in-out duration-500">{item.name}</span>
 				</a>
 			)
 		}))
@@ -46,7 +46,6 @@ function SmSocialLinks() {
 		const updatedArray = [...isHovered]
 		updatedArray[index] = true
 		setHovered(updatedArray)
-		console.log(isHovered)
 	}
 	const handleMouseLeave = (index) => {
 		const updatedArray = [...isHovered]
@@ -54,22 +53,23 @@ function SmSocialLinks() {
 		setHovered(updatedArray)
 	}
 
-   // useGSAP(() => {
-	// 	is
-   //    if (isHovered[0]) {
-   //       gsap.to(linkRefs.current[0], {
-   //          duration: 1,
-   //          text: "GitHub",
-   //          ease: "power3.inOut"
-   //       })
-   //    } else {
-   //       gsap.to(linkRefs.current[0], {
-   //          duration: 1,
-   //          text: "",
-   //          ease: "power3.inOut"
-   //       })
-   //    }
-   // },[isHovered])
+   useGSAP(() => {
+		isHovered.forEach((element, index) => {
+			if (element === true){
+				gsap.to(linkRefs.current[(index)].current, {
+					duration: 0.5,
+					text: "GitHub",
+					ease: "power3.inOut"
+				})
+			} else {
+				gsap.to(linkRefs.current[(index)].current, {
+					duration: 0.5,
+					text: "",
+					ease: "power3.inOut"
+				})
+			}
+		});
+   },[isHovered])
 
 	return (
 		<div>
