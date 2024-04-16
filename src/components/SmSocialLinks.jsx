@@ -58,7 +58,7 @@ function SmSocialLinks() {
 			if (element === true){
 				gsap.to(linkRefs.current[(index)].current, {
 					duration: 0.5,
-					text: "GitHub",
+					text: Links[index].name,
 					ease: "power3.inOut"
 				})
 			} else {
