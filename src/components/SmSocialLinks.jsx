@@ -73,7 +73,7 @@ function SmSocialLinks() {
 
 	return (
 		<div>
-			<div className="flex justify-start gap-x-4 my-5">
+			<div className="flex justify-start gap-4">
 				{mapLinks(Links)}
 			</div>
 		</div>
