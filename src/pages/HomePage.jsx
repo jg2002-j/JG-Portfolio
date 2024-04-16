@@ -36,8 +36,7 @@ function HomePage() {
 
    return (
       <>
-         <LoadingScreen/>
-
+         {/* <LoadingScreen/> */}
          <div className="min-h-dvh w-vw flex flex-col justify-between bgimage">
             <div className="flex justify-between">
                <div className="flex justify-start gap-x-2 m-2">

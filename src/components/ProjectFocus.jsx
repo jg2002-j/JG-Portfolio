@@ -72,23 +72,30 @@ function ProjectFocus(props) {
       }
    },[ isGitHovered ])
 
+	const [ img, setImg ] = useState("")
+
+	const fsImage = (e) => {
+		setImg(e.target.src)
+		document.getElementById("fsImage").showModal()
+	}
+
 	return (
 		<>
 			<div className="flex flex-col gap-10">
 				
 				<div className="mx-10 flex gap-10">
 					<a target="_blank" href={props.focusProj.deployed} onMouseEnter={() => setHovered("deployed")} onMouseLeave={() => removeHovered("deployed")} className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
-						<Globe className="h-[4vh] w-[4vh]" />
+						<Globe className="h-[3.5vh] w-[3.5vh]" />
 						<h2 ref={deployedLink} className="font-title text-[1.4vw] leading-none tracking-widest"></h2>
 					</a>
 					<a target="_blank" href={props.focusProj.repo} onMouseEnter={() => setHovered("git")} onMouseLeave={() => removeHovered("git")}  className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
-						<FolderGit2 className="h-[4vh] w-[4vh]" />
+						<FolderGit2 className="h-[3.5vh] w-[3.5vh]" />
 						<h2 ref={gitLink} className="font-title text-[1.4vw] leading-none tracking-widest"></h2>
 					</a>
 				</div>
 
 				<div className="mx-10 bg-stone-300 bg-opacity-10 rounded-lg p-10">
-					<img src={props.focusProj.desktopImgs[0]} alt="Desktop view" className="w-full rounded-lg" />
+					<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[0]} alt="Desktop view" className="w-full rounded-lg cursor-pointer" />
 				</div>
 
 				<div className="bg-stone-900 bg-opacity-90 noise p-10 flex flex-col gap-10">
@@ -105,22 +112,27 @@ function ProjectFocus(props) {
 					<div className="bg-stone-300 bg-opacity-10 rounded-lg p-10 flex gap-5 flex-grow">
 						{props.focusProj.mobileImgs.map((image, index) => (
 							<div key={index} className="h-full">
-								<img src={image} alt="Mobile view" className="rounded-lg" />
+								<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="rounded-lg cursor-pointer" />
 							</div>
 						))}
 					</div>
 					<div className="w-[50%] bg-stone-300 bg-opacity-10 noise rounded-lg p-10 flex flex-col gap-5">
 						<div className="h-full">
-							<img src={props.focusProj.desktopImgs[1]} alt="Desktop view" className="h-full w-full object-cover object-top rounded-lg" />
+							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className="h-full w-full object-cover object-top rounded-lg" />
 						</div>
 						<div className="h-full">
-							<img src={props.focusProj.desktopImgs[2]} alt="Desktop view" className="h-full w-full object-cover object-top rounded-lg" />
+							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className="h-full w-full object-cover object-top rounded-lg" />
 						</div>
 					</div>
 				</div>
-				
-
-
+				<dialog id="fsImage" className="modal">
+					<div className="modal-box bg-stone-900 noise max-w-[90vw] w-fit h-[90vh] overflow-hidden">
+						<img src={img} alt="Fullscreen view" className="h-full object-contain" />
+					</div>
+					<form method="dialog" className="modal-backdrop">
+						<button>close</button>
+					</form>
+				</dialog>
 			</div>
 		</>
 	)

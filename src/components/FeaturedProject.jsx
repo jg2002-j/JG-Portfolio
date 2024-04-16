@@ -1,13 +1,14 @@
 import React, { useState, useRef } from "react";
+
 import projects from "../data/Projects.json";
 import techBadges from "../data/TechBadges.json";
-import { StepForward, StepBack, ArrowUpRight } from "lucide-react";
 
 import bgtexture1 from "../assets/bgTextures/pawel-czerwinski-px-d44bbe7o-unsplash.jpg"
 import bgtexture2 from "../assets/bgTextures/pawel-czerwinski-YAtspJ-HV2E-unsplash.jpg"
 import bgtexture3 from "../assets/bgTextures/pawel-czerwinski-yIbz_ts9-tQ-unsplash.jpg"
 import bgtexture4 from "../assets/bgTextures/pawel-czerwinski-TNIy2MF3JBQ-unsplash.jpg"
 
+import { StepForward, StepBack, ArrowUpRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -34,10 +35,6 @@ function FeaturedProject() {
       }
 
       return(finalArray.map((letter, index) => (<span key={index} className="mx-1 font-title text-8xl ghosttext">{letter}</span>)))
-   }
-
-   const fsImage = (image) => {
-      alert(image)
    }
 
    const backgrounds = [bgtexture1, bgtexture2, bgtexture3]
@@ -80,6 +77,13 @@ function FeaturedProject() {
       }
    },[allProjectsHovered])
 
+	const [ img, setImg ] = useState("")
+
+	const fsImage = (e) => {
+		setImg(e.target.src)
+		document.getElementById("fsImage").showModal()
+	}
+
    return (
       <>
          <div className="max-w-[80%] min-h-dvh mx-auto my-10 relative rounded-lg overflow-hidden">
@@ -103,10 +107,10 @@ function FeaturedProject() {
                </div>
                <div className="bg-stone-900 noise w-full h-[40vh] p-10 flex justify-start items-center gap-5 overflow-auto hidescroll">
                   {enlargedProj.desktopImgs.map((image, index) => (
-                     <img key={index} onClick={() => fsImage(image)} className="h-full w-fit rounded-lg cursor-pointer" src={image} />
+                     <img key={index} onClick={() => fsImage(event)} className="h-full w-fit rounded-lg cursor-pointer" src={image} />
                   ))}
                   {enlargedProj.mobileImgs.map((image, index) => (
-                     <img key={index} onClick={() => fsImage(image)} className="h-full w-fit rounded-lg cursor-pointer" src={image} />
+                     <img key={index} onClick={() => fsImage(event)} className="h-full w-fit rounded-lg cursor-pointer" src={image} />
                   ))}
                </div>
                <div className="mx-20 bg-stone-300 bg-opacity-10 rounded-lg p-10 flex justify-between items-center gap-10">
@@ -128,6 +132,14 @@ function FeaturedProject() {
                ))}
             </div>
          </div>
+         <dialog id="fsImage" className="modal">
+				<div className="modal-box bg-stone-900 noise max-w-[90vw] w-fit h-[90vh] overflow-hidden">
+					<img src={img} alt="Fullscreen view" className="h-full object-contain" />
+				</div>
+				<form method="dialog" className="modal-backdrop">
+					<button>close</button>
+				</form>
+			</dialog>
       </>
    )
 };

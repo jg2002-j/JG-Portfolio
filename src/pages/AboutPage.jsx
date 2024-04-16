@@ -13,11 +13,6 @@ function AboutPage() {
             <h1 className="font-title text-center tracking-[0.7rem] text-6xl bg-gradient-to-r from-red-600 via-indigo-400 to-cyan-700 text-transparent bg-clip-text inline-block">About Me</h1>
          </div>
 			<AboutMe />
-			{/* <Link to={NavItems[5].route} role="button" className="p-4 m-2 rounded-lg bg-slate-50">Show {NavItems[5].title}</Link>
-			<Link to="" role="button" className="p-4 m-2 rounded-lg bg-slate-50">Hide {NavItems[5].title}</Link>
-			<Routes>
-        		<Route path={NavItems[5].route} element={<Experience />} />
-      	</Routes> */}
 			<Experience />
 		</>
   	)
