@@ -96,9 +96,9 @@ function FeaturedProject() {
                         <div className="aspect-video w-full rounded-lg cursor-pointer overflow-hidden">
                            <img onClick={() => fsImage(event)} src={proj.desktopImgs[0]} alt="" className="h-full w-full object-cover hover:scale-125 ease-in-out duration-1000" />
                         </div>
-                        <div className="mt-5 flex items-center gap-5">
-                           <a target="_blank" href={proj.deployed} className="h-full aspect-square p-5 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-600 hover:bg-opacity-300 ease-in-out duration-500"><Globe className="h-8 w-full"/></a>
-                           <a target="_blank" href={proj.repo} className="h-full aspect-square p-5 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-600 hover:bg-opacity-300 ease-in-out duration-500"><FolderGit2 className="h-8 w-full"/></a>
+                        <div className="flex justify-end items-center gap-5">
+                           <a target="_blank" href={proj.deployed} className="h-full aspect-square p-3 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-200 hover:bg-opacity-300 ease-in-out duration-1000 group"><Globe className="h-5 w-full text-stone-400 group-hover:text-stone-800 ease-in-out duration-1000"/></a>
+                           <a target="_blank" href={proj.repo} className="h-full aspect-square p-3 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-200 hover:bg-opacity-300 ease-in-out duration-1000 group"><FolderGit2 className="h-5 w-full text-stone-400 group-hover:text-stone-800 ease-in-out duration-1000"/></a>
                         </div>
                      </div>
                   ))}
