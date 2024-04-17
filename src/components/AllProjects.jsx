@@ -1,16 +1,16 @@
 import React, { useState } from "react";
 
-import ProjectModals from "./ProjectModals";
 import ProjectList from "./ProjectList";
 import ProjectFocus from "./ProjectFocus";
 
 import projects from "../data/Projects.json";
 
-import bgTexture from "../assets/bgTextures/pawel-czerwinski-YAtspJ-HV2E-unsplash.jpg";
-import bgTexture2 from "../assets/bgTextures/pawel-czerwinski-yIbz_ts9-tQ-unsplash.jpg"
+import bgTextures from "../assets/bgTextures/bgTextures";
 
 function AllProjects() {
   	
+	const bgTexture = bgTextures[Math.floor(Math.random()*(bgTextures.length))]
+
 	const [ focusProj, setfocusProj ] = useState(projects[0])
 	// const [ proj2, setproj2] = useState(projects[1])
 	// const [ proj3, setproj3] = useState(projects[2])

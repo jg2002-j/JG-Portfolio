@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-@font-face {
-	font-family: Akira;
-	src: url(../assets/Akira.otf);
-}
-
 :root{
 	--colHighlight: #943855;
 	--colBackground: #1a1923;
@@ -16,8 +11,8 @@
 
 	scroll-behavior: smooth;
 	background-image: 
-		url(../assets/nnnoise.svg),
-		url(../assets/uuunion.svg);
+		url(../assets/nnnoise.svg);
+		/* url(../assets/uuunion.svg); */
 	background-size: auto, cover;
 	background-position: center;
 }
@@ -39,7 +34,22 @@
 
 .font-header {
 	user-select: none;
-	font-family: "General Sans", sans-serif;
+	font-family: "Monument Grotesk Medium", sans-serif;
+}
+
+.font-monotype {
+	font-family: "Monument Grotesk Mono", monospace;
+}
+
+.ghosttext{
+	color:transparent;
+	-webkit-text-stroke: 1px white;
+	opacity: 7%;
+}
+
+.text-stroke-stone-300{
+	color: transparent;
+	-webkit-text-stroke: 1px rgb(214 211 209);
 }
 
 .noise {
@@ -65,6 +75,13 @@
 	position: relative;
 	display: inline-block;
 	background-color: rgba(255,255,255,1);
+}
+
+.hidescroll{
+	scrollbar-width: none;
+}
+.hidescroll::-webkit-scrollbar{
+	display: none;
 }
 
 .bgimage{
@@ -96,26 +113,4 @@
 .transpdivb{
 	mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 60%, transparent 95%);
 	scrollbar-width: 0;
-}
-
-.hidescroll{
-	scrollbar-width: none;
-}
-.hidescroll::-webkit-scrollbar{
-	display: none;
-}
-
-.ghosttext{
-	color:transparent;
-	-webkit-text-stroke: 1px white;
-	opacity: 7%;
-}
-
-.textsidewaysup{
-	writing-mode:vertical-lr;
-	rotate: 180deg;
-}
-
-#titlebar{
-	scroll-padding: 0vh;
 }

@@ -3,12 +3,9 @@ import React, { useState, useRef } from "react";
 import projects from "../data/Projects.json";
 import techBadges from "../data/TechBadges.json";
 
-import bgtexture1 from "../assets/bgTextures/pawel-czerwinski-px-d44bbe7o-unsplash.jpg"
-import bgtexture2 from "../assets/bgTextures/pawel-czerwinski-YAtspJ-HV2E-unsplash.jpg"
-import bgtexture3 from "../assets/bgTextures/pawel-czerwinski-yIbz_ts9-tQ-unsplash.jpg"
-import bgtexture4 from "../assets/bgTextures/pawel-czerwinski-TNIy2MF3JBQ-unsplash.jpg"
+import bgTextures from "../assets/bgTextures/bgTextures";
 
-import { StepForward, StepBack, ArrowUpRight } from "lucide-react";
+import { StepForward, ArrowUpRight } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -37,10 +34,8 @@ function FeaturedProject() {
       return(finalArray.map((letter, index) => (<span key={index} className="mx-1 font-title text-8xl ghosttext">{letter}</span>)))
    }
 
-   const backgrounds = [bgtexture1, bgtexture2, bgtexture3]
-   
    const [ enlargedProj, setEnlargedProj ] = useState(projects[0])
-   const [ bgTexture, setBgTexture ] = useState(backgrounds[0])
+   const [ bgTexture, setBgTexture ] = useState(bgTextures[0])
 
    const nextProj = (enlargedProj, bgTexture) => {
       let currentProj = (projects.findIndex(proj => (proj.id == enlargedProj.id)))
@@ -49,11 +44,11 @@ function FeaturedProject() {
          } else {
             setEnlargedProj(projects[currentProj+1])
          }
-      let currentBg = (backgrounds.findIndex(bg => (bg == bgTexture)))
-         if (currentBg+1 >= backgrounds.length){
-            setBgTexture(backgrounds[0])
+      let currentBg = (bgTextures.findIndex(bg => (bg == bgTexture)))
+         if (currentBg+1 >= bgTextures.length){
+            setBgTexture(bgTextures[0])
          } else {
-            setBgTexture(backgrounds[currentBg+1])
+            setBgTexture(bgTextures[currentBg+1])
          }
    }
 
@@ -83,6 +78,8 @@ function FeaturedProject() {
 		setImg(e.target.src)
 		document.getElementById("fsImage").showModal()
 	}
+
+   const allprojbgtexture = bgTextures[Math.floor(Math.random()*(bgTextures.length))]
 
    return (
       <>
@@ -122,7 +119,7 @@ function FeaturedProject() {
             </div>
          </div>
          <div onMouseEnter={() => allProjMouseEnter()} onMouseLeave={() => allProjMouseLeave()} className="max-w-[80%] mx-auto my-10 relative rounded-lg overflow-hidden px-20 py-10">
-            <img className="absolute -z-10 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgtexture4} alt="Background texture" />
+            <img className="absolute -z-10 left-0 top-0 h-full w-full object-cover blur-2xl" src={allprojbgtexture} alt="Background texture" />
             <NavLink to="projects" className="absolute h-full w-full top-0 left-0 flex justify-center items-center hover:backdrop-blur-3xl hover:bg-stone-900 hover:bg-opacity-80 noise ease-in-out duration-1000">
                <h2 ref={allProjects} className="text-[4vw] leading-none text-stone-400 tracking-widest font-title text-center"></h2>
             </NavLink>

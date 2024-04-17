@@ -225,10 +225,10 @@ function ProjectList(props) {
 				<div className="w-full flex flex-col gap-8">
 					{projects.map((project, index) => (
 						<div key={project.id} className={`flex flex-col justify-between gap-3 projItem bg-stone-300 bg-opacity-10 rounded-lg p-8 ${index === 0 ? "mt-8" : ""} ${isprojItemActive === index ? "bg-stone-900 bg-opacity-90 noise" : ""}`}>
-							<h2 className={`flex flex-wrap items-center justify-start font-title leading-none text-2xl tracking-widest`}>
-								<span className="font-header font-bold text-lg me-4 opacity-60">{index+1}</span>
-								{project.title}
-							</h2>
+							<div className={`flex items-center font-title leading-none text-2xl text-wrap tracking-widest`}>
+								<span className="inline font-header font-bold text-lg me-4 opacity-60">{index+1}</span>
+								<h2>{project.title}</h2>
+							</div>
 							<h3 className="font-header">{project.synopsis}</h3>
 							<div className="flex justify-start items-center">
 								{project.tags.map((tag, index) => (

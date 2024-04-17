@@ -9,6 +9,7 @@ import Sidebar from "./components/Sidebar";
 import NavItems from "./data/NavItems.json";
 
 import "./css/index.css";
+import "./css/font-faces.css";
 
 // Router
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";

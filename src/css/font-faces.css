@@ -1,0 +1,24 @@
+@font-face {
+	font-family: "Akira";
+	src: url(../assets/fonts/Akira.otf);
+}
+
+@font-face {
+	font-family: "Druk TWB";
+	src: url(../assets/fonts/DrukTextWide-Super-Trial.otf);
+}
+
+@font-face {
+	font-family: "GT America Bold";
+	src: url(../assets/fonts/GT-America-Standard-Bold.otf);
+}
+
+@font-face {
+	font-family: "Monument Grotesk Mono";
+	src: url(../assets/fonts/MonumentGrotesk-Mono.woff);
+}
+
+@font-face {
+	font-family: "Monument Grotesk Medium";
+	src: url(../assets/fonts/MonumentGrotesk-Medium.woff);
+}
