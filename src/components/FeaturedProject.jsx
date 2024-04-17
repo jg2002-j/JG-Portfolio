@@ -5,7 +5,7 @@ import techBadges from "../data/TechBadges.json";
 
 import bgTextures from "../assets/bgTextures/bgTextures";
 
-import { StepForward, ArrowUpRight } from "lucide-react";
+import { FolderGit2, Globe, StepForward } from 'lucide-react';
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -16,7 +16,7 @@ function FeaturedProject() {
       const projTechs = proj.techs;
       const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name)).map(tech => tech.value);
       const badgeElements = matchingTechBadges.map(value => (
-         <img className="h-6 select-none" key={value} alt={value} src={value} />
+         <img className="h-5 select-none" key={value} alt={value} src={value} />
       ));
       return badgeElements;
    };
@@ -32,25 +32,16 @@ function FeaturedProject() {
       }
 
       return(finalArray.map((letter, index) => (<span key={index} className="mx-1 font-title text-8xl ghosttext">{letter}</span>)))
-   }
+   }	
+   
+   const bgTexture = bgTextures[Math.floor(Math.random()*(bgTextures.length))]
 
-   const [ enlargedProj, setEnlargedProj ] = useState(projects[0])
-   const [ bgTexture, setBgTexture ] = useState(bgTextures[0])
-
-   const nextProj = (enlargedProj, bgTexture) => {
-      let currentProj = (projects.findIndex(proj => (proj.id == enlargedProj.id)))
-         if (currentProj+1 >= projects.length){
-            setEnlargedProj(projects[0])
-         } else {
-            setEnlargedProj(projects[currentProj+1])
-         }
-      let currentBg = (bgTextures.findIndex(bg => (bg == bgTexture)))
-         if (currentBg+1 >= bgTextures.length){
-            setBgTexture(bgTextures[0])
-         } else {
-            setBgTexture(bgTextures[currentBg+1])
-         }
-   }
+   const featuredProjs = []
+   projects.forEach((project) => {
+      if (project.featured) {
+         featuredProjs.push(project)
+      }
+   })
 
    const allProjects = useRef(null)
    const [ allProjectsHovered, setallProjectsHovered ] = useState(false)
@@ -79,54 +70,55 @@ function FeaturedProject() {
 		document.getElementById("fsImage").showModal()
 	}
 
-   const allprojbgtexture = bgTextures[Math.floor(Math.random()*(bgTextures.length))]
-
    return (
       <>
-         <div className="max-w-[80%] min-h-dvh mx-auto my-10 relative rounded-lg overflow-hidden">
+         <div className="min-h-dvh mx-auto relative rounded-lg overflow-hidden">
             <img className="absolute -z-10 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgTexture} alt="Background texture" />
-            <div className="absolute -z-10 left-[-5%] top-[-5%] h-[110%] w-[110%] flex flex-wrap transpdivtb">{bgText(enlargedProj.title,250)}</div>
-            <div className="my-20 flex flex-col justify-center gap-10">
-               <div className="mx-20 bg-stone-300 bg-opacity-10 rounded-lg p-10 flex justify-between items-center gap-10">
-                  <div className="flex flex-col justify-start gap-3">
-                     <h1 className="text-[4vw] font-title tracking-wider leading-none">{enlargedProj.title}</h1>
-                     <h2 className="select-none text-2xl text-wrap w-fit mb-2">{enlargedProj.synopsis}</h2>
-                     <div className="flex items-center gap-5">
-                        {enlargedProj.tags.map((tag, index) => (
-                           <span key={index} className="select-none uppercase text-sm tracking-wider px-3 py-1 bg-stone-300 bg-opacity-10 rounded-lg">{tag}</span>
-                        ))}
+
+            <div className="h-full bg-stone-900 bg-opacity-75 noise rounded-lg p-20 flex flex-col justify-center gap-20">
+
+               <div className="flex">
+						<h1 className="text-[6vw] font-header text-stone-500 leading-none tracking-wider mix-blend-difference hover:text-stone-400 duration-1000">My Work.</h1>
+					</div>					
+
+               <div className="bg-stone-300 bg-opacity-10 p-10 rounded-lg flex flex-col lg:flex-row gap-10">
+                  {featuredProjs.map((proj, index) => (
+                     <div key={index} className={`w-[35%] noise rounded-lg p-5 flex flex-col gap-3 relative overflow-hidden text-stone-400`} style={{backgroundColor: `rgba(${proj.swatch},0.4)`}}>
+                        <img className="absolute -z-20 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgTexture} alt="Background texture" />
+                        <div className="absolute -z-10 left-[-5%] top-[-5%] h-[110%] w-[110%] flex flex-wrap transpdivtb opacity-50">{bgText(proj.title,250)}</div>
+                        <h1 className="text-[1.5vw] font-title tracking-wider leading-none">{proj.title}</h1>
+                        <div className="flex items-center gap-2">
+                           {proj.tags.map((tag, index) => (
+                              <span key={index} className="select-none uppercase text-xs tracking-wider px-3 py-1 bg-stone-300 bg-opacity-10 rounded-lg">{tag}</span>
+                           ))}
+                        </div>
+                        <h2 className="select-none text-wrap w-fit">{proj.synopsis}</h2>
+                        <div className="aspect-video w-full rounded-lg cursor-pointer overflow-hidden">
+                           <img onClick={() => fsImage(event)} src={proj.desktopImgs[0]} alt="" className="h-full w-full object-cover hover:scale-125 ease-in-out duration-1000" />
+                        </div>
+                        <div className="mt-5 flex items-center gap-5">
+                           <a target="_blank" href={proj.deployed} className="h-full aspect-square p-5 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-600 hover:bg-opacity-300 ease-in-out duration-500"><Globe className="h-8 w-full"/></a>
+                           <a target="_blank" href={proj.repo} className="h-full aspect-square p-5 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-600 hover:bg-opacity-300 ease-in-out duration-500"><FolderGit2 className="h-8 w-full"/></a>
+                        </div>
                      </div>
-                  </div>
-                  <div className="flex justify-end gap-5 min-w-[15%]">
-                     <a target="_blank" href={enlargedProj.deployed} className="h-full aspect-square p-5 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-600 hover:bg-opacity-300 ease-in-out duration-500"><ArrowUpRight className="h-12 w-full"/></a>
-                     <button onClick={() => nextProj(enlargedProj, bgTexture)} className="h-full aspect-square p-5 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-600 hover:bg-opacity-300 ease-in-out duration-500"><StepForward className="h-12 w-full"/></button>
-                  </div>
-               </div>
-               <div className="bg-stone-900 noise w-full h-[40vh] p-10 flex justify-start items-center gap-5 overflow-auto hidescroll">
-                  {enlargedProj.desktopImgs.map((image, index) => (
-                     <img key={index} onClick={() => fsImage(event)} className="h-full w-fit rounded-lg cursor-pointer" src={image} />
-                  ))}
-                  {enlargedProj.mobileImgs.map((image, index) => (
-                     <img key={index} onClick={() => fsImage(event)} className="h-full w-fit rounded-lg cursor-pointer" src={image} />
                   ))}
                </div>
-               <div className="mx-20 bg-stone-300 bg-opacity-10 rounded-lg p-10 flex justify-between items-center gap-10">
-                  <p className="w-[65ch] max-w-[60%] text-wrap-pretty text-xl">{enlargedProj.desc}</p>
-                  <div className="max-w-[30%] flex flex-wrap justify-start items-center gap-4">
-                     {getBadges(enlargedProj)}
+
+               <div className="flex justify-end">
+						<h1 className="text-[6vw] font-header text-stone-500 leading-none tracking-wider mix-blend-difference hover:text-stone-400 duration-1000">See more.</h1>
+					</div>		
+
+               <div onMouseEnter={() => allProjMouseEnter()} onMouseLeave={() => allProjMouseLeave()} className="bg-stone-300 bg-opacity-10 relative rounded-lg overflow-hidden px-20 py-10">
+                  <NavLink to="projects" className="absolute h-full w-full top-0 left-0 flex justify-center items-center rounded-lg overflow-hidden hover:backdrop-blur-3xl hover:bg-stone-900 hover:bg-opacity-80 noise ease-in-out duration-1000">
+                     <h2 ref={allProjects} className="text-[4vw] leading-none text-stone-400 tracking-widest font-title text-center"></h2>
+                  </NavLink>
+                  <div className="w-full h-48 flex gap-5">
+                     {projects.map((proj, index) => (
+                        <img key={proj.id} className="h-full w-fit rounded-lg cursor-pointer" src={proj.desktopImgs[0]} />
+                     ))}
                   </div>
                </div>
-            </div>
-         </div>
-         <div onMouseEnter={() => allProjMouseEnter()} onMouseLeave={() => allProjMouseLeave()} className="max-w-[80%] mx-auto my-10 relative rounded-lg overflow-hidden px-20 py-10">
-            <img className="absolute -z-10 left-0 top-0 h-full w-full object-cover blur-2xl" src={allprojbgtexture} alt="Background texture" />
-            <NavLink to="projects" className="absolute h-full w-full top-0 left-0 flex justify-center items-center hover:backdrop-blur-3xl hover:bg-stone-900 hover:bg-opacity-80 noise ease-in-out duration-1000">
-               <h2 ref={allProjects} className="text-[4vw] leading-none text-stone-400 tracking-widest font-title text-center"></h2>
-            </NavLink>
-            <div className="w-full h-48 flex gap-5">
-               {projects.map((proj, index) => (
-                  <img key={proj.id} className="h-full w-fit rounded-lg cursor-pointer" src={proj.desktopImgs[0]} />
-               ))}
+
             </div>
          </div>
          <dialog id="fsImage" className="modal">

@@ -148,7 +148,7 @@ function Title() {
 
   	return (
 		<div id="titleBar" className="w-vw h-[40vh] bg-stone-900 noise p-10 flex justify-between items-center gap-10">
-			<div className="flex flex-col font-title text-[7vw] leading-none text-stone-600 select-none tracking-wide">
+			<div className="flex flex-col font-title text-[8vw] leading-none text-stone-500 select-none tracking-wide mix-blend-difference">
 				<h1 ref={NavAnimateTarget} className="text-stone-400">JAI</h1>
 				<h1 ref={JGtitle} className="">GANDHI</h1>
 			</div>

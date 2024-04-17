@@ -6,7 +6,7 @@ import Title from "../components/Title";
 import FeaturedProject from "../components/FeaturedProject";
 import CurrentTime from "../components/CurrentTime";
 import SmSocialLinks from "../components/SmSocialLinks";
-import Points from "../components/Points";
+import WhatIDo from "../components/WhatIDo";
 
 import {  } from "lucide-react";
 
@@ -35,8 +35,7 @@ function HomePage() {
             <Title/>
          </div>
          {/* <MiniNav/> */}
-         <Points/>   
-         <div className="w-full h-[20vh] noise bg-stone-900"></div>
+         <WhatIDo/>   
          <FeaturedProject/>
          <div className="w-fit my-10 p-10 mx-auto text-center">
             <p className="text-sm">Landing page art by <a className="font-bold hover:text-stone-200 duration-300" href="https://www.artstation.com/artwork/WB1JeE" target="_blank">@Xebelion</a> on Artstation</p>

@@ -11,8 +11,8 @@
 
 	scroll-behavior: smooth;
 	background-image: 
-		url(../assets/nnnoise.svg);
-		/* url(../assets/uuunion.svg); */
+		url(../assets/nnnoise.svg),
+		url(../assets/uuunion.svg);
 	background-size: auto, cover;
 	background-position: center;
 }
@@ -35,7 +35,9 @@
 
 .font-header {
 	user-select: none;
-	font-family: "Media Sans", sans-serif;
+	font-family: "Clash Grotesk", sans-serif;
+	/* text-transform: uppercase; */
+	font-weight: 600;
 }
 
 .font-mono {
@@ -45,7 +47,6 @@
 .ghosttext{
 	color:transparent;
 	-webkit-text-stroke: 1px white;
-	opacity: 7%;
 }
 
 .text-stroke-stone-300{
