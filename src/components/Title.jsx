@@ -148,9 +148,9 @@ function Title() {
 
   	return (
 		<div id="titleBar" className="w-vw h-[40vh] bg-stone-900 noise p-10 flex justify-between items-center gap-10">
-			<div className="flex flex-col font-title text-[7vw] leading-none text-stone-600 select-none tracking-widest">
-				<h1 ref={NavAnimateTarget} className="text-stone-400">Jai</h1>
-				<h1 ref={JGtitle} className="">Gandhi</h1>
+			<div className="flex flex-col font-title text-[7vw] leading-none text-stone-600 select-none tracking-wide">
+				<h1 ref={NavAnimateTarget} className="text-stone-400">JAI</h1>
+				<h1 ref={JGtitle} className="">GANDHI</h1>
 			</div>
 			<div className="h-full aspect-square grid auto-cols-fr justify-center items-center gap-10">
 				{renderNavLinks(NavItems)}

@@ -9,16 +9,26 @@
 }
 
 @font-face {
-	font-family: "GT America Bold";
-	src: url(../assets/fonts/GT-America-Standard-Bold.otf);
-}
-
-@font-face {
 	font-family: "Monument Grotesk Mono";
 	src: url(../assets/fonts/MonumentGrotesk-Mono.woff);
 }
 
 @font-face {
-	font-family: "Monument Grotesk Medium";
-	src: url(../assets/fonts/MonumentGrotesk-Medium.woff);
+	font-family: "Monument Grotesk Regular";
+	src: url(../assets/fonts/MonumentGrotesk-Regular.woff);
+}
+
+@font-face {
+	font-family: "Eva Peron";
+	src: url(../assets/fonts/VTCEva-Peron.woff);
+}
+
+@font-face {
+	font-family: "Media Sans";
+	src: url(../assets/fonts/MediaSansExtendedBlack.woff);
+}
+
+@font-face {
+	font-family: "Monument Extended";
+	src: url(../assets/fonts/MonumentExtended-Ultrabold.otf);
 }

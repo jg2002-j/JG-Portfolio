@@ -29,15 +29,16 @@
 
 .font-title{
 	user-select: none;
-	font-family: "Akira", sans-serif;
+	font-family: "Monument Extended", sans-serif;
+	text-transform: uppercase;
 }
 
 .font-header {
 	user-select: none;
-	font-family: "Monument Grotesk Medium", sans-serif;
+	font-family: "Media Sans", sans-serif;
 }
 
-.font-monotype {
+.font-mono {
 	font-family: "Monument Grotesk Mono", monospace;
 }
 
