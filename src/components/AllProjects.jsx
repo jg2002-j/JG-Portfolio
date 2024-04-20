@@ -65,7 +65,7 @@ function AllProjects() {
 		<>
 			<div className="flex">
 				<ProjectList chooseProjfnct={chooseProjfnct} />
-				<div className="w-full min-h-dvh mx-auto relative rounded-lg overflow-auto py-10">
+				<div className="w-full min-h-dvh mx-auto relative rounded-lg overflow-auto py-10 bg-stone-900 bg-opacity-75 noise">
 					<img className="absolute -z-10 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgTexture} alt="Background texture" />
 					<ProjectFocus focusProj={focusProj} />
 				</div>
