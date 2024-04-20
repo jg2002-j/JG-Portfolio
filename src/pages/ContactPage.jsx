@@ -66,7 +66,7 @@ function ContactPage() {
                {loadBugReport()}
             </div>
             <div className="w-full lg:flex-grow rounded-lg">
-               <button onClick={() => switchForms()} className="flex mb-10 border-2 border-stone-400 border-opacity-70 max-w-fit rounded-lg overflow-hidden">
+               <button onClick={() => switchForms()} className="flex mb-10 border-2 border-stone-400 border-opacity-70 max-w-fit rounded-lg overflow-hidden mx-auto">
                   <div className={`px-3 py-1 text-stone-400 hover:bg-stone-500 hover:bg-opacity-50 hover:text-stone-300 ease-in-out duration-500 ${form == "contact" ? activeFormClasses : ""}`}>Contact Me</div>
                   <div className={`px-3 py-1 text-stone-400 hover:bg-stone-500 hover:bg-opacity-50 hover:text-stone-300 ease-in-out duration-500 ${form == "feedback" ? activeFormClasses : ""}`}>Feedback</div>
                </button>
