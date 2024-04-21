@@ -100,7 +100,7 @@ function ProjectFocus(props) {
 					<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[0]} alt="Desktop view" className="w-full rounded-lg cursor-pointer" />
 				</div>
 
-				<div className="bg-stone-900 noise bg-opacity-90 noise p-10 flex flex-col gap-10">
+				<div className="bg-stone-900 bg-opacity-90 noise p-10 flex flex-col gap-10">
 					<h1 className="text-[4vw] font-title tracking-wider leading-none">{props.focusProj.title}</h1>
 					<div className="flex justify-between items-center gap-10">
                   <p className="w-[65ch] max-w-[60%] text-wrap-pretty text-xl">{props.focusProj.desc}</p>
