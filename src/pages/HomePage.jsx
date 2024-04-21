@@ -7,13 +7,13 @@ import FeaturedProject from "../components/FeaturedProject";
 import CurrentTime from "../components/CurrentTime";
 import SmSocialLinks from "../components/SmSocialLinks";
 import WhatIDo from "../components/WhatIDo";
+import GetInTouch from "../components/GetInTouch";
 
 import {  } from "lucide-react";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/all";
-import GetInTouch from "../components/GetInTouch";
 gsap.registerPlugin(ScrollTrigger)
 
 function HomePage() {
