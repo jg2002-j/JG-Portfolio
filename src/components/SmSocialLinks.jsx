@@ -123,7 +123,7 @@ function SmSocialLinks() {
 	},[githubHovered, linkedinHovered, cvHovered])
 
 	return(
-		<div className="flex justify-start gap-4">
+		<div className="flex justify-start gap-2">
 			<a onMouseEnter={() => handleMouseEnter("Github")} onMouseLeave={() => handleMouseLeave("Github")} target="_blank" href="" className="bg-stone-300 bg-opacity-10 rounded-lg px-6 py-3 hover:bg-stone-400 hover:bg-opacity-30 ease-in-out duration-500 flex items-center group">
 				{linkIcons("GitHub")}
 				<span ref={Github} className="group-hover:ms-3 tracking-wider leading-none uppercase text-sm font-mono text-stone-400 ease-in-out duration-500"></span>

@@ -65,7 +65,7 @@ function FeedbackForm() {
 
 	return (
 		<>
-			<form ref={feedbackForm} className="flex flex-col gap-14 max-w-[700px]">
+			<form ref={feedbackForm} className="flex flex-col gap-14 max-w-[700px] mx-auto">
 				<div className="flex flex-col gap-5">
 					<label className="font-header text-pretty text-stone-300 text-4xl">What's your name?<span className="text-stone-600 inline ms-2">*</span></label>
 					<input className="text-stone-400 text-2xl px-5 py-4 rounded-lg bg-stone-300 bg-opacity-10 focus:bg-stone-200 focus:bg-opacity-15" value={feedbackformData.name} name="name" onChange={handleFeedbackInputChange} type="text" placeholder="Darth Vader" />

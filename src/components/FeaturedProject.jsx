@@ -94,7 +94,7 @@ function FeaturedProject() {
                         </div>
                         <h2 className="select-none text-wrap w-fit">{proj.synopsis}</h2>
                         <div className="aspect-video w-full rounded-lg cursor-pointer overflow-hidden">
-                           <img onClick={() => fsImage(event)} src={proj.desktopImgs[0]} alt="" className="h-full w-full object-cover hover:scale-125 ease-in-out duration-1000" />
+                           <img onClick={() => fsImage(event)} src={proj.desktopImgs[0]} alt="" className="h-full w-full object-cover hover:scale-110 ease-in-out duration-1000" />
                         </div>
                         <div className="flex justify-end items-center gap-5">
                            <a target="_blank" href={proj.deployed} className="h-full aspect-square p-3 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-200 hover:bg-opacity-300 ease-in-out duration-1000 group"><Globe className="h-5 w-full text-stone-400 group-hover:text-stone-800 ease-in-out duration-1000"/></a>

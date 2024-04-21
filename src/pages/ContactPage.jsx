@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ContactForm from "../components/ContactForm";
 import FeedbackForm from "../components/FeedbackForm";
-import { Bug, Send, MessagesSquare, MapPin, Github, Linkedin, FileText } from "lucide-react";
+import { Bug, Send, MessagesSquare, MapPin } from "lucide-react";
 
 function ContactPage() {
 
