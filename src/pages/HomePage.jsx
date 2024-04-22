@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 
 import LoadingScreen from "../components/LoadingScreen";
-import MiniNav from "../components/MiniNav";
 import Title from "../components/Title";
 import FeaturedProject from "../components/FeaturedProject";
 import CurrentTime from "../components/CurrentTime";
@@ -35,7 +34,6 @@ function HomePage() {
             </div>
             <Title/>
          </div>
-         {/* <MiniNav/> */}
          <WhatIDo/>   
          <FeaturedProject/>
          <GetInTouch/>
