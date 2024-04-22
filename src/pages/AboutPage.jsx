@@ -2,13 +2,13 @@ import React from "react";
 
 import AboutMe from "../components/AboutMe";
 import Skills from "../components/Skills";
-import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 import Experience from "../components/Experience";
 
 function AboutPage() {
 	return (
 		<>
-			<Sidebar/>
+			<Navbar/>
 			<AboutMe />
 			<Skills/>
 			{/* <Experience /> */}

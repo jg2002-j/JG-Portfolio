@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import Sidebar from "../components/Sidebar";
+import Navbar from "../components/Navbar";
 import ContactForm from "../components/ContactForm";
 import FeedbackForm from "../components/FeedbackForm";
 import { Bug, Send, MessagesSquare, MapPin } from "lucide-react";
@@ -38,7 +38,7 @@ function ContactPage() {
 
    return (
       <>
-         <Sidebar/>
+         <Navbar/>
          <div className="min-h-dvh w-vw flex flex-col 2xl:flex-row-reverse justify-center items-center gap-10 p-10 2xl:px-[20vw]">
             <div className="flex flex-col max-w-[600px] w-full gap-10">
                <div className="w-full bg-stone-300 bg-opacity-10 rounded-lg p-10 flex flex-col gap-14">

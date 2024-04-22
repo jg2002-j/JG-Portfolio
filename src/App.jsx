@@ -5,7 +5,6 @@ import ProjectsPage from "./pages/ProjectsPage";
 import AboutPage from "./pages/AboutPage";
 import ContactPage from "./pages/ContactPage";
 
-import Sidebar from "./components/Sidebar";
 import NavItems from "./data/NavItems.json";
 
 import "./css/index.css";
@@ -32,12 +31,6 @@ gsap.registerPlugin(useGSAP,Flip,ScrollTrigger,Observer,ScrollToPlugin,Draggable
 
 function App() {
 
-	const [sidebarState, setsidebarState] = React.useState("hidden");
-   const toggleSidebar = (state) => {
-      if (state == "hidden") {setsidebarState("visible");} 
-      else if (state == "visible") {setsidebarState("hidden");}
-   };
-
 	return (
 		<Router>
 			<Routes>
@@ -46,8 +39,6 @@ function App() {
 				<Route path={NavItems[2].route} element={<AboutPage/>} />
 				<Route path={NavItems[3].route} element={<ContactPage/>} />
 			</Routes>
-			{/* <Sidebar state={sidebarState} toggleSidebar={toggleSidebar} />
-			<ContactMe /> */}
 		</Router>
 	);
 }
