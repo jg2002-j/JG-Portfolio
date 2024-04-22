@@ -23,15 +23,15 @@
 		"id": 3,
 		"title": "What libraries & frameworks can I use?",
 		"body": [
-			{"name": "jQuery", "slug": "jquery"},
 			{"name": "React", "slug": "react"},
 			{"name": "Node.js", "slug": "nodedotjs"},
-			{"name": "Bootstrap", "slug": "bootstrap"},
-			{"name": "TailwindCSS", "slug": "tailwindcss"},
-			{"name": "GSAP", "slug": "greensock"},
 			{"name": "NPM", "slug": "npm"},
 			{"name": "React Router", "slug": "reactrouter"},
-			{"name": "Axios", "slug": "axios"}
+			{"name": "Axios", "slug": "axios"},
+			{"name": "jQuery", "slug": "jquery"},
+			{"name": "Bootstrap", "slug": "bootstrap"},
+			{"name": "TailwindCSS", "slug": "tailwindcss"},
+			{"name": "GSAP", "slug": "greensock"}
 		]
 	},
 	{
@@ -55,7 +55,8 @@
 		"body": [
 			{"name": "Vue.js", "slug": "vuedotjs"},
 			{"name": "Next.js", "slug": "nextdotjs"},
-			{"name": "Figma", "slug": "figma"}
+			{"name": "Figma", "slug": "figma"},
+			{"name": "Framer Motion", "slug": "framer"}
 		]
 	}
 ]
