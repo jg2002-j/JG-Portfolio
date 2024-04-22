@@ -39,7 +39,7 @@ function HomePage() {
          <WhatIDo/>   
          <FeaturedProject/>
          <GetInTouch/>
-         <div className="w-fit my-10 p-10 mx-auto text-center">
+         <div className="w-full bg-stone-900 noise p-5 text-center">
             <p className="text-sm">Landing page art by <a className="font-bold hover:text-stone-200 duration-300" href="https://www.artstation.com/artwork/WB1JeE" target="_blank">@Xebelion</a> on Artstation</p>
             <p className="text-sm">Background art by <a className="font-bold hover:text-stone-200 duration-300" href="https://unsplash.com/@pawel_czerwinski?utm_content=creditCopyText&utm_medium=referral&utm_source=unsplash" target="_blank">Pawel Czerwinski</a> on Unsplash</p>
          </div>
