@@ -28,8 +28,8 @@ function HomePage() {
             <div className="flex justify-between p-2">
                <SmSocialLinks/>
                <div className="flex justify-end gap-x-2">
-                  <span className="tracking-wider select-none font-semibold text-stone-400 bg-stone-300 bg-opacity-10 hover:bg-opacity-70 hover:text-stone-600 duration-500 ease-in-out rounded-lg px-6 py-2"><CurrentTime/></span>
-                  <span className="tracking-wider select-none font-semibold text-stone-400 bg-stone-300 bg-opacity-10 hover:bg-opacity-70 hover:text-stone-600 duration-500 ease-in-out rounded-lg px-6 py-2">London, United Kingdom</span>
+                  <span className="tracking-wider select-none text-stone-400 bg-stone-300 bg-opacity-10 hover:bg-opacity-70 hover:text-stone-600 duration-500 ease-in-out rounded-lg text-xs font-mono px-4 py-3"><CurrentTime/></span>
+                  <span className="tracking-wider select-none text-stone-400 bg-stone-300 bg-opacity-10 hover:bg-opacity-70 hover:text-stone-600 duration-500 ease-in-out rounded-lg text-xs font-mono px-4 py-3">London, United Kingdom</span>
                </div>
             </div>
             <Title/>
