@@ -81,25 +81,78 @@ function ProjectFocus(props) {
 		document.getElementById("fsImage").showModal()
 	}
 
+	const renderOtherScreenshots = (proj) => {
+		if (proj.mobileImgs.length > 0 && proj.desktopImgs.length > 1){
+			return (
+				<div className="mx-10 flex gap-10">
+
+					<div className="bg-stone-300 bg-opacity-10 rounded-lg p-10 flex gap-5 w-full">
+						{proj.mobileImgs.map((image, index) => (
+							<div key={index} className="h-full">
+								<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="rounded-lg cursor-pointer" />
+							</div>
+						))}
+					</div>
+
+					<div className="w-[50%] bg-stone-300 bg-opacity-10 noise rounded-lg p-10 flex flex-col gap-5">
+						<div className="h-full">
+							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className="h-full w-full object-cover object-top rounded-lg" />
+						</div>
+						<div className="h-full">
+							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className="h-full w-full object-cover object-top rounded-lg" />
+						</div>
+					</div>
+
+				</div>
+			)
+		} else if (proj.mobileImgs.length > 0 && proj.desktopImgs.length == 1) {
+			return (
+				<div className="bg-stone-300 bg-opacity-10 rounded-lg p-10 flex gap-5 w-full">
+					{proj.mobileImgs.map((image, index) => (
+						<div key={index} className="h-full">
+							<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="rounded-lg cursor-pointer" />
+						</div>
+					))}
+				</div>
+			)
+		} else if (proj.mobileImgs.length == 0 && proj.desktopImgs.length > 1) {
+			return (
+				<>
+					<div className="mx-10 bg-stone-300 bg-opacity-10 rounded-lg p-10">
+						<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className="w-full rounded-lg cursor-pointer" />
+					</div>
+					<div className="mx-10 bg-stone-300 bg-opacity-10 rounded-lg p-10">
+						<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className="w-full rounded-lg cursor-pointer" />
+					</div>
+				</>
+			)
+		}
+	}
+
+	const renderDeployedLink = (proj) => {
+		if (proj.deployed != ""){
+			return(
+				<a target="_blank" href={proj.deployed} onMouseEnter={() => setHovered("deployed")} onMouseLeave={() => removeHovered("deployed")} className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
+					<Globe className="h-[3.5vh] w-[3.5vh]" />
+					<h2 ref={deployedLink} className="font-title text-[1.4vw] leading-none tracking-widest"></h2>
+				</a>
+			)
+		}
+	}
+
 	return (
 		<>
 			<div className="flex-grow flex flex-col gap-10 overflow-auto pb-10 text-stone-400">
 				
 				<div className="mx-10 flex gap-10">
-					{/* <button className="cursor-pointer max-w-[10%] min-w-24 flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
-						<StepBack className="h-[3.5vh] w-[3.5vh]" />
-					</button>
-					<button className="cursor-pointer max-w-[10%] min-w-24 flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
-						<StepForward className="h-[3.5vh] w-[3.5vh]" />
-					</button> */}
-					<a target="_blank" href={props.focusProj.deployed} onMouseEnter={() => setHovered("deployed")} onMouseLeave={() => removeHovered("deployed")} className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
-						<Globe className="h-[3.5vh] w-[3.5vh]" />
-						<h2 ref={deployedLink} className="font-title text-[1.4vw] leading-none tracking-widest"></h2>
-					</a>
+
+					{renderDeployedLink(props.focusProj)}
+					
 					<a target="_blank" href={props.focusProj.repo} onMouseEnter={() => setHovered("git")} onMouseLeave={() => removeHovered("git")}  className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
 						<FolderGit2 className="h-[3.5vh] w-[3.5vh]" />
 						<h2 ref={gitLink} className="font-title text-[1.4vw] leading-none tracking-widest"></h2>
 					</a>
+
 				</div>
 
 				<div className="mx-10 bg-stone-300 bg-opacity-10 rounded-lg p-10">
@@ -116,23 +169,7 @@ function ProjectFocus(props) {
                </div>
 				</div>
 
-				<div className="mx-10 flex gap-10">
-					<div className="bg-stone-300 bg-opacity-10 rounded-lg p-10 flex gap-5 flex-grow">
-						{props.focusProj.mobileImgs.map((image, index) => (
-							<div key={index} className="h-full">
-								<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="rounded-lg cursor-pointer" />
-							</div>
-						))}
-					</div>
-					<div className="w-[50%] bg-stone-300 bg-opacity-10 noise rounded-lg p-10 flex flex-col gap-5">
-						<div className="h-full">
-							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className="h-full w-full object-cover object-top rounded-lg" />
-						</div>
-						<div className="h-full">
-							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className="h-full w-full object-cover object-top rounded-lg" />
-						</div>
-					</div>
-				</div>
+				{renderOtherScreenshots(props.focusProj)}
 				
 				<dialog id="fsImage" className="modal">
 					<div className="modal-box bg-stone-900 noise max-w-[90vw] w-fit h-[90vh] overflow-hidden">
