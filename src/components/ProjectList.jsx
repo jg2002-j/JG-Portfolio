@@ -215,15 +215,15 @@ function ProjectList(props) {
 	})
 
 	return (
-	 	<div className="sticky top-0 w-[30vw] max-h-dvh flex flex-col bg-stone-300 bg-opacity-10 rounded-lg p-10">
+	 	<div className="sticky top-0 min-w-[30vw] max-h-dvh flex flex-col bg-stone-900 noise rounded-lg p-10">
 			<div className="flex justify-center items-center gap-4 mb-4">
 				<button className="btn btn-ghost" ref={projPrev}><ChevronsUp/></button>
 				<button className="btn btn-ghost" ref={projNext}><ChevronsDown/></button>
 			</div>
 			<div className="flex justify-center items-start overflow-hidden">
-				<div className="w-full flex flex-col gap-8">
+				<div className="w-full flex flex-col gap-8 text-stone-400">
 					{projects.map((project, index) => (
-						<div key={project.id} className={`flex flex-col justify-between gap-3 projItem bg-stone-300 bg-opacity-10 rounded-lg p-8 ${index === 0 ? "mt-8" : ""} ${isprojItemActive === index ? "bg-stone-900 bg-opacity-90 noise" : ""}`}>
+						<div key={project.id} className={`flex flex-col justify-between gap-3 projItem bg-stone-300 bg-opacity-10 rounded-lg p-8 ${index === 0 ? "mt-8" : ""} ${isprojItemActive === index ? "bg-stone-300 bg-opacity-30" : ""}`}>
 							<div className={`flex items-center font-title leading-none text-2xl text-wrap tracking-widest`}>
 								<span className="inline font-header font-bold text-lg me-4 opacity-60">{index+1}</span>
 								<h2>{project.title}</h2>

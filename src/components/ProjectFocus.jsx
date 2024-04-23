@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import techBadges from "../data/TechBadges.json";
 
-import { FolderGit2, Globe } from 'lucide-react';
+import { FolderGit2, Globe, StepForward, StepBack } from 'lucide-react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -83,9 +83,15 @@ function ProjectFocus(props) {
 
 	return (
 		<>
-			<div className="flex flex-col gap-10">
+			<div className="flex-grow flex flex-col gap-10 overflow-auto pb-10 text-stone-400">
 				
 				<div className="mx-10 flex gap-10">
+					{/* <button className="cursor-pointer max-w-[10%] min-w-24 flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
+						<StepBack className="h-[3.5vh] w-[3.5vh]" />
+					</button>
+					<button className="cursor-pointer max-w-[10%] min-w-24 flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
+						<StepForward className="h-[3.5vh] w-[3.5vh]" />
+					</button> */}
 					<a target="_blank" href={props.focusProj.deployed} onMouseEnter={() => setHovered("deployed")} onMouseLeave={() => removeHovered("deployed")} className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
 						<Globe className="h-[3.5vh] w-[3.5vh]" />
 						<h2 ref={deployedLink} className="font-title text-[1.4vw] leading-none tracking-widest"></h2>
@@ -127,6 +133,7 @@ function ProjectFocus(props) {
 						</div>
 					</div>
 				</div>
+				
 				<dialog id="fsImage" className="modal">
 					<div className="modal-box bg-stone-900 noise max-w-[90vw] w-fit h-[90vh] overflow-hidden">
 						<img src={img} alt="Fullscreen view" className="h-full object-contain" />
@@ -135,6 +142,7 @@ function ProjectFocus(props) {
 						<button>close</button>
 					</form>
 				</dialog>
+
 			</div>
 		</>
 	)
