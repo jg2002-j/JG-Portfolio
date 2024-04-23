@@ -20,11 +20,11 @@ function GetInTouch() {
 					
 					<div className="flex items-center gap-10 px-20">
 						
-						<NavLink to="/contact" className="bg-stone-300 max-w-[50%] min-h-40 h-full bg-opacity-10 p-20 rounded-lg hover:bg-stone-400 hover:bg-opacity-30 duration-1000 flex items-center justify-center">
+						<NavLink to="/contact" className="bg-stone-300 max-w-[50%] min-h-40 h-full bg-opacity-10 p-20 rounded-lg hover:bg-stone-400 hover:bg-opacity-20 duration-1000 flex items-center justify-center">
 							<h1 className="text-4xl font-header text-stone-500 leading-none tracking-wider hover:text-stone-400 duration-1000">Contact Form</h1>
 						</NavLink>
 						
-						<div className="bg-stone-300 min-h-40 flex-grow bg-opacity-10 p-20 rounded-lg hover:bg-stone-400 hover:bg-opacity-30 duration-1000 flex gap-20 items-center justify-center">
+						<div className="bg-stone-300 min-h-40 flex-grow bg-opacity-10 p-20 rounded-lg hover:bg-stone-400 hover:bg-opacity-20 duration-1000 flex gap-20 items-center justify-center">
 							<div className="min-w-[40%] flex flex-col gap-2">
 								<h3 className="text-4xl mb-5 font-header text-stone-500 leading-none tracking-wider hover:text-stone-400 duration-1000">Contact Me</h3>
 								<a target="_blank" href="mailto:jai.2002.gandhi@gmail.com" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center"><Send className="inline me-5"/>jai.2002.gandhi@gmail.com</a>

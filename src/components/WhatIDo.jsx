@@ -18,7 +18,7 @@ function Points() {
 					
 					<div className="flex items-center gap-10 px-20">
 					
-						<div className="max-w-[50%] min-h-[25rem] flex-grow relative bg-stone-300 bg-opacity-10 rounded-lg p-10 overflow-hidden flex items-center hover:bg-stone-400 hover:bg-opacity-30 duration-1000">
+						<div className="max-w-[50%] min-h-[25rem] flex-grow relative bg-stone-300 bg-opacity-10 rounded-lg p-10 overflow-hidden flex items-center hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
 							<div className="absolute left-[10%] top-0 h-full flex items-center"><h1 className="text-[30vh] font-title tracking-widest leading-none text-stone-300 text-opacity-10">1</h1></div>
 							<div className="flex items-end gap-[5vw] p-10">
 								<h2 className="text-[2.5vw] font-mono">Design</h2>
@@ -26,7 +26,7 @@ function Points() {
 							</div>
 						</div>
 					
-						<div className="max-w-[50%] min-h-[25rem] flex-grow relative bg-stone-300 bg-opacity-10 rounded-lg p-10 overflow-hidden flex items-center hover:bg-stone-400 hover:bg-opacity-30 duration-1000">
+						<div className="max-w-[50%] min-h-[25rem] flex-grow relative bg-stone-300 bg-opacity-10 rounded-lg p-10 overflow-hidden flex items-center hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
 							<div className="absolute left-[10%] top-0 h-full flex items-center"><h1 className="text-[30vh] font-title tracking-widest leading-none text-stone-300 text-opacity-10">2</h1></div>
 							<div className="flex items-end gap-[5vw] p-10">
 								<h2 className="text-[2.5vw] font-mono">Develop</h2>

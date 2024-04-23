@@ -16,7 +16,7 @@ function AboutMe() {
 	 	<>
 			<div className="flex flex-col gap-10 justify-center items-center min-h-dvh rounded-lg p-20 w-full relative bg-stone-900 bg-opacity-75 noise overflow-hidden">
 				<img className="absolute -z-10 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgTexture} alt="Background texture" />
-				<div className="w-full lg:max-w-[80%] p-10 py-20 bg-stone-300 bg-opacity-10 rounded-lg text-stone-400 hover:text-stone-300 duration-1000">
+				<div className="w-full lg:max-w-[80%] p-10 py-20 bg-stone-300 bg-opacity-10 rounded-lg text-stone-400 hover:text-stone-300 hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
 					<h3 className="text-4xl mb-5 font-header leading-none tracking-wider">About Me</h3>
 					<div className="collapse collapse-plus">
 						<input type="checkbox" /> 
@@ -33,21 +33,21 @@ function AboutMe() {
 					</div>
 				</div>
 				<div className="w-full lg:max-w-[80%] flex flex-col lg:flex-row gap-10 justify-center">
-					<div className="w-full bg-stone-300 bg-opacity-10 rounded-lg p-10 text-stone-400 hover:text-stone-300 duration-1000">
+					<div className="w-full bg-stone-300 bg-opacity-10 rounded-lg p-10 text-stone-400 hover:text-stone-300 hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
 						<div className="flex items-center gap-3 mb-5">
 							<h3 className="font-header leading-none tracking-wider">Experience</h3>
 							<div className="border-b-[1px] flex-grow"></div>
 						</div>
 						<NavLink to="/projects" className="text-[1.5vw]">{projects.length} Projects.</NavLink>
 					</div>
-					<div className="w-full bg-stone-300 bg-opacity-10 rounded-lg p-10 text-stone-400 hover:text-stone-300 duration-1000">
+					<div className="w-full bg-stone-300 bg-opacity-10 rounded-lg p-10 text-stone-400 hover:text-stone-300 hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
 						<div className="flex items-center gap-3 mb-5">
 							<h3 className="font-header leading-none tracking-wider">Location</h3>
 							<div className="border-b-[1px] flex-grow"></div>
 						</div>
 						<p className="text-[1.5vw]">London, United Kingdom.</p>
 					</div>
-					<div className="w-full bg-stone-300 bg-opacity-10 rounded-lg p-10 text-stone-400 hover:text-stone-300 duration-1000">
+					<div className="w-full bg-stone-300 bg-opacity-10 rounded-lg p-10 text-stone-400 hover:text-stone-300 hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
 						<div className="flex items-center gap-3 mb-5">
 							<h3 className="font-header leading-none tracking-wider">Favourite Tech</h3>
 							<div className="border-b-[1px] flex-grow"></div>
