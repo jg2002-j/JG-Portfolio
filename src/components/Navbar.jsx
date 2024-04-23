@@ -40,7 +40,9 @@ function Navbar() {
 		"Dracarys.",
 		"A Lannister always pays his debts.",
 		"You know nothing, Jon Snow.",
-		"Fire and blood."
+		"Fire and blood.",
+		"A heart's a heavy burden.",
+		"There you are! I was looking everywhere for you.",
 	]
 
 	const NavJG = useRef(null)
