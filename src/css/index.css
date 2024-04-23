@@ -116,3 +116,16 @@
 	mask-image: linear-gradient(to bottom, transparent 0%, black 10%, black 60%, transparent 95%);
 	scrollbar-width: 0;
 }
+
+.mockup-phone .camera {
+	position: relative;
+	top: 0px;
+	left: 0px;
+	background:  rgb(28 25 23);
+	height: 25px;
+	width: 150px;
+	margin: 0 auto;
+	border-bottom-left-radius: 17px;
+	border-bottom-right-radius: 17px;
+	z-index: 11;
+}

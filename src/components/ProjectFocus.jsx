@@ -2,7 +2,7 @@ import React, { useRef, useState } from "react";
 
 import techBadges from "../data/TechBadges.json";
 
-import { FolderGit2, Globe, StepForward, StepBack } from 'lucide-react';
+import { FolderGit2, Globe, Search, StepForward, StepBack } from 'lucide-react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
@@ -88,18 +88,33 @@ function ProjectFocus(props) {
 
 					<div className="bg-stone-300 bg-opacity-10 rounded-lg p-10 flex gap-5 w-full">
 						{proj.mobileImgs.map((image, index) => (
-							<div key={index} className="h-full">
-								<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="rounded-lg cursor-pointer" />
+							<div key={index} className="mockup-phone bg-stone-900 bg-opacity-100">
+								<div className="bg-stone-900 bg-opacity-100 noise camera"></div> 
+								<div className="display bg-stone-900 bg-opacity-100 h-full">
+									<div className="phone-1 h-full">
+										<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="h-full object-cover cursor-pointer" />
+									</div>
+								</div>
 							</div>
 						))}
 					</div>
 
 					<div className="w-[50%] bg-stone-300 bg-opacity-10 noise rounded-lg p-10 flex flex-col gap-5">
-						<div className="h-full">
-							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className="h-full w-full object-cover object-top rounded-lg" />
+						<div className="mockup-browser bg-stone-900 bg-opacity-75">
+							<div className="mockup-browser-toolbar pt-2">
+								<a target="_blank" href={props.focusProj.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{props.focusProj.deployed}</a>
+							</div>
+							<div className="flex justify-center p-2 bg-stone-900 bg-opacity-75">
+								<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+							</div>
 						</div>
-						<div className="h-full">
-							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className="h-full w-full object-cover object-top rounded-lg" />
+						<div className="mockup-browser bg-stone-900 bg-opacity-75">
+							<div className="mockup-browser-toolbar pt-2">
+								<a target="_blank" href={props.focusProj.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{props.focusProj.deployed}</a>
+							</div>
+							<div className="flex justify-center p-2 bg-stone-900 bg-opacity-75">
+								<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+							</div>
 						</div>
 					</div>
 
@@ -109,8 +124,13 @@ function ProjectFocus(props) {
 			return (
 				<div className="bg-stone-300 bg-opacity-10 rounded-lg p-10 flex gap-5 w-full">
 					{proj.mobileImgs.map((image, index) => (
-						<div key={index} className="h-full">
-							<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="rounded-lg cursor-pointer" />
+						<div key={index} className="mockup-phone bg-stone-900 bg-opacity-100">
+							<div className="bg-stone-900 bg-opacity-100 noise camera"></div> 
+							<div className="display bg-stone-900 bg-opacity-100 h-full">
+								<div className="phone-1 h-full">
+									<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="h-full object-cover cursor-pointer" />
+								</div>
+							</div>
 						</div>
 					))}
 				</div>
@@ -118,11 +138,21 @@ function ProjectFocus(props) {
 		} else if (proj.mobileImgs.length == 0 && proj.desktopImgs.length > 1) {
 			return (
 				<>
-					<div className="mx-10 bg-stone-300 bg-opacity-10 rounded-lg p-10">
-						<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className="w-full rounded-lg cursor-pointer" />
+					<div className="mockup-browser bg-stone-900 bg-opacity-100 noise">
+						<div className="mockup-browser-toolbar pt-2">
+							<a target="_blank" href={props.focusProj.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{props.focusProj.deployed}</a>
+						</div>
+						<div className="flex justify-center p-2 bg-stone-900 bg-opacity-100 noise">
+							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+						</div>
 					</div>
-					<div className="mx-10 bg-stone-300 bg-opacity-10 rounded-lg p-10">
-						<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className="w-full rounded-lg cursor-pointer" />
+					<div className="mockup-browser bg-stone-900 bg-opacity-100 noise">
+						<div className="mockup-browser-toolbar pt-2">
+							<a target="_blank" href={props.focusProj.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{props.focusProj.deployed}</a>
+						</div>
+						<div className="flex justify-center p-2 bg-stone-900 bg-opacity-100 noise">
+							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+						</div>
 					</div>
 				</>
 			)
@@ -155,9 +185,18 @@ function ProjectFocus(props) {
 
 				</div>
 
-				<div className="mx-10 bg-stone-300 bg-opacity-10 rounded-lg p-10">
-					<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[0]} alt="Desktop view" className="w-full rounded-lg cursor-pointer" />
+				<div className="mx-10 bg-stone-300 bg-opacity-10 rounded-lg p-10 ">
+					<div className="mockup-browser bg-stone-900 bg-opacity-100 noise">
+						<div className="mockup-browser-toolbar pt-2">
+							<a target="_blank" href={props.focusProj.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{props.focusProj.deployed}</a>
+						</div>
+						<div className="flex justify-center p-2 bg-stone-900 bg-opacity-100 noise">
+							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[0]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+						</div>
+					</div>
 				</div>
+
+
 
 				<div className="bg-stone-900 bg-opacity-90 noise p-10 flex flex-col gap-10">
 					<h1 className="text-[4vw] font-title tracking-wider leading-none">{props.focusProj.title}</h1>
