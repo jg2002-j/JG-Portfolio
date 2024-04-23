@@ -1,6 +1,6 @@
 import React, { useState, useRef } from "react";
 
-import projects from "../data/Projects.json";
+import projects from "../data/Projects";
 import techBadges from "../data/TechBadges.json";
 
 import bgTextures from "../assets/bgTextures/bgTextures";
@@ -108,7 +108,7 @@ function FeaturedProject() {
 						<h1 className="text-[6vw] font-header text-stone-500 leading-none tracking-wider mix-blend-difference hover:text-stone-400 duration-1000">See more.</h1>
 					</div>		
 
-               <div onMouseEnter={() => allProjMouseEnter()} onMouseLeave={() => allProjMouseLeave()} className="bg-stone-300 bg-opacity-10 relative rounded-lg overflow-hidden px-20 py-10">
+               <div onMouseEnter={() => allProjMouseEnter()} onMouseLeave={() => allProjMouseLeave()} className="bg-stone-300 bg-opacity-10 relative rounded-lg overflow-hidden p-10">
                   <NavLink to="projects" className="absolute h-full w-full top-0 left-0 flex justify-center items-center rounded-lg overflow-hidden hover:backdrop-blur-3xl hover:bg-stone-900 hover:bg-opacity-80 noise ease-in-out duration-1000">
                      <h2 ref={allProjects} className="text-[4vw] leading-none text-stone-400 tracking-widest font-title text-center"></h2>
                   </NavLink>

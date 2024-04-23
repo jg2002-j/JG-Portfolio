@@ -1,5 +1,5 @@
 import React, { useRef, useState } from "react";
-import projects from "../data/Projects.json";
+import projects from "../data/Projects";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ChevronsDown, ChevronsUp } from "lucide-react";

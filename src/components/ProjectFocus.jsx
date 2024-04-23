@@ -82,7 +82,10 @@ function ProjectFocus(props) {
 	}
 
 	const renderOtherScreenshots = (proj) => {
+		console.log(proj.desktopImgs.length, proj.mobileImgs.length)
 		if (proj.mobileImgs.length > 0 && proj.desktopImgs.length > 1){
+			console.log("mobile imgs AND desktop imgs")
+			console.log(proj.desktopImgs.length, proj.mobileImgs.length)
 			return (
 				<div className="mx-10 flex gap-10">
 
@@ -121,6 +124,8 @@ function ProjectFocus(props) {
 				</div>
 			)
 		} else if (proj.mobileImgs.length > 0 && proj.desktopImgs.length == 1) {
+			console.log("mobile imgs only")
+			console.log(proj.desktopImgs.length, proj.mobileImgs.length)
 			return (
 				<div className="bg-stone-300 bg-opacity-10 rounded-lg p-10 flex gap-5 w-full">
 					{proj.mobileImgs.map((image, index) => (
@@ -136,6 +141,8 @@ function ProjectFocus(props) {
 				</div>
 			)
 		} else if (proj.mobileImgs.length == 0 && proj.desktopImgs.length > 1) {
+			console.log("desktop imgs only")
+			console.log(proj.desktopImgs.length, proj.mobileImgs.length)
 			return (
 				<>
 					<div className="mockup-browser bg-stone-900 bg-opacity-100 noise">
@@ -195,8 +202,6 @@ function ProjectFocus(props) {
 						</div>
 					</div>
 				</div>
-
-
 
 				<div className="bg-stone-900 bg-opacity-90 noise p-10 flex flex-col gap-10">
 					<h1 className="text-[4vw] font-title tracking-wider leading-none">{props.focusProj.title}</h1>

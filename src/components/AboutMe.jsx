@@ -6,7 +6,7 @@ import { NavLink } from "react-router-dom";
 
 import bgTextures from "../assets/bgTextures/bgTextures";
 import pfp from "../assets/pfp.jpg";
-import projects from "../data/Projects.json";
+import projects from "../data/Projects";
 
 function AboutMe() {
 

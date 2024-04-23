@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import ProjectList from "./ProjectList";
 import ProjectFocus from "./ProjectFocus";
 
-import projects from "../data/Projects.json";
+import projects from "../data/Projects";
 
 import bgTextures from "../assets/bgTextures/bgTextures";
 import { StepForward } from "lucide-react";
