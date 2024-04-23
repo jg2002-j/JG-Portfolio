@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 
 import techBadges from "../data/TechBadges.json";
 
@@ -7,6 +7,9 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 function ProjectFocus(props) {
+
+	const project = props.focusProj;
+	console.log(project)
 
 	const getBadges = (proj) => {
       const projTechs = proj.techs;
@@ -82,10 +85,7 @@ function ProjectFocus(props) {
 	}
 
 	const renderOtherScreenshots = (proj) => {
-		console.log(proj.desktopImgs.length, proj.mobileImgs.length)
 		if (proj.mobileImgs.length > 0 && proj.desktopImgs.length > 1){
-			console.log("mobile imgs AND desktop imgs")
-			console.log(proj.desktopImgs.length, proj.mobileImgs.length)
 			return (
 				<div className="mx-10 flex gap-10">
 
@@ -124,8 +124,6 @@ function ProjectFocus(props) {
 				</div>
 			)
 		} else if (proj.mobileImgs.length > 0 && proj.desktopImgs.length == 1) {
-			console.log("mobile imgs only")
-			console.log(proj.desktopImgs.length, proj.mobileImgs.length)
 			return (
 				<div className="bg-stone-300 bg-opacity-10 rounded-lg p-10 flex gap-5 w-full">
 					{proj.mobileImgs.map((image, index) => (
@@ -141,10 +139,8 @@ function ProjectFocus(props) {
 				</div>
 			)
 		} else if (proj.mobileImgs.length == 0 && proj.desktopImgs.length > 1) {
-			console.log("desktop imgs only")
-			console.log(proj.desktopImgs.length, proj.mobileImgs.length)
 			return (
-				<>
+				<div className="flex px-10 gap-10">
 					<div className="mockup-browser bg-stone-900 bg-opacity-100 noise">
 						<div className="mockup-browser-toolbar pt-2">
 							<a target="_blank" href={props.focusProj.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{props.focusProj.deployed}</a>
@@ -161,7 +157,7 @@ function ProjectFocus(props) {
 							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
 						</div>
 					</div>
-				</>
+				</div>
 			)
 		}
 	}
@@ -183,9 +179,9 @@ function ProjectFocus(props) {
 				
 				<div className="mx-10 flex gap-10">
 
-					{renderDeployedLink(props.focusProj)}
+					{renderDeployedLink(project)}
 					
-					<a target="_blank" href={props.focusProj.repo} onMouseEnter={() => setHovered("git")} onMouseLeave={() => removeHovered("git")}  className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
+					<a target="_blank" href={project.repo} onMouseEnter={() => setHovered("git")} onMouseLeave={() => removeHovered("git")}  className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
 						<FolderGit2 className="h-[3.5vh] w-[3.5vh]" />
 						<h2 ref={gitLink} className="font-title text-[1.4vw] leading-none tracking-widest"></h2>
 					</a>
@@ -195,25 +191,25 @@ function ProjectFocus(props) {
 				<div className="mx-10 bg-stone-300 bg-opacity-10 rounded-lg p-10 ">
 					<div className="mockup-browser bg-stone-900 bg-opacity-100 noise">
 						<div className="mockup-browser-toolbar pt-2">
-							<a target="_blank" href={props.focusProj.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{props.focusProj.deployed}</a>
+							<a target="_blank" href={project.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{project.deployed}</a>
 						</div>
 						<div className="flex justify-center p-2 bg-stone-900 bg-opacity-100 noise">
-							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[0]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+							<img onClick={() => fsImage(event)} src={project.desktopImgs[0]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
 						</div>
 					</div>
 				</div>
 
 				<div className="bg-stone-900 bg-opacity-90 noise p-10 flex flex-col gap-10">
-					<h1 className="text-[4vw] font-title tracking-wider leading-none">{props.focusProj.title}</h1>
+					<h1 className="text-[4vw] font-title tracking-wider leading-none">{project.title}</h1>
 					<div className="flex justify-between items-center gap-10">
-                  <p className="w-[65ch] max-w-[60%] text-wrap-pretty text-xl">{props.focusProj.desc}</p>
+                  <p className="w-[65ch] max-w-[60%] text-wrap-pretty text-xl">{project.desc}</p>
                   <div className="max-w-[30%] flex flex-wrap justify-start items-center gap-4">
-                     {getBadges(props.focusProj)}
+                     {getBadges(project)}
                   </div>
                </div>
 				</div>
 
-				{renderOtherScreenshots(props.focusProj)}
+				{renderOtherScreenshots(project)}
 				
 				<dialog id="fsImage" className="modal">
 					<div className="modal-box bg-stone-900 noise max-w-[90vw] w-fit h-[90vh] overflow-hidden">

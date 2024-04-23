@@ -228,7 +228,7 @@ function ProjectList(props) {
 								<span className="inline font-header font-bold text-lg me-4 opacity-60">{index+1}</span>
 								<h2>{project.title}</h2>
 							</div>
-							<h3 className="">{project.synopsis}</h3>
+							<h3 className="text-pretty max-w-[50ch]">{project.synopsis}</h3>
 							<div className="flex justify-start items-center">
 								{project.tags.map((tag, index) => (
 									<span key={index} className="border-2 border-stone-300 border-opacity-10 rounded-lg px-3 py-1 me-2 text-xs tracking-wider uppercase select-none">{tag}</span>
