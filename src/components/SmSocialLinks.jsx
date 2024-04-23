@@ -124,15 +124,15 @@ function SmSocialLinks() {
 
 	return(
 		<div className="flex justify-start gap-2">
-			<a onMouseEnter={() => handleMouseEnter("Github")} onMouseLeave={() => handleMouseLeave("Github")} target="_blank" href="" className="bg-stone-300 bg-opacity-10 rounded-lg px-4 py-3 hover:bg-stone-400 hover:bg-opacity-30 ease-in-out duration-500 flex items-center group">
+			<a onMouseEnter={() => handleMouseEnter("Github")} onMouseLeave={() => handleMouseLeave("Github")} target="_blank" href="https://github.com/jg2002-j" className="bg-stone-300 bg-opacity-10 rounded-lg px-4 py-3 hover:bg-stone-400 hover:bg-opacity-30 ease-in-out duration-500 flex items-center group">
 				{linkIcons("GitHub")}
 				<span ref={Github} className="group-hover:ms-3 tracking-wider leading-none uppercase text-xs font-mono text-stone-400 ease-in-out duration-500"></span>
 			</a>
-			<a onMouseEnter={() => handleMouseEnter("Linkedin")} onMouseLeave={() => handleMouseLeave("Linkedin")} target="_blank" href="" className="bg-stone-300 bg-opacity-10 rounded-lg px-4 py-3 hover:bg-stone-400 hover:bg-opacity-30 ease-in-out duration-500 flex items-center group">
+			<a onMouseEnter={() => handleMouseEnter("Linkedin")} onMouseLeave={() => handleMouseLeave("Linkedin")} target="_blank" href="https://www.linkedin.com/in/jg2002/" className="bg-stone-300 bg-opacity-10 rounded-lg px-4 py-3 hover:bg-stone-400 hover:bg-opacity-30 ease-in-out duration-500 flex items-center group">
 				{linkIcons("LinkedIn")}
 				<span ref={Linkedin} className="group-hover:ms-3 tracking-wider leading-none uppercase text-xs font-mono text-stone-400 ease-in-out duration-500"></span>
 			</a>
-			<a onMouseEnter={() => handleMouseEnter("CV")} onMouseLeave={() => handleMouseLeave("CV")} target="_blank" href="" className="bg-stone-300 bg-opacity-10 rounded-lg px-4 py-3 hover:bg-stone-400 hover:bg-opacity-30 ease-in-out duration-500 flex items-center group">
+			<a onMouseEnter={() => handleMouseEnter("CV")} onMouseLeave={() => handleMouseLeave("CV")} target="_blank" href="https://www.dropbox.com/scl/fi/2y6z2e05ia477za2cebtz/JaiGandhiCV.pdf?rlkey=ssr2bkcj5l1xts5wliez85kol&dl=0" className="bg-stone-300 bg-opacity-10 rounded-lg px-4 py-3 hover:bg-stone-400 hover:bg-opacity-30 ease-in-out duration-500 flex items-center group">
 				{linkIcons("CV")}
 				<span ref={CV} className="group-hover:ms-3 tracking-wider leading-none uppercase text-xs font-mono text-stone-400 ease-in-out duration-500"></span>
 			</a>
