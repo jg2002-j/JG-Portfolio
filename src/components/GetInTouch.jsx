@@ -26,13 +26,13 @@ function GetInTouch() {
 						
 						<div className="bg-stone-300 min-h-40 flex-grow bg-opacity-10 p-20 rounded-lg hover:bg-stone-400 hover:bg-opacity-20 duration-1000 flex gap-20 items-center justify-center">
 							<div className="min-w-[40%] flex flex-col gap-2">
-								<h3 className="text-4xl mb-5 font-header text-stone-500 leading-none tracking-wider hover:text-stone-400 duration-1000">Contact Me</h3>
+								<h2 className="text-4xl mb-5 font-header text-stone-500 leading-none tracking-wider hover:text-stone-400 duration-1000">Contact Me</h2>
 								<a target="_blank" href="mailto:jai.2002.gandhi@gmail.com" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center"><Send className="inline me-5"/>jai.2002.gandhi@gmail.com</a>
 								<a target="_blank" href="https://wa.me/447481861855" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center"><MessagesSquare className="inline me-5"/>+44 7481 861 855</a>
 								<p className="max-w-fit text-stone-400 text-2xl py-2 flex items-center"><MapPin className="inline me-5" />London, United Kingdom</p>
 							</div>
 							<div className="min-w-[20%] flex flex-col gap-2">
-								<h3 className="text-4xl mb-5 font-header text-stone-500 leading-none tracking-wider hover:text-stone-400 duration-1000">Links</h3>
+								<h2 className="text-4xl mb-5 font-header text-stone-500 leading-none tracking-wider hover:text-stone-400 duration-1000">Links</h2>
 								<a target="_blank" href="https://github.com/jg2002-j" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center ">
 									<img className="aspect-square h-5 me-4" src="https://cdn.simpleicons.org/github/a7a29f" alt="GitHub"/>
 									<span>GitHub</span>
