@@ -8,11 +8,11 @@ function SmSocialLinks() {
 	const linkIcons = (name) => {
       switch (name) {
          case "GitHub":
-            return(<img className="aspect-square h-4" src="https://cdn.simpleicons.org/github/a7a29f" alt={name}/>)
+            return(<img className="aspect-square h-4" src="https://cdn.simpleicons.org/github/a7a29f" alt={`${name} icon logo`}/>)
          case "LinkedIn":
-            return(<img className="aspect-square h-4" src="https://cdn.simpleicons.org/linkedin/a7a29f" alt={name}/>)
+            return(<img className="aspect-square h-4" src="https://cdn.simpleicons.org/linkedin/a7a29f" alt={`${name} icon logo`}/>)
          case "CV":
-            return(<img className="aspect-square h-4" src="https://cdn.simpleicons.org/googledocs/a7a29f" alt={name}/>)
+            return(<img className="aspect-square h-4" src="https://cdn.simpleicons.org/googledocs/a7a29f" alt={`${name} icon logo`}/>)
          default:
             break;
       }
