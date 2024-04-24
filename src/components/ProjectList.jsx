@@ -215,7 +215,7 @@ function ProjectList(props) {
 	})
 
 	return (
-	 	<div className="sticky top-0 min-w-[30vw] max-h-dvh flex flex-col bg-stone-900 noise rounded-lg p-10">
+	 	<div className="sticky top-0 z-50 min-w-[30vw] max-h-dvh flex flex-col bg-stone-900 noise rounded-lg p-10">
 			<div className="flex justify-center items-center gap-4 mb-4">
 				<button className="btn btn-ghost" ref={projPrev}><ChevronsUp/></button>
 				<button className="btn btn-ghost" ref={projNext}><ChevronsDown/></button>

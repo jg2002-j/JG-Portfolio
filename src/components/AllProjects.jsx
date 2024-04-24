@@ -31,7 +31,7 @@ function AllProjects() {
 						<ProjectFocus focusProj={focusProj} />
 					</div>
 				</div> 
-				<div className="drawer-side">
+				<div className="drawer-side z-50">
 					<label htmlFor="chooseprojdrawer" aria-label="close sidebar" className="drawer-overlay bg-stone-300 bg-opacity-10 noise"></label>
 					<ProjectList chooseProjfnct={chooseProjfnct} />
 				</div>
