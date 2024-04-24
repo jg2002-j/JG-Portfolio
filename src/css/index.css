@@ -58,27 +58,6 @@
 	background-image: url(../assets/nnnoise.svg);
 }
 
-.homepage-img{
-	width: 100%;
-	height: 125%;
-	position: absolute;
-	top: -10%;
-	object-fit: cover;
-	object-position: center;
-	mask-image: linear-gradient(to bottom, black 75%, rgba(0,0,0,0.5) 90%,transparent 100%);
-	z-index: -1;
-}
-
-.line {
-	width: 100%;
-	max-width: 800px;
-	height: 8px;
-	margin: 0 0 10px 0;
-	position: relative;
-	display: inline-block;
-	background-color: rgba(255,255,255,1);
-}
-
 .hidescroll{
 	scrollbar-width: none;
 }
