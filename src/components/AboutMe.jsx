@@ -1,12 +1,8 @@
 import React from "react";
-import AboutMeBento from "./AboutMeBento";
-import SmSocialLinks from "./SmSocialLinks";
-
+import bgTextures from "../assets/bgTextures/bgTextures";
+import projects from "../data/Projects";
 import { NavLink } from "react-router-dom";
 
-import bgTextures from "../assets/bgTextures/bgTextures";
-import pfp from "../assets/pfp.jpg";
-import projects from "../data/Projects";
 
 function AboutMe() {
 
@@ -56,16 +52,6 @@ function AboutMe() {
 					</div>
 				</div>
 			</div>
-
-			{/* <div className="2xl:mx-60 m-20 max-w-full min-h-dvh flex-col justify-center" id="aboutme">
-				<div className="flex flex-col 2xl:flex-row justify-center items-center min-h-[80vh] gap-20">
-					<div className="h-full w-full 2xl:w-3/5 flex flex-col justify-center items-start bg-stone-300 bg-opacity-10 p-10 rounded-lg">
-						<h1 className="mb-5 max-w-prose text-[1.3vw]">Having finished an EdX Skills Bootcamp for front-end web development, I'm now seeking to leverage my experiences, creative outlook and technical skills in the dynamic world of front-end web development.</h1>
-						<SmSocialLinks />
-					</div>
-					<AboutMeBento />
-				</div>
-			</div> */}
 	 	</>
   	)
 };

@@ -25,7 +25,7 @@ function Skills() {
 			}
 		} else {
 			return (
-				<img className="inline-block me-2 group-hover:scale-125 duration-500" height="15" width="15" src={`https://cdn.simpleicons.org/${item.slug}/.svg`}/>
+				<img className="inline-block me-2 group-hover:scale-125 duration-500" height="15" width="15" alt={`${item.slug} logo`} src={`https://cdn.simpleicons.org/${item.slug}/.svg`}/>
 			)
 		}
 	}

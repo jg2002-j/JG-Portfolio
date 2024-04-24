@@ -23,7 +23,7 @@ function AboutMeBento() {
 			</div>
 
 			<div className="row-start-1 col-start-6 row-span-3 col-span-3 rounded-xl bg-stone-300 bg-opacity-10 cursor-default ease-in-out duration-700 text-slate-200 flex justify-center items-center p-4">
-				<img className="h-full w-full rounded-lg" src={pfp} alt="" />
+				<img className="h-full w-full rounded-lg" src={pfp} alt="Profile picture" />
 			</div>
 			
 			<div className="row-start-4 col-start-6 row-span-2 col-span-3 rounded-xl bg-stone-300 bg-opacity-10 cursor-default ease-in-out duration-700 text-slate-200 flex justify-center items-center p-4 group">

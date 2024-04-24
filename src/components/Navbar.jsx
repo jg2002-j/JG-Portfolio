@@ -1,7 +1,6 @@
 import React, { useState, useRef } from "react";
 import NavIcons from "./NavIcons";
 import NavItems from "../data/NavItems.json";
-import { MenuSquare } from "lucide-react";
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
@@ -16,7 +15,6 @@ function Navbar() {
 			NavItems.map((navItem, index) => (
 				<NavLink key={index} to={navItem.link} className={({isActive}) => isActive ? `border-opacity-100 ${commonStyles}` : `border-opacity-0 ${commonStyles}`}>
 					{NavIcons(navItem.icon,iconStyles)}
-					{/* <span className="ms-2 tracking-wider leading-none uppercase text-xs font-mono ease-in-out duration-500">{navItem.name}</span> */}
 				</NavLink>
 			))
 		)
