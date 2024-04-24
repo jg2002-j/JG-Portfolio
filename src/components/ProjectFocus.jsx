@@ -178,7 +178,7 @@ function ProjectFocus(props) {
 	const renderDeployedLink = (proj) => {
 		if (proj.deployed != ""){
 			return(
-				<a target="_blank" href={proj.deployed} onMouseEnter={() => setHovered("deployed")} onMouseLeave={() => removeHovered("deployed")} className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
+				<a aria-label="Visit deployed site." target="_blank" href={proj.deployed} onMouseEnter={() => setHovered("deployed")} onMouseLeave={() => removeHovered("deployed")} className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
 					<Globe className="h-[3.5vh] w-[3.5vh]" />
 					<h2 ref={deployedLink} className="font-title text-[1.4vw] leading-none tracking-widest"></h2>
 				</a>
@@ -194,7 +194,7 @@ function ProjectFocus(props) {
 
 					{renderDeployedLink(project)}
 					
-					<a target="_blank" href={project.repo} onMouseEnter={() => setHovered("git")} onMouseLeave={() => removeHovered("git")}  className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
+					<a aria-label="Visit GitHub repo." target="_blank" href={project.repo} onMouseEnter={() => setHovered("git")} onMouseLeave={() => removeHovered("git")}  className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
 						<FolderGit2 className="h-[3.5vh] w-[3.5vh]" />
 						<h2 ref={gitLink} className="font-title text-[1.4vw] leading-none tracking-widest"></h2>
 					</a>

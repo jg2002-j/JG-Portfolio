@@ -20,6 +20,7 @@ function Title() {
 						<NavLink 
 							key={index} 
 							to={navItem.link} 
+							aria-label={`Visit the ${navItem.name} page.`}
 							className={`col-start-${oddCol} row-start-1 bg-stone-300 bg-opacity-10 rounded-lg h-full aspect-square p-5 hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}
 							onClick={() => scrollDownHome(navItem.name)} 
 							onMouseEnter={() => enterAnimate(navItem.id)} 
@@ -34,6 +35,7 @@ function Title() {
 						<NavLink 
 							key={index} 
 							to={navItem.link} 
+							aria-label={`Visit the ${navItem.name} page.`}
 							className={`col-start-${evenCol} row-start-2 bg-stone-300 bg-opacity-10 rounded-lg h-full aspect-square p-5 hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}
 							onMouseEnter={() => enterAnimate(navItem.id)} 
 							onMouseLeave={() => leaveAnimate(navItem.id)}

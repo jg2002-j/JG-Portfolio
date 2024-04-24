@@ -86,8 +86,8 @@ function FeaturedProject() {
                            <img onClick={() => fsImage(event)} src={proj.desktopImgs[0]} alt="Project screenshot" className="h-full w-full object-cover hover:scale-110 ease-in-out duration-1000" />
                         </div>
                         <div className="flex justify-end items-center gap-5">
-                           <a target="_blank" href={proj.deployed} className="h-full aspect-square p-3 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-200 hover:bg-opacity-300 ease-in-out duration-1000 group"><Globe className="h-5 w-full text-stone-400 group-hover:text-stone-800 ease-in-out duration-1000"/></a>
-                           <a target="_blank" href={proj.repo} className="h-full aspect-square p-3 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-200 hover:bg-opacity-300 ease-in-out duration-1000 group"><FolderGit2 className="h-5 w-full text-stone-400 group-hover:text-stone-800 ease-in-out duration-1000"/></a>
+                           <a target="_blank" aria-label="Visit the deployed site." href={proj.deployed} className="h-full aspect-square p-3 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-200 hover:bg-opacity-300 ease-in-out duration-1000 group"><Globe className="h-5 w-full text-stone-400 group-hover:text-stone-800 ease-in-out duration-1000"/></a>
+                           <a target="_blank" aria-label="Visit the GitHub repo." href={proj.repo} className="h-full aspect-square p-3 rounded-lg flex justify-center items-center bg-stone-300 bg-opacity-10 hover:bg-stone-200 hover:bg-opacity-300 ease-in-out duration-1000 group"><FolderGit2 className="h-5 w-full text-stone-400 group-hover:text-stone-800 ease-in-out duration-1000"/></a>
                         </div>
                      </div>
                   ))}
