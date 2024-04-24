@@ -34,15 +34,15 @@ function GetInTouch() {
 							<div className="min-w-[20%] flex flex-col gap-2">
 								<h2 className="text-4xl mb-5 font-header text-stone-500 leading-none tracking-wider hover:text-stone-400 duration-1000">Links</h2>
 								<a target="_blank" href="https://github.com/jg2002-j" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center ">
-									<img className="aspect-square h-5 me-4" src="https://cdn.simpleicons.org/github/a7a29f" alt="GitHub"/>
+									<img className="aspect-square h-5 me-4" src="https://cdn.simpleicons.org/github/a7a29f" alt="GitHub link"/>
 									<span>GitHub</span>
 								</a>
 								<a target="_blank" href="https://www.linkedin.com/in/jg2002/" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center ">
-									<img className="aspect-square h-5 me-4" src="https://cdn.simpleicons.org/linkedin/a7a29f" alt="LinkedIn"/>
+									<img className="aspect-square h-5 me-4" src="https://cdn.simpleicons.org/linkedin/a7a29f" alt="LinkedIn link"/>
 									<span>LinkedIn</span>
 								</a>
 								<a target="_blank" href="https://www.dropbox.com/scl/fi/2y6z2e05ia477za2cebtz/JaiGandhiCV.pdf?rlkey=ssr2bkcj5l1xts5wliez85kol&dl=0" className="max-w-fit text-stone-400 text-2xl ease-in-out duration-500 hover:bg-stone-300 hover:bg-opacity-10 hover:rounded-lg hover:px-5 py-2 flex items-center ">
-									<img className="aspect-square h-5 me-4" src="https://cdn.simpleicons.org/googledocs/a7a29f" alt="My CV"/>
+									<img className="aspect-square h-5 me-4" src="https://cdn.simpleicons.org/googledocs/a7a29f" alt="My CV link"/>
 									<span>My CV</span>
 								</a>
 							</div>

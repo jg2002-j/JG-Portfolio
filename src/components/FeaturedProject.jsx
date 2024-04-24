@@ -98,7 +98,7 @@ function FeaturedProject() {
 					</div>		
 
                <div onMouseEnter={() => allProjMouseEnter()} onMouseLeave={() => allProjMouseLeave()} className="bg-stone-300 bg-opacity-10 relative rounded-lg overflow-hidden p-10">
-                  <NavLink to="projects" className="absolute h-full w-full top-0 left-0 flex justify-center items-center rounded-lg overflow-hidden hover:backdrop-blur-3xl hover:bg-stone-900 hover:bg-opacity-80 noise ease-in-out duration-1000">
+                  <NavLink aria-label="Visit the projects page." to="projects" className="absolute h-full w-full top-0 left-0 flex justify-center items-center rounded-lg overflow-hidden hover:backdrop-blur-3xl hover:bg-stone-900 hover:bg-opacity-80 noise ease-in-out duration-1000">
                      <h2 ref={allProjects} className="text-[4vw] leading-none text-stone-400 tracking-widest font-title text-center"></h2>
                   </NavLink>
                   <div className="w-full h-48 flex gap-5">
