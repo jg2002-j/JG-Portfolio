@@ -1,5 +1,4 @@
 import React, { useState, useRef } from "react";
-import Links from "../data/Links.json";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 

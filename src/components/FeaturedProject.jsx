@@ -1,7 +1,7 @@
 import React, { useState, useRef } from "react";
 
 import projects from "../data/Projects";
-import bgTextures from "../assets/bgTextures/bgTextures";
+import BackgroundTexture from "../assets/bgTextures/BackgroundTexture";
 
 import { FolderGit2, Globe } from 'lucide-react';
 import { NavLink } from "react-router-dom";
@@ -23,8 +23,6 @@ function FeaturedProject() {
       return(finalArray.map((letter, index) => (<span key={index} className="mx-1 font-title text-8xl ghosttext">{letter}</span>)))
    }	
    
-   const bgTexture = bgTextures[Math.floor(Math.random()*(bgTextures.length))]
-
    const featuredProjs = []
    projects.forEach((project) => {
       if (project.featured) {
@@ -62,7 +60,7 @@ function FeaturedProject() {
    return (
       <>
          <div className="min-h-dvh mx-auto relative rounded-lg overflow-hidden">
-            <img className="absolute -z-10 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgTexture} alt="Background texture" />
+            <BackgroundTexture />
 
             <div className="h-full bg-stone-900 bg-opacity-75 noise rounded-lg p-20 flex flex-col justify-center gap-20">
 
@@ -73,7 +71,7 @@ function FeaturedProject() {
                <div className="bg-stone-300 bg-opacity-10 p-10 rounded-lg flex flex-col lg:flex-row gap-10">
                   {featuredProjs.map((proj, index) => (
                      <div key={index} className={`w-[35%] noise rounded-lg p-5 flex flex-col gap-3 relative overflow-hidden text-stone-400`} style={{backgroundColor: `rgba(${proj.swatch},0.4)`}}>
-                        <img className="absolute -z-20 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgTexture} alt="Background texture" />
+                        <BackgroundTexture />
                         <div className="absolute -z-10 left-[-5%] top-[-5%] h-[110%] w-[110%] flex flex-wrap transpdivtb opacity-50">{bgText(proj.title,50)}</div>
                         <h1 className="text-[1.5vw] font-title tracking-wider leading-none">{proj.title}</h1>
                         <div className="flex items-center gap-2">

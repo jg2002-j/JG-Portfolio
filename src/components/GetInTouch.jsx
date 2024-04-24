@@ -1,16 +1,13 @@
 import React from "react";
-import bgTextures from "../assets/bgTextures/bgTextures";
+import BackgroundTexture from "../assets/bgTextures/BackgroundTexture";
 import { NavLink } from "react-router-dom";
-import { Bug, Send, MessagesSquare, MapPin } from "lucide-react";
+import { Send, MessagesSquare, MapPin } from "lucide-react";
 
 function GetInTouch() {
-
-	const bgTexture = bgTextures[Math.floor(Math.random()*(bgTextures.length))]
-
 	return (
 		<div className="min-h-dvh flex items-center text-stone-400">
 			<div className="w-full h-dvh mx-auto relative rounded-lg overflow-hidden">
-				<img className="absolute -z-10 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgTexture} alt="Background texture" />
+				<BackgroundTexture />
 
 				<div className="h-full bg-stone-900 bg-opacity-75 noise rounded-lg py-20 flex flex-col justify-center gap-20">
 					

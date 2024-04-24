@@ -1,17 +1,14 @@
 import React from "react";
-import bgTextures from "../assets/bgTextures/bgTextures";
+import BackgroundTexture from "../assets/bgTextures/BackgroundTexture";
 import projects from "../data/Projects";
 import { NavLink } from "react-router-dom";
 
 
 function AboutMe() {
-
-	const bgTexture = bgTextures[Math.floor(Math.random()*(bgTextures.length))]
-
   	return (
 	 	<>
 			<div className="flex flex-col gap-10 justify-center items-center min-h-dvh rounded-lg p-20 w-full relative bg-stone-900 bg-opacity-75 noise overflow-hidden">
-				<img className="absolute -z-10 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgTexture} alt="Background texture" />
+				<BackgroundTexture />
 				<div className="w-full lg:max-w-[80%] p-10 py-20 bg-stone-300 bg-opacity-10 rounded-lg text-stone-400 hover:text-stone-300 hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
 					<h3 className="text-4xl mb-5 font-header leading-none tracking-wider">About Me</h3>
 					<div className="collapse collapse-plus">

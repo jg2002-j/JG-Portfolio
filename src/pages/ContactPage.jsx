@@ -3,7 +3,7 @@ import Navbar from "../components/Navbar";
 import ContactForm from "../components/ContactForm";
 import FeedbackForm from "../components/FeedbackForm";
 import { Bug, Send, MessagesSquare, MapPin } from "lucide-react";
-import bgTextures from "../assets/bgTextures/bgTextures";
+import BackgroundTexture from "../assets/bgTextures/BackgroundTexture";
 
 function ContactPage() {
 
@@ -35,15 +35,13 @@ function ContactPage() {
       }
    }
 
-   const bgTexture = bgTextures[Math.floor(Math.random()*(bgTextures.length))]
-
    const activeFormClasses = "bg-stone-600 bg-opacity-50 text-stone-200"
 
    return (
       <>
          <Navbar/>
          <div className="min-h-dvh w-vw flex flex-col 2xl:flex-row-reverse justify-center items-center gap-10 pt-16 p-10 2xl:px-[20vw] relative bg-stone-900 bg-opacity-75 noise text-stone-400">
-            <img className="absolute -z-10 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgTexture} alt="Background texture" />
+            <BackgroundTexture />
             <div className="flex flex-col max-w-[600px] w-full gap-10">
                <div className="w-full bg-stone-300 bg-opacity-10 rounded-lg p-10 flex flex-col gap-14">
                   <h2 className="text-5xl font-title tracking-widest">Get in Touch</h2>

@@ -3,7 +3,7 @@ import React, { useRef, useState, Suspense } from "react";
 import Loading from "./Loading";
 import techBadges from "../data/TechBadges.json";
 
-import { FolderGit2, Globe, Search, StepForward, StepBack } from 'lucide-react';
+import { FolderGit2, Globe, Search } from 'lucide-react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
