@@ -74,7 +74,7 @@ function FeaturedProject() {
                   {featuredProjs.map((proj, index) => (
                      <div key={index} className={`w-[35%] noise rounded-lg p-5 flex flex-col gap-3 relative overflow-hidden text-stone-400`} style={{backgroundColor: `rgba(${proj.swatch},0.4)`}}>
                         <img className="absolute -z-20 left-0 top-0 h-full w-full object-cover blur-2xl" src={bgTexture} alt="Background texture" />
-                        <div className="absolute -z-10 left-[-5%] top-[-5%] h-[110%] w-[110%] flex flex-wrap transpdivtb opacity-50">{bgText(proj.title,250)}</div>
+                        <div className="absolute -z-10 left-[-5%] top-[-5%] h-[110%] w-[110%] flex flex-wrap transpdivtb opacity-50">{bgText(proj.title,50)}</div>
                         <h1 className="text-[1.5vw] font-title tracking-wider leading-none">{proj.title}</h1>
                         <div className="flex items-center gap-2">
                            {proj.tags.map((tag, index) => (

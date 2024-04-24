@@ -1,34 +1,41 @@
 @font-face {
 	font-family: "Akira";
 	src: url(../assets/fonts/Akira.otf);
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Druk TWB";
 	src: url(../assets/fonts/DrukTextWide-Super-Trial.otf);
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Monument Grotesk Mono";
 	src: url(../assets/fonts/MonumentGrotesk-Mono.woff);
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Monument Grotesk Regular";
 	src: url(../assets/fonts/MonumentGrotesk-Regular.woff);
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Eva Peron";
 	src: url(../assets/fonts/VTCEva-Peron.woff);
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Media Sans";
 	src: url(../assets/fonts/MediaSansExtendedBlack.woff);
+	font-display: swap;
 }
 
 @font-face {
 	font-family: "Monument Extended";
 	src: url(../assets/fonts/MonumentExtended-Ultrabold.otf);
+	font-display: swap;
 }
