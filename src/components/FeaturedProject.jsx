@@ -1,25 +1,14 @@
 import React, { useState, useRef } from "react";
 
 import projects from "../data/Projects";
-import techBadges from "../data/TechBadges.json";
-
 import bgTextures from "../assets/bgTextures/bgTextures";
 
-import { FolderGit2, Globe, StepForward } from 'lucide-react';
+import { FolderGit2, Globe } from 'lucide-react';
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 function FeaturedProject() {
-
-   const getBadges = (proj) => {
-      const projTechs = proj.techs;
-      const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name)).map(tech => tech.value);
-      const badgeElements = matchingTechBadges.map(value => (
-         <img className="h-5 select-none" key={value} alt={value} src={value} />
-      ));
-      return badgeElements;
-   };
 
    const bgText = (text, repeats) => {
       let finalArray = []

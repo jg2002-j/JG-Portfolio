@@ -1,5 +1,6 @@
-import React, { useEffect, useRef, useState } from "react";
+import React, { useRef, useState, Suspense } from "react";
 
+import Loading from "./Loading";
 import techBadges from "../data/TechBadges.json";
 
 import { FolderGit2, Globe, Search, StepForward, StepBack } from 'lucide-react';
@@ -95,7 +96,9 @@ function ProjectFocus(props) {
 								<div className="bg-stone-900 bg-opacity-100 noise camera"></div> 
 								<div className="display bg-stone-900 bg-opacity-100 h-full">
 									<div className="phone-1 h-full">
-										<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="h-full object-cover cursor-pointer" />
+										<Suspense fallback={<Loading/>}>
+											<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="h-full object-cover cursor-pointer" />
+										</Suspense>
 									</div>
 								</div>
 							</div>
@@ -108,7 +111,9 @@ function ProjectFocus(props) {
 								<a target="_blank" href={props.focusProj.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{props.focusProj.deployed}</a>
 							</div>
 							<div className="flex justify-center p-2 bg-stone-900 bg-opacity-75">
-								<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+								<Suspense fallback={<Loading/>}>
+									<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+								</Suspense>
 							</div>
 						</div>
 						<div className="mockup-browser bg-stone-900 bg-opacity-75">
@@ -116,7 +121,9 @@ function ProjectFocus(props) {
 								<a target="_blank" href={props.focusProj.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{props.focusProj.deployed}</a>
 							</div>
 							<div className="flex justify-center p-2 bg-stone-900 bg-opacity-75">
-								<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+								<Suspense fallback={<Loading/>}>
+									<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+								</Suspense>
 							</div>
 						</div>
 					</div>
@@ -131,7 +138,9 @@ function ProjectFocus(props) {
 							<div className="bg-stone-900 bg-opacity-100 noise camera"></div> 
 							<div className="display bg-stone-900 bg-opacity-100 h-full">
 								<div className="phone-1 h-full">
-									<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="h-full object-cover cursor-pointer" />
+									<Suspense fallback={<Loading/>}>
+										<img onClick={() => fsImage(event)} src={image} alt="Mobile view" className="h-full object-cover cursor-pointer" />
+									</Suspense>
 								</div>
 							</div>
 						</div>
@@ -146,7 +155,9 @@ function ProjectFocus(props) {
 							<a target="_blank" href={props.focusProj.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{props.focusProj.deployed}</a>
 						</div>
 						<div className="flex justify-center p-2 bg-stone-900 bg-opacity-100 noise">
-							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+							<Suspense fallback={<Loading/>}>
+								<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[1]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+							</Suspense>
 						</div>
 					</div>
 					<div className="mockup-browser bg-stone-900 bg-opacity-100 noise">
@@ -154,7 +165,9 @@ function ProjectFocus(props) {
 							<a target="_blank" href={props.focusProj.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{props.focusProj.deployed}</a>
 						</div>
 						<div className="flex justify-center p-2 bg-stone-900 bg-opacity-100 noise">
-							<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+							<Suspense fallback={<Loading/>}>
+								<img onClick={() => fsImage(event)} src={props.focusProj.desktopImgs[2]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+							</Suspense>
 						</div>
 					</div>
 				</div>
@@ -194,7 +207,9 @@ function ProjectFocus(props) {
 							<a target="_blank" href={project.deployed} className="mx-auto w-fit px-5 py-1 flex justify-center items-center gap-2 bg-stone-300 bg-opacity-10 rounded-lg font-mono text-sm text-stone-400 text-opacity-80"><Search className="p-1" />{project.deployed}</a>
 						</div>
 						<div className="flex justify-center p-2 bg-stone-900 bg-opacity-100 noise">
-							<img onClick={() => fsImage(event)} src={project.desktopImgs[0]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+							<Suspense fallback={<Loading/>}>
+								<img onClick={() => fsImage(event)} src={project.desktopImgs[0]} alt="Desktop view" className=" w-full rounded-lg cursor-pointer" />
+							</Suspense>
 						</div>
 					</div>
 				</div>
