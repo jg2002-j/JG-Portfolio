@@ -7,8 +7,19 @@ import { useGSAP } from "@gsap/react";
 
 function Title() {
 
-	// odd numbers on row 1
-	// even numbers on row 2
+	// Refs
+	const JGtitle = useRef(null);
+	const NavAnimateTarget = useRef(null)
+	const blackBar = useRef(null)
+	const navBoxes = useRef(null)
+
+	// States
+	const [ oneHovered, setOneHovered ] = useState(false);
+	const [ twoHovered, setTwoHovered ] = useState(false);
+	const [ threeHovered, setThreeHovered ] = useState(false);
+	const [ fourHovered, setFourHovered ] = useState(false);
+
+	// Functions
 	const renderNavLinks = (NavItems) => {
 		let oddCol = 0
 		let evenCol = 0
@@ -48,13 +59,42 @@ function Title() {
 		)
 	}
 
-	const JGtitle = useRef(null);
-	const NavAnimateTarget = useRef(null)
-	const [ oneHovered, setOneHovered ] = useState(false);
-	const [ twoHovered, setTwoHovered ] = useState(false);
-	const [ threeHovered, setThreeHovered ] = useState(false);
-	const [ fourHovered, setFourHovered ] = useState(false);
-	
+	const enterAnimate = (id) => {
+		if (id == 1){
+			setOneHovered(true)
+		} else if (id == 2){
+			setTwoHovered(true)
+		} else if (id == 3){
+			setThreeHovered(true)
+		} else if (id == 4){
+			setFourHovered(true)
+		} else {
+			console.log("error")
+		}
+	}
+
+	const leaveAnimate = (id) => {
+		if (id == 1){
+			setOneHovered(false)
+		} else if (id == 2){
+			setTwoHovered(false)
+		} else if (id == 3){
+			setThreeHovered(false)
+		} else if (id == 4){
+			setFourHovered(false)
+		} else {
+			console.log("error")
+		}
+	}
+
+	const scrollDownHome = (name) => {
+		if (name == "Home"){
+			document.getElementById("titleBar").scrollIntoView();
+		}
+	}
+
+
+	// GSAP
 	useGSAP(() => {
 		if (oneHovered){
 			gsap.to(NavAnimateTarget.current, {
@@ -114,47 +154,22 @@ function Title() {
 		}
 	},[oneHovered, twoHovered, threeHovered, fourHovered])
 
-	const enterAnimate = (id) => {
-		if (id == 1){
-			setOneHovered(true)
-		} else if (id == 2){
-			setTwoHovered(true)
-		} else if (id == 3){
-			setThreeHovered(true)
-		} else if (id == 4){
-			setFourHovered(true)
-		} else {
-			console.log("error")
-		}
-	}
-
-	const leaveAnimate = (id) => {
-		if (id == 1){
-			setOneHovered(false)
-		} else if (id == 2){
-			setTwoHovered(false)
-		} else if (id == 3){
-			setThreeHovered(false)
-		} else if (id == 4){
-			setFourHovered(false)
-		} else {
-			console.log("error")
-		}
-	}
-
-	const scrollDownHome = (name) => {
-		if (name == "Home"){
-			document.getElementById("titleBar").scrollIntoView();
-		}
-	}
+	useGSAP(() => {
+		const tl = gsap.timeline({delay: 0.5})
+		tl.from(blackBar.current, {y:"120%", duration: 1, ease: "power2.out"}, "<")
+		tl.addLabel("boxEnd", ">-0.5")
+		tl.from(NavAnimateTarget.current, {x: "-100%", opacity: 0, duration: 1, ease: "power2.out"}, "boxEnd")
+		tl.from(JGtitle.current, {x: "-100% ", opacity: 0, duration: 1, ease: "power2.out"}, "<")
+		tl.from(navBoxes.current, {x: "100%", opacity: 0, duration: 1, ease: "power2.out"}, "boxEnd")
+	})
 
   	return (
-		<div id="titleBar" className="w-vw h-[40vh] bg-stone-900 noise p-10 flex justify-between items-center gap-10">
+		<div ref={blackBar} className="w-vw h-[40vh] bg-stone-900 noise p-10 flex justify-between items-center gap-10">
 			<div className="flex flex-col font-title text-[8vw] leading-none text-stone-500 select-none tracking-wide mix-blend-difference">
 				<h1 ref={NavAnimateTarget} className="text-stone-400">JAI</h1>
 				<h1 ref={JGtitle} className="">GANDHI</h1>
 			</div>
-			<div className="h-full aspect-square grid auto-cols-fr justify-center items-center gap-10">
+			<div ref={navBoxes} className="h-full aspect-square grid auto-cols-fr justify-center items-center gap-10">
 				{renderNavLinks(NavItems)}
 			</div>
 		</div>

@@ -108,3 +108,7 @@
 	border-bottom-right-radius: 17px;
 	z-index: 11;
 }
+
+body {
+	overflow-x: hidden;
+}
