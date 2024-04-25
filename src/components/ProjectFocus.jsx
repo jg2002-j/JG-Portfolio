@@ -240,7 +240,6 @@ function ProjectFocus(props) {
 						<h2 className="font-title text-[1.4vw] leading-none tracking-widest"></h2>
 					</a>
 					<button aria-label="See next Project." onClick={() => nextProjBtn()} className="lg:hidden flex-grow cursor-pointer flex justify-center items-center gap-3 bg-stone-300 bg-opacity-10 rounded-lg p-4 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
-						<h2 className="font-mono leading-none tracking-widest">{props.currentProj+1} / {props.projsLength}</h2>
 						<StepForward className="h-[3.5vh] w-[3.5vh]" />
 					</button>
 				</div>
@@ -259,8 +258,9 @@ function ProjectFocus(props) {
 						<img onClick={() => fsImage(event)} src={project.desktopImgs[0]} alt="Desktop view" className="lg:hidden w-full rounded-lg cursor-pointer" />
 					</Suspense>
 				</div>
-				<div className="bg-stone-900 bg-opacity-90 noise p-10 flex flex-col gap-10">
+				<div className="bg-stone-900 bg-opacity-90 noise p-10 flex flex-col gap-5 md:gap-10">
 					<h1 className="text-3xl lg:text-[4vw] font-title tracking-wider leading-none">{project.title}</h1>
+					<h2 className="text-end font-mono text-xs leading-none tracking-widest uppercase">&#91; <strong>{props.currentProj+1}</strong> / {props.projsLength} &#93;</h2>
 					<div className="flex flex-col lg:flex-row justify-between lg:items-center gap-10">
                   <p className="lg:max-w-[60%] text-wrap-pretty text-sm lg:text-xl">{project.desc}</p>
                   <div className="lg:max-w-[30%] flex flex-wrap justify-start items-center gap-4">
