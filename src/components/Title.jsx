@@ -161,17 +161,17 @@ function Title() {
 		startTl.from(JGtitle.current, {x: "-100% ", opacity: 0, duration: 1, ease: "power2.out"}, "<")
 		startTl.from(navBoxes.current, {x: "100%", opacity: 0, duration: 1, ease: "power2.out"}, "boxEnd")
 
-		const endTl = gsap.timeline({
-			scrollTrigger: {
-				trigger: blackBar.current,
-				start: "top 60%",
-				end: "top 20%",
-				scrub: true,
-			}
-		})
-		endTl.to(NavAnimateTarget.current, {x: "-100%", opacity: 0, duration: 1, ease: "power2.out"})
-		endTl.to(JGtitle.current, {x: "-100% ", opacity: 0, duration: 1, ease: "power2.out"}, "<")
-		endTl.to(navBoxes.current, {x: "100%", opacity: 0, duration: 1, ease: "power2.out"}, "<")
+		// const endTl = gsap.timeline({
+		// 	scrollTrigger: {
+		// 		trigger: blackBar.current,
+		// 		start: "top 60%",
+		// 		end: "top 20%",
+		// 		scrub: true,
+		// 	}
+		// })
+		// endTl.to(NavAnimateTarget.current, {x: "-100%", opacity: 0, duration: 1, ease: "power2.out"})
+		// endTl.to(JGtitle.current, {x: "-100% ", opacity: 0, duration: 1, ease: "power2.out"}, "<")
+		// endTl.to(navBoxes.current, {x: "100%", opacity: 0, duration: 1, ease: "power2.out"}, "<")
 	})
 
   	return (

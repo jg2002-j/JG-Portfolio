@@ -59,7 +59,7 @@ function FeaturedProject() {
 
    return (
       <>
-         <div className="min-h-dvh mx-auto relative rounded-lg overflow-hidden">
+         <div className="scrollPanel min-h-dvh mx-auto relative rounded-lg overflow-hidden">
             <BackgroundTexture />
 
             <div className="h-full bg-stone-900 bg-opacity-75 noise rounded-lg p-20 flex flex-col justify-center gap-20">

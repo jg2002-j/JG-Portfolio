@@ -12,19 +12,12 @@ import {  } from "lucide-react";
 
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/all";
-gsap.registerPlugin(ScrollTrigger)
 
 function HomePage() {
-
-   useGSAP(() => {
-
-   })
-
    return (
       <>
          {/* <LoadingScreen/> */}
-         <div className="min-h-dvh w-vw flex flex-col justify-between bgimage">
+         <div className="scrollPanel min-h-dvh w-vw flex flex-col justify-between bgimage">
             <div className="flex justify-between p-2">
                <SmSocialLinks/>
                <div className="flex justify-end gap-x-2">
@@ -46,3 +39,5 @@ function HomePage() {
 };
 
 export default HomePage;
+
+

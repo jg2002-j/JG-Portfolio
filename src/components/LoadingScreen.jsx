@@ -28,7 +28,7 @@ function LoadingScreen() {
 	}, [])
 
   	return (
-		<div ref={LScreenRef} className="w-full h-dvh z-50 bg-stone-950 noise flex justify-center items-center">
+		<div ref={LScreenRef} className="w-full h-dvh z-50 bg-stone-950 noise flex justify-center items-center text-stone-400">
 			<div className="flex flex-col gap-5 justify-center items-center">
 				<Loader2 ref={LSRef} size={50} className="animate-spin" />
 				<h1 ref={JGRef} className="box font-title text-4xl leading-[0] overflow-hidden">Jai Gandhi</h1>

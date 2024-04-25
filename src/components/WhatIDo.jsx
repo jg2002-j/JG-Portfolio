@@ -1,10 +1,10 @@
-import React, { useRef } from "react";
+import React, { useRef, forwardRef } from "react";
 import BackgroundTexture from "../assets/bgTextures/BackgroundTexture";
 import Services from "../data/Services.json";
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
-function Points() {
+function WhatIDo() {
 
 	// Refs
 	const WhatIDo = useRef(null)
@@ -45,7 +45,7 @@ function Points() {
 	})
 
 	return (
-		<div className="min-h-dvh flex items-center text-stone-400">
+		<div className="scrollPanel min-h-dvh flex items-center text-stone-400">
 			<div className="w-full min-h-dvh flex flex-col mx-auto relative rounded-lg overflow-hidden">
 				<BackgroundTexture />
 				<div className="flex-grow bg-stone-900 bg-opacity-75 noise rounded-lg py-20 flex flex-col justify-center gap-20">
@@ -63,4 +63,4 @@ function Points() {
 	)
 };
 
-export default Points;
+export default WhatIDo;

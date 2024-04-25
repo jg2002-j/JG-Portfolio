@@ -5,7 +5,7 @@ import { Send, MessagesSquare, MapPin } from "lucide-react";
 
 function GetInTouch() {
 	return (
-		<div className="min-h-dvh flex items-center text-stone-400">
+		<div className="scrollPanel min-h-dvh flex items-center text-stone-400">
 			<div className="w-full h-dvh mx-auto relative rounded-lg overflow-hidden">
 				<BackgroundTexture />
 
