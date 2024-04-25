@@ -158,11 +158,11 @@ function Title() {
 
   	return (
 		<div ref={blackBar} className="w-vw h-[40vh] bg-stone-900 noise p-5 lg:p-10 flex flex-col md:flex-row justify-center md:justify-between items-center gap-5 lg:gap-10">
-			<div className="flex flex-col gap-3 help font-title text-5xl md:text-[8vw] leading-none text-stone-500 select-none tracking-wide mix-blend-difference text-center md:text-start">
+			<div className="flex flex-col gap-3 font-title text-5xl md:text-[8vw] leading-none text-stone-500 select-none tracking-wide mix-blend-difference text-center md:text-start">
 				<h1 ref={NavAnimateTarget} className="text-stone-400">JAI</h1>
 				<h1 ref={JGtitle} className="">GANDHI</h1>
 			</div>
-			<div ref={navBoxes} className="help md:h-full md:aspect-square w-full md:w-fit justify-center items-center flex md:flex-wrap gap-5">
+			<div ref={navBoxes} className="md:h-full md:aspect-square w-full md:w-fit justify-center items-center flex md:flex-wrap gap-5">
 				{renderNavLinks(NavItems)}
 			</div>
 		</div>
