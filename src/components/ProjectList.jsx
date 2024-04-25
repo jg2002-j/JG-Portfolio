@@ -6,10 +6,14 @@ import { ChevronsDown, ChevronsUp } from "lucide-react";
 
 function ProjectList(props) {
 
-	const [ isprojItemActive, setisprojItemActive ] = useState(false)
+	// Refs
 	const projNext = useRef(null)
 	const projPrev = useRef(null)
 
+	// States
+	const [ isprojItemActive, setisprojItemActive ] = useState(false)
+
+	// GSAP
 	useGSAP(() => {
 		// GSAP Helper Function
 		function verticalLoop(items, config) {

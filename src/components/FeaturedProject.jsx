@@ -1,8 +1,6 @@
 import React, { useState, useRef } from "react";
-
 import projects from "../data/Projects";
 import BackgroundTexture from "../assets/bgTextures/BackgroundTexture";
-
 import { FolderGit2, Globe } from 'lucide-react';
 import { NavLink } from "react-router-dom";
 import gsap from "gsap";

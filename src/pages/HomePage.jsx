@@ -1,6 +1,4 @@
 import React, { useState, useRef } from "react";
-
-import LoadingScreen from "../components/LoadingScreen";
 import Title from "../components/Title";
 import FeaturedProject from "../components/FeaturedProject";
 import CurrentTime from "../components/CurrentTime";
@@ -8,15 +6,9 @@ import SmSocialLinks from "../components/SmSocialLinks";
 import WhatIDo from "../components/WhatIDo";
 import GetInTouch from "../components/GetInTouch";
 
-import {  } from "lucide-react";
-
-import gsap from "gsap";
-import { useGSAP } from "@gsap/react";
-
 function HomePage() {
    return (
       <>
-         {/* <LoadingScreen/> */}
          <div className="scrollPanel min-h-dvh w-vw flex flex-col justify-between bgimage">
             <div className="flex justify-center lg:justify-between p-2">
                <SmSocialLinks/>

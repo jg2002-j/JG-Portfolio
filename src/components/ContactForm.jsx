@@ -4,12 +4,17 @@ import emailjs from "@emailjs/browser";
 
 function ContactForm() {
 
+	// Refs
+	const form = useRef()
+
+	// States
 	const [ formData, setFormData ] = useState({
 		name: "",
 		email: "",
 		message: "",
 	})
 
+	// Functions
 	const handleInputChange = (e) => {
 		const { name, value } = e.target;
 		setFormData({
@@ -20,9 +25,6 @@ function ContactForm() {
 
 	let incompleteFormFields = []
 	const [ ffields, setFfields ] = useState(incompleteFormFields)
-	
-	const form = useRef()
-
 	const handleFormSubmit = (e) => {
 		e.preventDefault();
 		incompleteFormFields = []

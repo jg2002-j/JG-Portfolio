@@ -1,17 +1,16 @@
 import React, { useState } from "react";
-
 import ProjectList from "./ProjectList";
 import ProjectFocus from "./ProjectFocus";
 import BackgroundTexture from "../assets/bgTextures/BackgroundTexture";
-
 import projects from "../data/Projects";
-
 import { StepForward } from "lucide-react";
 
 function AllProjects() {
   	
+	// States
 	const [ focusProj, setfocusProj ] = useState(projects[0])
 
+	// Functions
 	const chooseProjfnct = (index) => {
 		setfocusProj(projects[index])
 	}

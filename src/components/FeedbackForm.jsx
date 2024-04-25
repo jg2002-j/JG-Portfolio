@@ -4,6 +4,10 @@ import emailjs from "@emailjs/browser";
 
 function FeedbackForm() {
 
+	// Refs
+	const feedbackForm = useRef()
+
+	// States
 	const [ feedbackformData, setfeedbackFormData ] = useState({
 		name: "",
 		email: "",
@@ -11,9 +15,9 @@ function FeedbackForm() {
 		improvement: "",
 		favourite: ""
 	})
-
 	const [ selectedRadio, setselectedRadio ] = useState("");
 
+	// Functions
 	const handleFeedbackInputChange = (e) => {
 		const { name, value, id } = e.target;
 		console.log(name, value, e.target)
@@ -29,9 +33,6 @@ function FeedbackForm() {
 
 	let feedbackIncompleteFields = []
 	const [ feedbackfields, setfeedbackfields ] = useState(feedbackIncompleteFields)
-	
-	const feedbackForm = useRef()
-
 	const handleFeedbackFormSubmit = (e) => {
 		e.preventDefault();
 		feedbackIncompleteFields = []

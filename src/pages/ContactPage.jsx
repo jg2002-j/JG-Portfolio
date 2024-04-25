@@ -7,7 +7,13 @@ import BackgroundTexture from "../assets/bgTextures/BackgroundTexture";
 
 function ContactPage() {
 
+   // States
    const [ form, setForm ] = useState("contact")
+
+   // Constants
+   const activeFormClasses = "bg-stone-600 bg-opacity-50 text-stone-200"
+
+   // Functions
    const switchForms = () => {
       if (form == "contact"){
          setForm("feedback")
@@ -15,6 +21,7 @@ function ContactPage() {
          setForm("contact")
       }
    }
+
    const loadForm = () => {
       if (form == "contact"){
          return(<ContactForm/>)
@@ -34,8 +41,6 @@ function ContactPage() {
          )
       }
    }
-
-   const activeFormClasses = "bg-stone-600 bg-opacity-50 text-stone-200"
 
    return (
       <>

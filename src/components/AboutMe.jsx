@@ -3,7 +3,6 @@ import BackgroundTexture from "../assets/bgTextures/BackgroundTexture";
 import projects from "../data/Projects";
 import { NavLink } from "react-router-dom";
 
-
 function AboutMe() {
   	return (
 	 	<>

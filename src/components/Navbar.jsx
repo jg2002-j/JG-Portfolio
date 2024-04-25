@@ -7,19 +7,15 @@ import { useGSAP } from "@gsap/react";
 
 function Navbar() {
 
+	// Refs
+	const NavJG = useRef(null)
+
+	// States
+	const [ navJGHovered, setNavJGHovered ] = useState(false)
+
+	// Constants
 	const commonStyles = "bg-stone-300 bg-opacity-10 hover:bg-stone-400 hover:bg-opacity-30 text-stone-400 border-2 border-stone-400 rounded-lg px-4 py-2 flex items-center ease-in-out duration-500"
 	const iconStyles = "aspect-square h-4"
-
-	const genNavIcons = () => {
-		return (
-			NavItems.map((navItem, index) => (
-				<NavLink key={index} to={navItem.link} className={({isActive}) => isActive ? `border-opacity-100 ${commonStyles}` : `border-opacity-0 ${commonStyles}`}>
-					{NavIcons(navItem.icon,iconStyles)}
-				</NavLink>
-			))
-		)
-	}
-
 	const phrases = [
 		"No, I am your father.",
 		"It's a trap!",
@@ -43,8 +39,18 @@ function Navbar() {
 		"There you are! I was looking everywhere for you.",
 	]
 
-	const NavJG = useRef(null)
-	const [ navJGHovered, setNavJGHovered ] = useState(false)
+	// Functions
+	const genNavIcons = () => {
+		return (
+			NavItems.map((navItem, index) => (
+				<NavLink key={index} to={navItem.link} className={({isActive}) => isActive ? `border-opacity-100 ${commonStyles}` : `border-opacity-0 ${commonStyles}`}>
+					{NavIcons(navItem.icon,iconStyles)}
+				</NavLink>
+			))
+		)
+	}
+
+	// GSAP
 	useGSAP(() => {
 		if (navJGHovered){
 			gsap.to(NavJG.current, {
@@ -60,7 +66,6 @@ function Navbar() {
 			});
 		}
 	}, [ navJGHovered ])
-
 
 	return (
 		<>

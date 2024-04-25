@@ -19,27 +19,7 @@ function Title() {
 	const [ threeHovered, setThreeHovered ] = useState(false);
 	const [ fourHovered, setFourHovered ] = useState(false);
 
-	// Functions
-	const renderNavLinks = (NavItems) => {
-		return(
-			NavItems.map((navItem, index) => {
-				return(
-					<NavLink 
-						key={index} 
-						to={navItem.link} 
-						aria-label={`Visit the ${navItem.name} page.`}
-						className={`bg-stone-300 bg-opacity-10 rounded-lg h-[45%] aspect-square hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}
-						onClick={() => scrollDownHome(navItem.name)} 
-						onMouseEnter={() => enterAnimate(navItem.id)} 
-						onMouseLeave={() => leaveAnimate(navItem.id)} 
-					>
-						{NavIcons(navItem.icon, "text-[#a7a29f] w-full h-6 md:h-7 lg:h-8 xl:h-9 2xl:h-10")}
-					</NavLink>
-				)
-			})
-		)
-	}
-
+	// Events
 	const enterAnimate = (id) => {
 		if (id == 1){
 			setOneHovered(true)
@@ -66,6 +46,27 @@ function Title() {
 		} else {
 			console.log("error")
 		}
+	}
+
+	// Functions
+	const renderNavLinks = (NavItems) => {
+		return(
+			NavItems.map((navItem, index) => {
+				return(
+					<NavLink 
+						key={index} 
+						to={navItem.link} 
+						aria-label={`Visit the ${navItem.name} page.`}
+						className={`bg-stone-300 bg-opacity-10 rounded-lg h-[45%] aspect-square hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}
+						onClick={() => scrollDownHome(navItem.name)} 
+						onMouseEnter={() => enterAnimate(navItem.id)} 
+						onMouseLeave={() => leaveAnimate(navItem.id)} 
+					>
+						{NavIcons(navItem.icon, "text-[#a7a29f] w-full h-6 md:h-7 lg:h-8 xl:h-9 2xl:h-10")}
+					</NavLink>
+				)
+			})
+		)
 	}
 
 	const scrollDownHome = (name) => {

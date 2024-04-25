@@ -1,31 +1,25 @@
 import React, { useRef, useState, Suspense } from "react";
-
 import Loading from "./Loading";
 import techBadges from "../data/TechBadges.json";
-
 import { FolderGit2, Globe, Search } from 'lucide-react';
 import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 
 function ProjectFocus(props) {
 
-	const project = props.focusProj;
-	console.log(project)
-
-	const getBadges = (proj) => {
-      const projTechs = proj.techs;
-      const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name)).map(tech => tech.value);
-      const badgeElements = matchingTechBadges.map(value => (
-         <img className="h-6 select-none" key={value} alt={value} src={value} />
-      ));
-      return badgeElements;
-   };
-
+	// Refs
 	const deployedLink = useRef(null)
 	const gitLink = useRef(null)
+	
+	// States
 	const [ isDeployedHovered, setDeployedHovered ] = useState(false)
 	const [ isGitHovered, setGitHovered ] = useState(false)
+	const [ img, setImg ] = useState("")
 
+	// Constants
+	const project = props.focusProj;
+
+	// Events
 	const setHovered = (link) => {
 		if (link == "deployed"){
 			setDeployedHovered(true)
@@ -46,40 +40,16 @@ function ProjectFocus(props) {
 		}
 	}
 
-	useGSAP(() => {
-      if (isDeployedHovered) {
-         gsap.to(deployedLink.current, {
-            duration: 1.5,
-            text: "Visit Deployed Site →",
-            ease: "power3.inOut"
-         })
-      } else {
-         gsap.to(deployedLink.current, {
-            duration: 1.5,
-            text: "",
-            ease: "power3.inOut"
-         })
-      }
-   },[ isDeployedHovered ])
-
-	useGSAP(() => {
-      if (isGitHovered) {
-         gsap.to(gitLink.current, {
-            duration: 1.5,
-            text: "See GitHub Repo →",
-            ease: "power3.inOut"
-         })
-      } else {
-         gsap.to(gitLink.current, {
-            duration: 1.5,
-            text: "",
-            ease: "power3.inOut"
-         })
-      }
-   },[ isGitHovered ])
-
-	const [ img, setImg ] = useState("")
-
+	// Functions
+	const getBadges = (proj) => {
+      const projTechs = proj.techs;
+      const matchingTechBadges = techBadges.filter(tech => projTechs.includes(tech.name)).map(tech => tech.value);
+      const badgeElements = matchingTechBadges.map(value => (
+         <img className="h-6 select-none" key={value} alt={value} src={value} />
+      ));
+      return badgeElements;
+   };
+	
 	const fsImage = (e) => {
 		setImg(e.target.src)
 		document.getElementById("fsImage").showModal()
@@ -186,21 +156,49 @@ function ProjectFocus(props) {
 		}
 	}
 
+	// GSAP
+	useGSAP(() => {
+      if (isDeployedHovered) {
+         gsap.to(deployedLink.current, {
+            duration: 1.5,
+            text: "Visit Deployed Site →",
+            ease: "power3.inOut"
+         })
+      } else {
+         gsap.to(deployedLink.current, {
+            duration: 1.5,
+            text: "",
+            ease: "power3.inOut"
+         })
+      }
+   },[ isDeployedHovered ])
+
+	useGSAP(() => {
+      if (isGitHovered) {
+         gsap.to(gitLink.current, {
+            duration: 1.5,
+            text: "See GitHub Repo →",
+            ease: "power3.inOut"
+         })
+      } else {
+         gsap.to(gitLink.current, {
+            duration: 1.5,
+            text: "",
+            ease: "power3.inOut"
+         })
+      }
+   },[ isGitHovered ])
+
 	return (
 		<>
 			<div className="flex-grow flex flex-col gap-10 overflow-auto pb-10 text-stone-400">
-				
 				<div className="mx-10 flex gap-10">
-
 					{renderDeployedLink(project)}
-					
 					<a aria-label="Visit GitHub repo." target="_blank" href={project.repo} onMouseEnter={() => setHovered("git")} onMouseLeave={() => removeHovered("git")}  className="cursor-pointer flex-grow flex justify-center items-center gap-5 bg-stone-300 bg-opacity-10 rounded-lg p-10 noise hover:bg-stone-900 hover:bg-opacity-90 ease-in-out duration-700">
 						<FolderGit2 className="h-[3.5vh] w-[3.5vh]" />
 						<h2 ref={gitLink} className="font-title text-[1.4vw] leading-none tracking-widest"></h2>
 					</a>
-
 				</div>
-
 				<div className="mx-10 bg-stone-300 bg-opacity-10 rounded-lg p-10 ">
 					<div className="mockup-browser bg-stone-900 bg-opacity-100 noise">
 						<div className="mockup-browser-toolbar pt-2">
@@ -213,7 +211,6 @@ function ProjectFocus(props) {
 						</div>
 					</div>
 				</div>
-
 				<div className="bg-stone-900 bg-opacity-90 noise p-10 flex flex-col gap-10">
 					<h1 className="text-[4vw] font-title tracking-wider leading-none">{project.title}</h1>
 					<div className="flex justify-between items-center gap-10">
@@ -223,9 +220,7 @@ function ProjectFocus(props) {
                   </div>
                </div>
 				</div>
-
 				{renderOtherScreenshots(project)}
-				
 				<dialog id="fsImage" className="modal">
 					<div className="modal-box bg-stone-900 noise max-w-[90vw] w-fit h-[90vh] overflow-hidden">
 						<img src={img} alt="Fullscreen view" className="h-full object-contain" />
@@ -234,7 +229,6 @@ function ProjectFocus(props) {
 						<button>close</button>
 					</form>
 				</dialog>
-
 			</div>
 		</>
 	)
