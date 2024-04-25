@@ -8,7 +8,7 @@ const projects = [
 		"synopsis": "A time management app with task tracking and minimalist design.",
 		"tags": ["collaborative", "design", "development", "apis"],
 		"desc": "Time management is essential when it comes to studying. Our app is based on the Pomodoro Technique, a tried-and-tested learning method that intersperses periods of concentration with set breaks. Topics of study are broken down to sessions of around 25 minutes to maximise focus, with enforced breaks between sessions to help with memory retention and decrease fatigue. It’s not just helpful for filling your mind, you can empty it too by using Nucleus as a meditation and mindfulness aid. With a minimalist UI and customisable session and break lengths, Nucleus is a simple solution for tasks that may initially seem overwhelming, helps build better study habits and sends procrastination packing.",
-		"desktopImgs": [ imgs.nucleusD1, imgs.nucleusD2, imgs.nucleusD2 ],
+		"desktopImgs": [ imgs.nucleusD1, imgs.nucleusD2, imgs.nucleusD3 ],
 		"mobileImgs": [ imgs.nucleusM1, imgs.nucleusM2, imgs.nucleusM3 ],
 		"swatch": "133,69,77",
 		"deployed": "https://nucleus-plum-zeta.vercel.app/",
