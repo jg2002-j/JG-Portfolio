@@ -26,23 +26,23 @@ function WhatIDo() {
 		)
 	}	
 
-	// GSAP
-	useGSAP(() => {
-		const serviceBoxes = gsap.utils.toArray(".servBox")
-		serviceBoxes.forEach((box) => {
-			gsap.from(box, {
-				y: "120%",
-				opacity: 0,
-				scrollTrigger: {
-					trigger: WhatIDo.current,
-					start: "bottom 70%",
-					end: "top 40%",
-					scrub: true,
-					// markers: true,
-				}
-			})
-		})
-	})
+	// // GSAP
+	// useGSAP(() => {
+	// 	const serviceBoxes = gsap.utils.toArray(".servBox")
+	// 	serviceBoxes.forEach((box) => {
+	// 		gsap.from(box, {
+	// 			y: "120%",
+	// 			opacity: 0,
+	// 			scrollTrigger: {
+	// 				trigger: WhatIDo.current,
+	// 				start: "bottom 70%",
+	// 				end: "top 40%",
+	// 				scrub: true,
+	// 				// markers: true,
+	// 			}
+	// 		})
+	// 	})
+	// })
 
 	return (
 		<div className="scrollPanel min-h-dvh flex items-center text-stone-400">
