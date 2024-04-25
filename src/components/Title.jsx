@@ -21,40 +21,21 @@ function Title() {
 
 	// Functions
 	const renderNavLinks = (NavItems) => {
-		let oddCol = 0
-		let evenCol = 0
-		return (
+		return(
 			NavItems.map((navItem, index) => {
-				if (navItem.id % 2 !== 0) { // odd
-					oddCol++
-					return (
-						<NavLink 
-							key={index} 
-							to={navItem.link} 
-							aria-label={`Visit the ${navItem.name} page.`}
-							className={`col-start-${oddCol} row-start-1 bg-stone-300 bg-opacity-10 rounded-lg h-full aspect-square p-5 hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}
-							onClick={() => scrollDownHome(navItem.name)} 
-							onMouseEnter={() => enterAnimate(navItem.id)} 
-							onMouseLeave={() => leaveAnimate(navItem.id)} 
-						>
-							{NavIcons(navItem.icon, "text-[#a7a29f]", 30)}
-						</NavLink>
-					)
-				} else if (navItem.id % 2 === 0) { //even
-					evenCol++
-					return (
-						<NavLink 
-							key={index} 
-							to={navItem.link} 
-							aria-label={`Visit the ${navItem.name} page.`}
-							className={`col-start-${evenCol} row-start-2 bg-stone-300 bg-opacity-10 rounded-lg h-full aspect-square p-5 hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}
-							onMouseEnter={() => enterAnimate(navItem.id)} 
-							onMouseLeave={() => leaveAnimate(navItem.id)}
-						>
-							{NavIcons(navItem.icon, "text-[#a7a29f]", 30)}
-						</NavLink>
-					)
-				}
+				return(
+					<NavLink 
+						key={index} 
+						to={navItem.link} 
+						aria-label={`Visit the ${navItem.name} page.`}
+						className={`bg-stone-300 bg-opacity-10 rounded-lg h-[45%] aspect-square hover:bg-stone-400 hover:bg-opacity-40 duration-500 ease-in-out flex flex-col items-center justify-center`}
+						onClick={() => scrollDownHome(navItem.name)} 
+						onMouseEnter={() => enterAnimate(navItem.id)} 
+						onMouseLeave={() => leaveAnimate(navItem.id)} 
+					>
+						{NavIcons(navItem.icon, "text-[#a7a29f] w-full h-6 md:h-7 lg:h-8 xl:h-9 2xl:h-10")}
+					</NavLink>
+				)
 			})
 		)
 	}
@@ -175,12 +156,12 @@ function Title() {
 	})
 
   	return (
-		<div ref={blackBar} className="w-vw h-[40vh] bg-stone-900 noise p-10 flex justify-between items-center gap-10">
-			<div className="flex flex-col font-title text-[8vw] leading-none text-stone-500 select-none tracking-wide mix-blend-difference">
+		<div ref={blackBar} className="w-vw h-[40vh] bg-stone-900 noise p-10 flex flex-col md:flex-row justify-between items-center gap-10">
+			<div className="flex flex-col font-title text-[8vw] leading-none text-stone-500 select-none tracking-wide mix-blend-difference text-center md:text-start">
 				<h1 ref={NavAnimateTarget} className="text-stone-400">JAI</h1>
 				<h1 ref={JGtitle} className="">GANDHI</h1>
 			</div>
-			<div ref={navBoxes} className="h-full aspect-square grid auto-cols-fr justify-center items-center gap-10">
+			<div ref={navBoxes} className="h-full w-full md:w-fit aspect-square justify-center items-center flex md:flex-wrap gap-[9%]">
 				{renderNavLinks(NavItems)}
 			</div>
 		</div>

@@ -4,6 +4,17 @@ import { useGSAP } from "@gsap/react";
 
 function SmSocialLinks() {
 
+	// Refs
+	const Github = useRef(null)
+	const Linkedin = useRef(null)
+	const CV = useRef(null)
+
+	// States
+	const [ githubHovered, setGithubHovered ] = useState(false)
+	const [ linkedinHovered, setLinkedinHovered ] = useState(false)
+	const [ cvHovered, setCVHovered ] = useState(false)
+	
+	// Functions
 	const linkIcons = (name) => {
       switch (name) {
          case "GitHub":
@@ -16,14 +27,6 @@ function SmSocialLinks() {
             break;
       }
    }
-
-	const [ githubHovered, setGithubHovered ] = useState(false)
-	const [ linkedinHovered, setLinkedinHovered ] = useState(false)
-	const [ cvHovered, setCVHovered ] = useState(false)
-
-	const Github = useRef(null)
-	const Linkedin = useRef(null)
-	const CV = useRef(null)
 
 	const handleMouseEnter = (link) => {
 		switch (link) {
@@ -53,6 +56,7 @@ function SmSocialLinks() {
 		setCVHovered(false)
 	}
 
+	// GSAP
 	useGSAP(() => {
 		if (githubHovered) {
 			gsap.to(Github.current, {
@@ -137,70 +141,6 @@ function SmSocialLinks() {
 			</a>
 		</div>
 	)
-
-	// const mapLinks = (Links) => {
-	// 	return(
-	// 		Links.map((item, index) => {
-	// 		createRef(index);
-	// 		return(
-	// 			<a onMouseEnter={() => handleMouseEnter(index)} onMouseLeave={() => handleMouseLeave(index)} key={index} target="_blank" href={item.link} className="bg-stone-300 bg-opacity-10 rounded-lg px-6 py-3 hover:bg-stone-400 hover:bg-opacity-30 ease-in-out duration-500 flex items-center group">
-	// 				{linkIcons(item.name)}
-	// 				<span ref={linkRefs.current[index]} className="group-hover:ms-3 tracking-wider font-semibold text-stone-400 leading-none ease-in-out duration-500">{item.name}</span>
-	// 			</a>
-	// 		)
-	// 	}))
-	// }
-
-	// const linkRefs = useRef([]);
-	// const createRef = (index) => {
-	// 	linkRefs.current[index] = React.createRef()
-	// }
-
-	// const [ isHovered, setHovered ] = useState(
-	// 	Links.map(() => false)
-	// )
-
-	// const handleMouseEnter = (index) => {
-	// 	const updatedArray = [...isHovered]
-	// 	updatedArray.forEach(linkstate => {
-	// 		linkstate = true
-	// 	});
-	// 	updatedArray[index] = true
-	// 	setHovered(updatedArray)
-	// }
-	// const handleMouseLeave = (index) => {
-	// 	const updatedArray = [...isHovered]
-	// 	updatedArray[index] = false
-	// 	setHovered(updatedArray)
-	// }
-
-   // useGSAP(() => {
-	// 	console.log(isHovered)
-		
-	// 	isHovered.forEach((element, index) => {
-	// 		if (element === true){
-	// 			gsap.to(linkRefs.current[(index)].current, {
-	// 				duration: 0.5,
-	// 				text: Links[index].name,
-	// 				ease: "power3.inOut"
-	// 			})
-	// 		} else {
-	// 			gsap.to(linkRefs.current[(index)].current, {
-	// 				duration: 0.5,
-	// 				text: "",
-	// 				ease: "power3.inOut"
-	// 			})
-	// 		}
-	// 	});
-   // },[isHovered])
-
-	// return (
-	// 	<div>
-	// 		<div className="flex justify-start gap-4">
-	// 			{mapLinks(Links)}
-	// 		</div>
-	// 	</div>
-	// )
 };
 
 export default SmSocialLinks;
