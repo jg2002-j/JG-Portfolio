@@ -8,7 +8,7 @@ import { useGSAP } from "@gsap/react";
 function Title() {
 
 	// Refs
-	const JGtitle = useRef(null);
+	const JGtitle = useRef(null)
 	const NavAnimateTarget = useRef(null)
 	const blackBar = useRef(null)
 	const navBoxes = useRef(null)
@@ -92,7 +92,6 @@ function Title() {
 			document.getElementById("titleBar").scrollIntoView();
 		}
 	}
-
 
 	// GSAP
 	useGSAP(() => {

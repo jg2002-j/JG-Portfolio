@@ -7,6 +7,7 @@ import { useGSAP } from "@gsap/react";
 
 function Skills() {
 
+	// Functions
 	const img = (item) => {
 		if (item.iconsrc == "lucide") {
 			switch (item.icon) {
@@ -28,16 +29,17 @@ function Skills() {
 		}
 	}
 
+	// GSAP
    useGSAP(() => {
-		const skillbox = gsap.utils.toArray('.skillbox');
+		const skillbox = gsap.utils.toArray(".skillbox");
 		skillbox.forEach((box) => {
 			gsap.from(box, {
 				y: -150,
 				opacity: 0,
 				scrollTrigger: {
 					trigger: box,
-					start: 'bottom 95%',
-					end: 'top 65%',
+					start: "bottom 95%",
+					end: "top 65%",
 					scrub: true,
 					// markers: true,
 				},
