@@ -40,7 +40,7 @@ function ContactPage() {
    return (
       <>
          <Navbar/>
-         <div className="min-h-dvh w-vw flex flex-col 2xl:flex-row-reverse justify-center items-center gap-10 pt-16 p-10 2xl:px-[20vw] relative bg-stone-900 bg-opacity-75 noise text-stone-400">
+         <div className="min-h-dvh w-vw flex flex-col 2xl:flex-row-reverse justify-center items-center gap-10 pt-24 p-10 2xl:px-[20vw] relative bg-stone-900 bg-opacity-75 noise text-stone-400">
             <BackgroundTexture />
             <div className="flex flex-col max-w-[600px] w-full gap-10">
                <div className="w-full bg-stone-300 bg-opacity-10 rounded-lg p-10 flex flex-col gap-14">
