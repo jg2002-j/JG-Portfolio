@@ -64,8 +64,8 @@ function Navbar() {
 
 	return (
 		<>
-			<div className="z-50 fixed top-0 left-0 w-full flex justify-between items-center gap-5 px-6 py-3 text-stone-400 ease-in-out duration-1000">
-				<NavLink ref={NavJG} onMouseEnter={() => {setNavJGHovered(true)}} onMouseLeave={() => {setNavJGHovered(false)}}  to="/" className="font-title tracking-widest text-2xl min-w-48">Jai Gandhi</NavLink>
+			<div className="z-50 fixed top-0 left-0 w-full flex justify-center lg:justify-between items-center gap-5 px-6 py-3 text-stone-400 ease-in-out duration-1000">
+				<NavLink ref={NavJG} onMouseEnter={() => {setNavJGHovered(true)}} onMouseLeave={() => {setNavJGHovered(false)}}  to="/" className="hidden lg:block font-title tracking-widest text-2xl min-w-48">Jai Gandhi</NavLink>
 				<div className="flex justify-end items-center gap-3">
 					{genNavIcons()}
 				</div>
