@@ -50,7 +50,7 @@ function Skills() {
   	return (
 		<div id="skills" className="flex flex-col justify-center items-center min-h-dvh bg-stone-900 bg-opacity-75 noise relative overflow-hidden">
 			<BackgroundTexture />
-			<div className="lg:max-w-[80%] w-full mx-auto flex flex-col 2xl:flex-row justify-center items-start mt-10 mb-40 gap-[5rem]">
+			<div className="lg:max-w-[80%] w-full mx-auto flex flex-col 2xl:flex-row justify-center items-center lg:items-start mt-10 mb-40 gap-[5rem]">
 					{skillslist.map(skill => (
 						<div key={skill.id} className="2xl:w-1/5 w-4/5">
 							<h1 className="font-header text-4xl text-slate-300 mb-9">{skill.title}</h1>
