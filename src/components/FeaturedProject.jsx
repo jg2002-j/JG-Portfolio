@@ -65,7 +65,7 @@ function FeaturedProject() {
             <div className="h-full bg-stone-900 bg-opacity-75 noise rounded-lg p-20 flex flex-col justify-center gap-20">
 
                <div className="flex">
-						<h1 className="text-[6vw] font-header text-stone-500 leading-none tracking-wider mix-blend-difference hover:text-stone-400 duration-1000">My Work.</h1>
+						<h1 className="text-4xl lg:text-[6vw] font-header text-stone-500 leading-none tracking-wider mix-blend-difference hover:text-stone-400 duration-1000">My Work.</h1>
 					</div>					
 
                <div className="bg-stone-300 bg-opacity-10 p-10 rounded-lg flex flex-col lg:flex-row gap-10">

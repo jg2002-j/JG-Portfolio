@@ -14,8 +14,8 @@ function WhatIDo() {
 		return (
 			Services.map((service, index) => {
 				return (
-					<div key={index} className="servBox max-w-[800px] flex-grow bg-stone-300 bg-opacity-10 rounded-lg p-10 flex flex-col xl:flex-row items-center gap-10 hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
-						<h1 className="text-[30vh] font-title tracking-widest leading-none text-stone-300 text-opacity-10">{index+1}</h1>
+					<div key={index} className="servBox max-w-[800px] flex-grow w-full lg:w-fit bg-stone-300 bg-opacity-10 rounded-lg p-10 flex flex-col xl:flex-row items-center gap-10 hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
+						<h1 className="text-6xl lg:text-[30vh] font-title tracking-widest leading-none text-stone-300 text-opacity-10">{index+1}</h1>
 						<div className="flex flex-col gap-3">
 							<h2 className="text-3xl font-header">{service.title}</h2>
 							<p className="max-w-prose text-xl text-pretty">{service.desc}</p>
@@ -50,9 +50,9 @@ function WhatIDo() {
 				<BackgroundTexture />
 				<div className="flex-grow bg-stone-900 bg-opacity-75 noise rounded-lg py-20 flex flex-col justify-center gap-20">
 					<div className="flex justify-end px-20">
-						<h1 ref={WhatIDo} className="text-[6vw] font-header text-stone-500 leading-none tracking-wider mix-blend-difference hover:text-stone-400 duration-1000">What I do.</h1>
+						<h1 ref={WhatIDo} className="text-4xl lg:text-[6vw] font-header text-stone-500 leading-none tracking-wider mix-blend-difference hover:text-stone-400 duration-1000">What I do.</h1>
 					</div>
-					<div className="flex flex-col xl:flex-row justify-center items-center gap-20 px-20">				
+					<div className="flex flex-col lg:flex-row justify-center items-center gap-10 lg:gap-20 px-10 lg:px-20">				
 						<div className="hidden xl:block flex-grow"></div>
 						{renderServices()}
 						<div className="hidden xl:block flex-grow"></div>
