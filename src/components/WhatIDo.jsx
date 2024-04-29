@@ -15,14 +15,14 @@ function WhatIDo() {
 			Services.map((service, index) => {
 				return (
 					<div>
-						<div key={index} className="hidden lg:flex servBox max-w-[800px] flex-grow w-full lg:w-fit bg-stone-300 bg-opacity-10 rounded-lg p-10 flex-row items-center gap-10 hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
+						<div key={index} className="hidden lg:flex servBox max-w-[800px] flex-grow w-full lg:w-fit bg-stone-300 bg-opacity-10 rounded-lg p-10 flex-row items-start gap-10 hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
 							<h1 className="text-6xl lg:text-[30vh] font-title tracking-widest leading-none text-stone-300 text-opacity-10">{index+1}</h1>
 							<div className="flex flex-col gap-3">
 								<h2 className="text-3xl font-header">{service.title}</h2>
 								<p className="max-w-prose lg:text-xl text-pretty">{service.desc}</p>
 							</div>
 						</div>
-						<div key={index} className="flex lg:hidden servBox max-w-[800px] flex-grow w-full lg:w-fit bg-stone-300 bg-opacity-10 rounded-lg p-10 flex-row items-center gap-10 hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
+						<div key={index} className="flex lg:hidden servBox max-w-[800px] flex-grow w-full lg:w-fit bg-stone-300 bg-opacity-10 rounded-lg p-10 flex-row items-start gap-10 hover:bg-stone-400 hover:bg-opacity-20 duration-1000">
 							<div className="flex flex-col gap-3">
 								<div className="flex items-center gap-5">
 									<h1 className="text-6xl lg:text-[30vh] font-title tracking-widest leading-none text-stone-300 text-opacity-10">{index+1}</h1>

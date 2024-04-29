@@ -107,7 +107,7 @@ const projects = [
 		"title": "Password Generator",
 		"synopsis": "A web application that generates a password string based on user input using simple JS.",
 		"tags": ["individual", "development"],
-		"desc": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam et minus voluptatem magnam iusto temporibus reiciendis maxime? Id, praesentium quos non hic autem expedita quisquam totam laborum eligendi nisi repudiandae!",
+		"desc": "This web app familiarised me with the basics of JavaScript and web APIs, in order to generate a simple prompt-based password generator.",
 		"desktopImgs": [
 			"https://github.com/jg2002-j/password-generator/raw/main/Screenshot%202024-01-23%20174657.png"
 		],
